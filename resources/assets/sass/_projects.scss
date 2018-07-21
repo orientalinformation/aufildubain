@@ -1,0 +1,59 @@
+/** xs **/
+.projects {
+
+    .regular-projects {
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -150px;
+        }
+
+        .regular {
+
+            @include media-breakpoint-up(lg) {
+                z-index: 1;
+            }
+
+            .slick-slide {
+
+                .card {
+                    height: 290px;
+
+                    @include media-breakpoint-up(md) {
+                        height: 292px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        height: 365px;
+                    } 
+
+                    @include media-breakpoint-up(xl) {
+                        height: 400px;
+                    }
+
+                    @include media-breakpoint-up(xxl) {
+                        height: 420px;
+                    }                
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+@include media-breakpoint-up(xxl) {
+
+}

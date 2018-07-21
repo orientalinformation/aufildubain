@@ -1,0 +1,367 @@
+/*custom css */
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #333;
+}
+
+html body {
+  font-weight: 400;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form-control::-ms-expand {
+    background-color: transparent;
+    border: 0;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    background-color: #eee;
+    opacity: 1;
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.aufi-nav-site {
+    padding-right: 30px;
+}
+
+.aufi-nav-site a {
+    margin-top: 15px;
+}
+
+.table {
+    font-weight: 400;
+    color: #333;
+}
+
+.table>tfoot>tr>th, .table>thead>tr>th {
+    font-weight: 600;
+    color: #333;
+}
+
+ 
+/*++++++++++++++ PRODUCTS +++++++++++++++++++++*/
+
+.aufi-modal-primary  {
+    background-color: #22A7F0 !important;
+}
+
+/*++++++++++++++ STORES +++++++++++++++++++++*/
+.modal-open .select2-container {
+    z-index: auto !important;
+}
+
+/*++++++++++++++ banners +++++++++++++++++++++*/
+
+.banners textarea.form-control {
+    height: 150px;
+}
+
+
+
+/*++++++++++++++ General +++++++++++++++++++++*/
+
+.mce-tinymce iframe {
+    height: 300px !important;
+}
+
+.au-img-select2 {
+    display: inherit!important;
+    padding-right: 10px;
+}
+
+.select2-selection__choice {
+    background-color: #fff!important;
+}
+
+.aufi-modal-primary  {
+    background-color: #22A7F0 !important;
+}
+
+.aufi-modal-default {
+    background-color: #fff !important;
+    border-bottom: 1px solid #e5e5e5;    
+}
+
+.aufi-modal-default * {
+    color: #333 !important;
+}
+
+.aufi-gallery .panel.widget {
+    height: 200px;
+    padding: 0;
+}
+
+.aufi-gallery .panel.widget h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 170px;
+    margin-left: 5px;
+}
+
+.aufi-gallery .panel.widget .panel-content {
+    text-align: left;
+}
+
+.aufi-gallery .aufi-panel-button {
+    margin: 0 10px; 
+}
+
+.aufi-gallery .aufi-panel-button a {
+    margin-left: 5px;
+    float: right;
+}
+
+.aufi-panel-button .aufi-span-size {
+    line-height: 48px;
+}
+
+#gallery_modal .modal-content .modal-body {
+    padding: 1px;
+}
+
+.aufi-gallery-item .dimmer {
+    bottom: 0;
+    top: unset !important;
+    height: 20% !important;
+}
+
+@media (max-width: 768px) {
+
+    .aufi-nav-site {
+        right: 75px !important;
+    }
+}
+
+
+.aufi-box-plus {
+    box-sizing: border-box;
+    height: 100px;
+    padding-right: 5px;
+    position: relative;
+    width: 100px;
+    cursor: default;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(221, 223, 226);
+    border-image: initial;
+    border-radius: 2px;
+    float: left;
+}
+
+.aufi-bg-plus {
+    background-image: url(../../images/aufi-plus.png);
+    background-size: 20px;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+}
+
+.aufi-bg-plus:hover {
+    background-image: url(../../images/aufi-plus-hover.png);
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(121, 121, 121);
+    border-image: initial;
+}
+
+.aufi-box-img img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.aufi-remove,
+.aufi-trend-remove {
+    cursor: pointer;
+}
+
+.aufi-item-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.aufi-remove a {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: red;
+}
+
+.aufi-trend-remove a {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: red;    
+}
+
+.aufi-group-color input[type="color"] {
+    height: 67px;
+}
+
+.aufi-group-color .row div {
+    margin-bottom: 10px;
+}
+
+.aufi-group-view-img .aufi-view-img-1,
+.aufi-group-view-img .aufi-view-img-2,
+.aufi-group-view-img .aufi-view-img-2 .row .col-md-12,
+.aufi-group-view-img .aufi-view-img-3,
+.aufi-group-view-img .aufi-view-img-6 {
+    margin-bottom: 0;
+}
+
+.aufi-group-view-img .aufi-view-img-1 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 400px;
+}
+
+.aufi-group-view-img .aufi-view-img-2 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 200px;
+}
+
+.aufi-group-view-img .aufi-view-img-3 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 300px;
+}
+
+.aufi-group-view-img .aufi-view-img-4 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 300px;
+}
+
+.aufi-group-view-img .aufi-view-img-5 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 300px;
+}
+
+.aufi-group-view-img .aufi-view-img-6 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 300px;
+}
+
+.aufi-group-view-img .aufi-view-img-7 .aufi-view-item-img {
+    background-color: #f0f2f4;
+    min-height: 650px;
+}
+
+.aufi-trends-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 24px;    
+}
+
+.aufi-trends-edit {
+    cursor: pointer;
+    position: absolute;
+    bottom: 68px;
+    right: 24px;  
+}
+
+.aufi-trends-btn span.icon,
+.aufi-trends-edit span.icon {
+    font-size: 25px;
+}
+
+.aufi-view-text h4 ,
+.aufi-view-text p {
+    position: absolute;
+    left: 16px;
+    color: #fff;
+    background: url(/images/trans44black.png) repeat transparent;
+    overflow: hidden;
+    padding: 10px;
+    max-height: 80px;
+    margin-right: 15px;
+}
+
+.aufi-view-text p {
+    bottom: 6px;
+}
+
+.aufi-view-text h4 {
+    top: 15px;
+    font-size: 18pt;
+}
+
+.aufi-trend-item-img {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 200px;
+}
+
+.aufi-view-img-1 .aufi-trend-item-img {
+    min-height: 400px;
+}
+
+.aufi-view-img-2 .aufi-trend-item-img {
+    min-height: 200px;
+}
+
+.aufi-view-img-3 .aufi-trend-item-img,
+.aufi-view-img-4 .aufi-trend-item-img,
+.aufi-view-img-5 .aufi-trend-item-img,
+.aufi-view-img-6 .aufi-trend-item-img  {
+    min-height: 300px;
+}
+
+.aufi-view-img-7 .aufi-trend-item-img {
+    min-height: 650px;
+}

@@ -1,0 +1,26 @@
+
+// BUTTONS
+@each $color, $value in $theme-colors {
+  .btn-alt-#{$color} {
+    @include button-variant($value, transparent, #ffffff, $value, #ffffff, $value);
+    &:not(:disabled):not(.disabled):active:focus, &:active, &:focus, &:hover {
+        color: $value;
+        background: #ffffff;
+        outline: 0;
+        border-color: $value;
+        box-shadow: unset;
+    }
+  }
+}
+
+.btn-alt-light {
+  @include button-outline-variant(#00b4dd, #ffffff);
+    background: #ffffff;
+    &:hover {
+      border: 1px solid #ffffff;
+    }
+    &:not(:disabled):not(.disabled):active:focus, &:active, &:focus, &:hover {
+        outline: 0;
+        box-shadow: unset;
+    }
+}

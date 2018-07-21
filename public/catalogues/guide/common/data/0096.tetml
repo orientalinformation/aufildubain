@@ -1,0 +1,1881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I5" x="275.77" y="821.82" width="130.91" height="185.18"/>
+    <PlacedImage image="I6" x="305.89" y="885.57" width="8.64" height="29.28"/>
+    <PlacedImage image="I6" x="345.57" y="885.57" width="8.64" height="29.28"/>
+    <PlacedImage image="I0" x="29.49" y="836.41" width="697.89" height="493.37"/>
+    <Para>
+      <Box llx="63.19" lly="67.96" urx="257.49" ury="50.96">
+        <Word>
+          <Text>MOBILIER</Text>
+          <Box llx="63.19" lly="67.96" urx="146.39" ury="50.96"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="151.85" lly="67.96" urx="172.67" ury="50.96"/>
+        </Word>
+        <Word>
+          <Text>VASQUES</Text>
+          <Box llx="178.13" lly="67.96" urx="257.49" ury="50.96"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="63.19" lly="121.37" urx="104.39" ury="107.37">
+        <Word>
+          <Text>COCO</Text>
+          <Box llx="63.19" lly="121.37" urx="104.39" ury="107.37"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I3" x="271.15" y="654.38" width="130.94" height="185.22"/>
+    <Para>
+      <Box llx="343.88" lly="100.04" urx="414.69" ury="84.04">
+        <Word>
+          <Text>MEUBLES</Text>
+          <Box llx="343.88" lly="100.04" urx="414.69" ury="84.04"/>
+        </Word>
+      </Box>
+    </Para>
+    <Table llx="71.69" lly="144.15" urx="189.42" ury="131.22">
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+          <Para>
+            <Box llx="71.69" lly="142.69" urx="189.42" ury="132.69">
+              <Word>
+                <Text>Meuble</Text>
+                <Box llx="71.69" lly="142.69" urx="106.86" ury="132.69"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="109.64" lly="142.69" urx="121.49" ury="132.69"/>
+              </Word>
+              <Word>
+                <Text>salle</Text>
+                <Box llx="124.27" lly="142.69" urx="146.28" ury="132.69"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="149.06" lly="142.69" urx="160.91" ury="132.69"/>
+              </Word>
+              <Word>
+                <Text>bains</Text>
+                <Box llx="163.69" lly="142.69" urx="189.42" ury="132.69"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+  </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+  </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+  </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+  </Cell>
+      </Row>
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+          <Para>
+            <Box llx="71.69" lly="200.61" urx="246.73" ury="147.62">
+              <Word>
+                <Text>COCO</Text>
+                <Box llx="71.69" lly="156.62" urx="98.37" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>joue</Text>
+                <Box llx="100.87" lly="156.62" urx="117.87" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>le</Text>
+                <Box llx="120.37" lly="156.62" urx="127.20" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>jeu</Text>
+                <Box llx="129.71" lly="156.62" urx="141.54" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>des</Text>
+                <Box llx="144.04" lly="156.62" urx="158.71" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>formes</Text>
+                <Box llx="161.22" lly="156.62" urx="189.05" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>géométriques</Text>
+                <Box llx="191.55" lly="156.62" urx="246.73" ury="147.62"/>
+              </Word>
+              <Word>
+                <Text>rondes</Text>
+                <Box llx="71.69" lly="167.62" urx="99.37" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="101.87" lly="167.62" urx="109.54" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>carrées</Text>
+                <Box llx="112.04" lly="167.62" urx="141.70" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="141.70" lly="167.62" urx="144.20" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="146.71" lly="167.62" urx="154.38" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>l</Text>
+                <Box llx="156.88" lly="167.62" urx="158.88" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>’</Text>
+                <Box llx="158.88" lly="167.62" urx="161.38" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>innovation</Text>
+                <Box llx="161.38" lly="167.62" urx="202.88" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="205.39" lly="167.62" urx="207.89" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>plan</Text>
+                <Box llx="210.39" lly="167.62" urx="227.56" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="230.06" lly="167.62" urx="240.23" ury="158.62"/>
+              </Word>
+              <Word>
+                <Text>toilette</Text>
+                <Box llx="71.69" lly="178.62" urx="99.03" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>ultra-fin</Text>
+                <Box llx="101.53" lly="178.62" urx="132.36" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="132.36" lly="178.62" urx="134.86" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>trop-plein</Text>
+                <Box llx="137.37" lly="178.62" urx="176.21" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>invisible</Text>
+                <Box llx="178.71" lly="178.62" urx="210.88" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="210.88" lly="178.62" urx="213.38" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>tiroir</Text>
+                <Box llx="215.88" lly="178.62" urx="233.71" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>à</Text>
+                <Box llx="236.21" lly="178.62" urx="241.04" ury="169.62"/>
+              </Word>
+              <Word>
+                <Text>fermeture</Text>
+                <Box llx="71.69" lly="189.61" urx="110.20" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>douce</Text>
+                <Box llx="112.70" lly="189.61" urx="137.88" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="140.38" lly="189.61" urx="148.05" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>automatique</Text>
+                <Box llx="150.55" lly="189.61" urx="200.90" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>...</Text>
+                <Box llx="200.90" lly="189.61" urx="208.41" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>La</Text>
+                <Box llx="210.91" lly="189.61" urx="220.75" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>force</Text>
+                <Box llx="223.25" lly="189.61" urx="243.58" ury="180.61"/>
+              </Word>
+              <Word>
+                <Text>tranquille</Text>
+                <Box llx="71.69" lly="200.61" urx="108.53" ury="191.61"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="108.53" lly="200.61" urx="111.03" ury="191.61"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="212.46" urx="179.56" ury="205.46">
+              <Word>
+                <Text>•</Text>
+                <Box llx="71.69" lly="212.46" urx="75.19" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>Dim</Text>
+                <Box llx="77.14" lly="212.46" urx="89.06" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>.:</Text>
+                <Box llx="89.06" lly="212.46" urx="93.83" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>L</Text>
+                <Box llx="95.77" lly="212.46" urx="99.53" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>120,6</Text>
+                <Box llx="101.48" lly="212.46" urx="118.99" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>x</Text>
+                <Box llx="120.94" lly="212.46" urx="124.30" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>H</Text>
+                <Box llx="126.25" lly="212.46" urx="131.18" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>87</Text>
+                <Box llx="133.12" lly="212.46" urx="140.91" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>x</Text>
+                <Box llx="142.85" lly="212.46" urx="146.22" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>P</Text>
+                <Box llx="148.17" lly="212.46" urx="152.58" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>50,5</Text>
+                <Box llx="154.52" lly="212.46" urx="168.15" ury="205.46"/>
+              </Word>
+              <Word>
+                <Text>cm</Text>
+                <Box llx="170.09" lly="212.46" urx="179.56" ury="205.46"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="230.46" urx="219.77" ury="214.46">
+              <Word>
+                <Text>•</Text>
+                <Box llx="71.69" lly="221.46" urx="75.19" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>Plan</Text>
+                <Box llx="77.14" lly="221.46" urx="90.24" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="92.18" lly="221.46" urx="99.83" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>toilette</Text>
+                <Box llx="101.78" lly="221.46" urx="121.74" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>en</Text>
+                <Box llx="123.69" lly="221.46" urx="131.08" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>pierre</Text>
+                <Box llx="133.03" lly="221.46" urx="149.89" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="151.84" lly="221.46" urx="159.49" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>synthèse</Text>
+                <Box llx="161.43" lly="221.46" urx="188.26" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>Rocksolid</Text>
+                <Box llx="190.21" lly="221.46" urx="219.77" ury="214.46"/>
+              </Word>
+              <Word>
+                <Text>extra-fin</Text>
+                <Box llx="77.14" lly="230.46" urx="101.51" ury="223.46"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="103.45" lly="230.46" urx="109.16" ury="223.46"/>
+              </Word>
+              <Word>
+                <Text>trop-plein</Text>
+                <Box llx="111.10" lly="230.46" urx="139.75" ury="223.46"/>
+              </Word>
+              <Word>
+                <Text>invisible</Text>
+                <Box llx="141.70" lly="230.46" urx="164.90" ury="223.46"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="257.47" urx="237.65" ury="232.46">
+              <Word>
+                <Text>•</Text>
+                <Box llx="71.69" lly="239.46" urx="75.19" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>Meuble</Text>
+                <Box llx="77.14" lly="239.46" urx="99.31" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>sous-vasque</Text>
+                <Box llx="101.25" lly="239.46" urx="139.88" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>2</Text>
+                <Box llx="141.83" lly="239.46" urx="145.72" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>tiroirs</Text>
+                <Box llx="147.66" lly="239.46" urx="163.87" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="163.87" lly="239.46" urx="165.81" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>Ouverture</Text>
+                <Box llx="167.76" lly="239.46" urx="197.33" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>«</Text>
+                <Box llx="199.27" lly="239.46" urx="202.26" ury="232.46"/>
+              </Word>
+              <Word>
+                <Text>pousselâche</Text>
+                <Box llx="203.13" lly="239.46" urx="227.76" ury="232.46"/>
+                <Box llx="77.14" lly="248.46" urx="93.09" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>»,</Text>
+                <Box llx="93.97" lly="248.46" urx="98.89" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>fermeture</Text>
+                <Box llx="100.84" lly="248.46" urx="129.50" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>douce</Text>
+                <Box llx="131.44" lly="248.46" urx="150.38" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>Soft</Text>
+                <Box llx="152.33" lly="248.46" urx="164.51" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>Close</Text>
+                <Box llx="166.46" lly="248.46" urx="183.57" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="183.57" lly="248.46" urx="185.52" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>Laque</Text>
+                <Box llx="187.47" lly="248.46" urx="206.27" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>gris</Text>
+                <Box llx="208.21" lly="248.46" urx="218.97" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>foncé</Text>
+                <Box llx="220.92" lly="248.46" urx="237.65" ury="241.46"/>
+              </Word>
+              <Word>
+                <Text>mat</Text>
+                <Box llx="77.14" lly="257.47" urx="88.67" ury="250.47"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="88.67" lly="257.47" urx="90.62" ury="250.47"/>
+              </Word>
+              <Word>
+                <Text>socle</Text>
+                <Box llx="92.57" lly="257.47" urx="108.39" ury="250.47"/>
+              </Word>
+              <Word>
+                <Text>métal</Text>
+                <Box llx="110.33" lly="257.47" urx="126.80" ury="250.47"/>
+              </Word>
+              <Word>
+                <Text>noir</Text>
+                <Box llx="128.74" lly="257.47" urx="139.89" ury="250.47"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="275.47" urx="215.23" ury="259.47">
+              <Word>
+                <Text>•</Text>
+                <Box llx="71.69" lly="266.47" urx="75.19" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>Existe</Text>
+                <Box llx="77.14" lly="266.47" urx="95.02" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>en</Text>
+                <Box llx="96.97" lly="266.47" urx="104.36" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>23</Text>
+                <Box llx="106.31" lly="266.47" urx="114.09" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>coloris</Text>
+                <Box llx="116.04" lly="266.47" urx="135.62" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="136.49" lly="266.47" urx="138.44" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>7</Text>
+                <Box llx="140.38" lly="266.47" urx="144.28" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>laques</Text>
+                <Box llx="146.22" lly="266.47" urx="165.93" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>mates</Text>
+                <Box llx="167.87" lly="266.47" urx="186.41" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="186.41" lly="266.47" urx="188.35" ury="259.47"/>
+              </Word>
+              <Word>
+                <Text>7</Text>
+                <Box llx="77.14" lly="275.47" urx="81.03" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>laques</Text>
+                <Box llx="82.98" lly="275.47" urx="102.68" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>brillantes</Text>
+                <Box llx="104.63" lly="275.47" urx="131.20" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="133.15" lly="275.47" urx="138.85" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>9</Text>
+                <Box llx="140.80" lly="275.47" urx="144.69" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>placages</Text>
+                <Box llx="146.63" lly="275.47" urx="173.74" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>bois</Text>
+                <Box llx="175.68" lly="275.47" urx="188.26" ury="268.47"/>
+              </Word>
+              <Word>
+                <Text>véritable</Text>
+                <Box llx="190.20" lly="275.47" urx="215.23" ury="268.47"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="302.48" urx="234.97" ury="277.47">
+              <Word>
+                <Text>•</Text>
+                <Box llx="71.69" lly="284.47" urx="75.19" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>Armoire</Text>
+                <Box llx="77.14" lly="284.47" urx="100.48" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>de</Text>
+                <Box llx="102.43" lly="284.47" urx="110.08" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>toilette</Text>
+                <Box llx="112.03" lly="284.47" urx="131.99" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>avec</Text>
+                <Box llx="133.94" lly="284.47" urx="148.08" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>éclairage</Text>
+                <Box llx="150.02" lly="284.47" urx="176.87" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>LED</Text>
+                <Box llx="178.82" lly="284.47" urx="191.53" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>sablé</Text>
+                <Box llx="193.47" lly="284.47" urx="209.42" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="209.42" lly="284.47" urx="211.36" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>1</Text>
+                <Box llx="213.31" lly="284.47" urx="217.20" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>porte</Text>
+                <Box llx="219.15" lly="284.47" urx="234.97" ury="277.47"/>
+              </Word>
+              <Word>
+                <Text>ronde</Text>
+                <Box llx="77.14" lly="293.47" urx="94.52" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>double</Text>
+                <Box llx="96.47" lly="293.47" urx="117.08" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>miroir</Text>
+                <Box llx="119.03" lly="293.47" urx="135.62" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>,</Text>
+                <Box llx="134.98" lly="293.47" urx="136.93" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>1</Text>
+                <Box llx="138.87" lly="293.47" urx="142.76" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>porte</Text>
+                <Box llx="144.71" lly="293.47" urx="160.53" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>rectangulaire</Text>
+                <Box llx="162.48" lly="293.47" urx="200.87" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>laqué</Text>
+                <Box llx="202.82" lly="293.47" urx="219.15" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>gris</Text>
+                <Box llx="221.10" lly="293.47" urx="231.86" ury="286.47"/>
+              </Word>
+              <Word>
+                <Text>foncé</Text>
+                <Box llx="77.14" lly="302.48" urx="93.87" ury="295.48"/>
+              </Word>
+              <Word>
+                <Text>mat</Text>
+                <Box llx="95.81" lly="302.48" urx="107.35" ury="295.48"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+  </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+  </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+  </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+  </Cell>
+      </Row>
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+          <Para>
+            <Box llx="71.69" lly="333.73" urx="202.80" ury="308.73">
+              <Word>
+                <Text>Réf</Text>
+                <Box llx="71.69" lly="315.73" urx="83.10" ury="308.73"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="83.10" lly="315.73" urx="85.04" ury="308.73"/>
+              </Word>
+              <Word>
+                <Text>SFHQ120GF2842</Text>
+                <Box llx="86.99" lly="315.73" urx="143.02" ury="308.73"/>
+              </Word>
+              <Word>
+                <Text>-</Text>
+                <Box llx="144.97" lly="315.73" urx="147.82" ury="308.73"/>
+              </Word>
+              <Word>
+                <Text>SPIK120GF2842</Text>
+                <Box llx="149.76" lly="315.73" urx="202.80" ury="308.73"/>
+              </Word>
+              <Word>
+                <Text>Prix</Text>
+                <Box llx="71.69" lly="324.73" urx="82.97" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>hors</Text>
+                <Box llx="84.92" lly="324.73" urx="98.14" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>éco-participation</Text>
+                <Box llx="100.08" lly="324.73" urx="150.65" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="151.53" lly="324.73" urx="153.47" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>4812,00</Text>
+                <Box llx="155.42" lly="324.73" urx="181.63" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>€</Text>
+                <Box llx="183.38" lly="324.73" urx="188.63" ury="317.73"/>
+              </Word>
+              <Word>
+                <Text>+</Text>
+                <Box llx="71.69" lly="333.73" urx="75.89" ury="326.73"/>
+              </Word>
+              <Word>
+                <Text>éco-participation</Text>
+                <Box llx="77.84" lly="333.73" urx="128.41" ury="326.73"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="129.28" lly="333.73" urx="131.23" ury="326.73"/>
+              </Word>
+              <Word>
+                <Text>3,34</Text>
+                <Box llx="133.17" lly="333.73" urx="146.80" ury="326.73"/>
+              </Word>
+              <Word>
+                <Text>€</Text>
+                <Box llx="148.55" lly="333.73" urx="153.80" ury="326.73"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="71.69" lly="345.21" urx="142.24" ury="335.71">
+              <Word>
+                <Text>Total</Text>
+                <Box llx="71.69" lly="345.21" urx="90.70" ury="335.71"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="91.89" lly="345.21" urx="94.53" ury="335.71"/>
+              </Word>
+              <Word>
+                <Text>4</Text>
+                <Box llx="97.17" lly="345.21" urx="102.45" ury="335.71"/>
+              </Word>
+              <Word>
+                <Text>815,34</Text>
+                <Box llx="103.69" lly="345.21" urx="132.74" ury="335.71"/>
+              </Word>
+              <Word>
+                <Text>€</Text>
+                <Box llx="135.11" lly="345.21" urx="142.24" ury="335.71"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+          <Para>
+            <Box llx="454.84" lly="327.56" urx="473.75" ury="319.16">
+              <Word>
+                <Text>Choix</Text>
+                <Box llx="454.84" lly="323.36" urx="465.77" ury="319.16"/>
+              </Word>
+              <Word>
+                <Text>des</Text>
+                <Box llx="466.88" lly="323.36" urx="473.75" ury="319.16"/>
+              </Word>
+              <Word>
+                <Text>couleurs</Text>
+                <Box llx="456.06" lly="327.56" urx="472.53" ury="323.36"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+          <Para>
+            <Box llx="490.91" lly="327.56" urx="511.38" ury="319.16">
+              <Word>
+                <Text>Facilité</Text>
+                <Box llx="494.28" lly="323.36" urx="508.01" ury="319.16"/>
+              </Word>
+              <Word>
+                <Text>d</Text>
+                <Box llx="490.91" lly="327.56" urx="493.35" ury="323.36"/>
+              </Word>
+              <Word>
+                <Text>’</Text>
+                <Box llx="493.35" lly="327.56" urx="494.46" ury="323.36"/>
+              </Word>
+              <Word>
+                <Text>entretien</Text>
+                <Box llx="494.46" lly="327.56" urx="511.38" ury="323.36"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+          <Para>
+            <Box llx="527.06" lly="327.56" urx="548.92" ury="319.16">
+              <Word>
+                <Text>Choix</Text>
+                <Box llx="528.54" lly="323.36" urx="539.47" ury="319.16"/>
+              </Word>
+              <Word>
+                <Text>des</Text>
+                <Box llx="540.58" lly="323.36" urx="547.45" ury="319.16"/>
+              </Word>
+              <Word>
+                <Text>dimensions</Text>
+                <Box llx="527.06" lly="327.56" urx="548.92" ury="323.36"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+          <Para>
+            <Box llx="563.60" lly="326.00" urx="586.09" ury="321.80">
+              <Word>
+                <Text>GARANTIE</Text>
+                <Box llx="563.60" lly="326.00" urx="586.09" ury="321.80"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="562.62" lly="337.30" urx="587.06" ury="326.00">
+              <Word>
+                <Text>5</Text>
+                <Box llx="562.62" lly="337.30" urx="568.59" ury="326.00"/>
+              </Word>
+              <Word>
+                <Text>ans</Text>
+                <Box llx="569.96" lly="337.30" urx="587.06" ury="326.00"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+          <Para>
+            <Box llx="74.53" lly="372.79" urx="119.72" ury="362.79">
+              <Word>
+                <Text>OPTIONS</Text>
+                <Box llx="74.53" lly="372.79" urx="119.72" ury="362.79"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="74.53" lly="392.20" ulx="74.53" uly="376.20" urx="214.57" ury="376.20" lrx="214.57" lry="392.20">
+              <Word>
+                <Text>•</Text>
+                <Box llx="74.53" lly="383.20" urx="78.03" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>Échelle</Text>
+                <Box llx="80.17" lly="383.20" urx="101.57" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>porte-serviettes</Text>
+                <Box llx="103.71" lly="383.20" urx="150.64" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>murale</Text>
+                <Box llx="152.78" lly="383.20" urx="173.14" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>en</Text>
+                <Box llx="175.28" lly="383.20" urx="182.67" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>métal</Text>
+                <Box llx="184.81" lly="383.20" urx="201.28" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>noir</Text>
+                <Box llx="203.42" lly="383.20" urx="214.57" ury="376.20"/>
+              </Word>
+              <Word>
+                <Text>Réf</Text>
+                <Box llx="80.17" lly="392.20" urx="91.57" ury="385.20"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="91.57" lly="392.20" urx="93.52" ury="385.20"/>
+              </Word>
+              <Word>
+                <Text>HHRE001</Text>
+                <Box llx="95.66" lly="392.20" urx="127.30" ury="385.20"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="128.15" lly="392.20" urx="130.10" ury="385.20"/>
+              </Word>
+              <Word>
+                <Text>282,00</Text>
+                <Box llx="132.24" lly="392.20" urx="156.71" ury="384.20"/>
+              </Word>
+              <Word>
+                <Text>€</Text>
+                <Box llx="158.90" lly="392.20" urx="164.90" ury="384.20"/>
+              </Word>
+            </Box>
+          </Para>
+          <Para>
+            <Box llx="74.53" lly="410.21" ulx="74.53" uly="394.20" urx="235.77" ury="394.20" lrx="235.77" lry="410.20">
+              <Word>
+                <Text>•</Text>
+                <Box llx="74.53" lly="401.20" urx="78.03" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>Banc</Text>
+                <Box llx="80.17" lly="401.20" urx="95.86" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>assise</Text>
+                <Box llx="98.01" lly="401.20" urx="116.67" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>laquée</Text>
+                <Box llx="118.81" lly="401.20" urx="138.78" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>gris</Text>
+                <Box llx="140.92" lly="401.20" urx="151.68" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>foncé</Text>
+                <Box llx="153.82" lly="401.20" urx="170.55" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>et</Text>
+                <Box llx="172.70" lly="401.20" urx="178.40" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>support</Text>
+                <Box llx="180.54" lly="401.20" urx="203.87" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>métal</Text>
+                <Box llx="206.02" lly="401.20" urx="222.48" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>noir</Text>
+                <Box llx="224.62" lly="401.20" urx="235.77" ury="394.20"/>
+              </Word>
+              <Word>
+                <Text>Réf</Text>
+                <Box llx="80.17" lly="410.21" urx="91.57" ury="403.21"/>
+              </Word>
+              <Word>
+                <Text>.</Text>
+                <Box llx="91.57" lly="410.21" urx="93.52" ury="403.21"/>
+              </Word>
+              <Word>
+                <Text>BANB070</Text>
+                <Box llx="95.66" lly="410.21" urx="127.17" ury="403.21"/>
+              </Word>
+              <Word>
+                <Text>:</Text>
+                <Box llx="128.03" lly="410.20" urx="129.97" ury="403.20"/>
+              </Word>
+              <Word>
+                <Text>597,60</Text>
+                <Box llx="132.12" lly="410.20" urx="156.58" ury="402.20"/>
+              </Word>
+              <Word>
+                <Text>€</Text>
+                <Box llx="158.78" lly="410.20" urx="164.78" ury="402.20"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+  </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+  </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+  </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+  </Cell>
+      </Row>
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+          <Para>
+            <Box llx="114.14" lly="450.59" urx="192.27" ury="443.59">
+              <Word>
+                <Text>•</Text>
+                <Box llx="114.14" lly="450.59" urx="116.90" ury="445.09"/>
+              </Word>
+              <Word>
+                <Text>Un</Text>
+                <Box llx="118.43" lly="450.59" urx="126.83" ury="443.59"/>
+              </Word>
+              <Word>
+                <Text>plan</Text>
+                <Box llx="128.58" lly="450.59" urx="141.41" ury="443.59"/>
+              </Word>
+              <Word>
+                <Text>extrêmement</Text>
+                <Box llx="143.16" lly="450.59" urx="182.93" ury="443.59"/>
+              </Word>
+              <Word>
+                <Text>fin</Text>
+                <Box llx="184.69" lly="450.59" urx="192.27" ury="443.59"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+  </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+  </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+  </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+  </Cell>
+      </Row>
+      <Row>
+        <Cell llx="69.69" lly="144.15" urx="246.73" ury="131.22">
+  </Cell>
+        <Cell llx="400.51" lly="144.15" urx="474.53" ury="131.22">
+          <Para>
+            <Box llx="400.51" lly="498.38" urx="464.96" ury="484.38">
+              <Word>
+                <Text>SINEA</Text>
+                <Box llx="400.51" lly="498.38" urx="441.72" ury="484.38"/>
+              </Word>
+              <Word>
+                <Text>2.0</Text>
+                <Box llx="445.94" lly="498.38" urx="464.96" ury="484.38"/>
+              </Word>
+            </Box>
+          </Para>
+        </Cell>
+        <Cell llx="488.91" lly="144.15" urx="513.38" ury="131.22">
+  </Cell>
+        <Cell llx="525.06" lly="144.15" urx="550.92" ury="131.22">
+  </Cell>
+        <Cell llx="560.62" lly="144.15" urx="589.06" ury="131.22">
+  </Cell>
+      </Row>
+    </Table>
+    <PlacedImage image="I1" x="97.95" y="592.45" width="607.27" height="858.99"/>
+    <PlacedImage image="I4" x="250.77" y="465.16" width="185.31" height="138.88"/>
+    <PlacedImage image="I2" x="431.69" y="474.81" width="178.30" height="132.40"/>
+    <Para>
+      <Box llx="409.02" lly="519.70" urx="526.75" ury="509.70">
+        <Word>
+          <Text>Meuble</Text>
+          <Box llx="409.02" lly="519.70" urx="444.19" ury="509.70"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="446.97" lly="519.70" urx="458.82" ury="509.70"/>
+        </Word>
+        <Word>
+          <Text>salle</Text>
+          <Box llx="461.60" lly="519.70" urx="483.61" ury="509.70"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="486.39" lly="519.70" urx="498.24" ury="509.70"/>
+        </Word>
+        <Word>
+          <Text>bains</Text>
+          <Box llx="501.02" lly="519.70" urx="526.75" ury="509.70"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="566.62" urx="584.06" ury="524.63">
+        <Word>
+          <Text>Notre</Text>
+          <Box llx="409.02" lly="533.63" urx="431.18" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>ligne</Text>
+          <Box llx="433.68" lly="533.63" urx="452.68" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>à</Text>
+          <Box llx="455.19" lly="533.63" urx="460.02" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>succès</Text>
+          <Box llx="462.52" lly="533.63" urx="491.02" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>réinterprétée</Text>
+          <Box llx="493.53" lly="533.63" urx="544.36" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>dans</Text>
+          <Box llx="546.87" lly="533.63" urx="566.54" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>sa</Text>
+          <Box llx="569.04" lly="533.63" urx="578.38" ury="524.63"/>
+        </Word>
+        <Word>
+          <Text>version</Text>
+          <Box llx="409.02" lly="544.63" urx="438.01" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>2.0</Text>
+          <Box llx="440.52" lly="544.63" urx="453.03" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>avec</Text>
+          <Box llx="455.53" lly="544.63" urx="474.53" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>une</Text>
+          <Box llx="477.03" lly="544.63" urx="491.87" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>forme</Text>
+          <Box llx="494.37" lly="544.63" urx="517.71" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="520.21" lly="544.63" urx="530.38" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>vague</Text>
+          <Box llx="532.88" lly="544.63" urx="557.22" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>plus</Text>
+          <Box llx="559.72" lly="544.63" urx="576.56" ury="535.63"/>
+        </Word>
+        <Word>
+          <Text>prononcée</Text>
+          <Box llx="409.02" lly="555.63" urx="452.03" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="452.03" lly="555.63" urx="454.53" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>une</Text>
+          <Box llx="457.03" lly="555.63" urx="471.87" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>vasque</Text>
+          <Box llx="474.37" lly="555.63" urx="503.38" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>profonde</Text>
+          <Box llx="505.88" lly="555.63" urx="542.22" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="542.22" lly="555.63" urx="544.73" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>un</Text>
+          <Box llx="547.23" lly="555.63" urx="557.24" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>plan</Text>
+          <Box llx="559.74" lly="555.63" urx="576.91" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="409.02" lly="566.62" urx="416.68" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>des</Text>
+          <Box llx="419.19" lly="566.62" urx="433.86" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>façades</Text>
+          <Box llx="436.36" lly="566.62" urx="468.19" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>d</Text>
+          <Box llx="470.69" lly="566.62" urx="476.03" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="476.03" lly="566.62" urx="478.53" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>une</Text>
+          <Box llx="478.53" lly="566.62" urx="493.37" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>finesse</Text>
+          <Box llx="495.87" lly="566.62" urx="524.21" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>incomparable</Text>
+          <Box llx="526.71" lly="566.62" urx="581.55" ury="557.62"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="581.55" lly="566.62" urx="584.06" ury="557.62"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="578.47" urx="512.99" ury="571.47">
+        <Word>
+          <Text>•</Text>
+          <Box llx="409.02" lly="578.47" urx="412.52" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>Dim</Text>
+          <Box llx="414.46" lly="578.47" urx="426.38" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="426.38" lly="578.47" urx="428.33" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="429.20" lly="578.47" urx="431.15" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>L</Text>
+          <Box llx="433.10" lly="578.47" urx="436.85" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>91</Text>
+          <Box llx="438.80" lly="578.47" urx="446.58" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>x</Text>
+          <Box llx="448.53" lly="578.47" urx="451.90" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>H</Text>
+          <Box llx="453.84" lly="578.47" urx="458.77" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>32,7</Text>
+          <Box llx="460.72" lly="578.47" urx="474.34" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>x</Text>
+          <Box llx="476.29" lly="578.47" urx="479.65" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>P</Text>
+          <Box llx="481.60" lly="578.47" urx="486.01" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>47,5</Text>
+          <Box llx="487.95" lly="578.47" urx="501.58" ury="571.47"/>
+        </Word>
+        <Word>
+          <Text>cm</Text>
+          <Box llx="503.52" lly="578.47" urx="512.99" ury="571.47"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="605.47" urx="557.09" ury="580.47">
+        <Word>
+          <Text>•</Text>
+          <Box llx="409.02" lly="587.47" urx="412.52" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>Plan</Text>
+          <Box llx="414.46" lly="587.47" urx="427.56" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="429.50" lly="587.47" urx="437.16" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>toilette</Text>
+          <Box llx="439.10" lly="587.47" urx="459.07" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="461.01" lly="587.47" urx="468.40" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>pierre</Text>
+          <Box llx="470.35" lly="587.47" urx="487.21" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="489.16" lly="587.47" urx="496.81" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>synthèse</Text>
+          <Box llx="498.75" lly="587.47" urx="525.59" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>Rocksolid</Text>
+          <Box llx="527.53" lly="587.47" urx="557.09" ury="580.47"/>
+        </Word>
+        <Word>
+          <Text>particulièrement</Text>
+          <Box llx="414.46" lly="596.47" urx="462.31" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>robuste</Text>
+          <Box llx="464.25" lly="596.47" urx="487.07" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="489.02" lly="596.47" urx="494.72" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>extrêmement</Text>
+          <Box llx="496.67" lly="596.47" urx="536.21" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>fin</Text>
+          <Box llx="538.16" lly="596.47" urx="545.02" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="545.02" lly="596.47" urx="546.97" ury="589.47"/>
+        </Word>
+        <Word>
+          <Text>Système</Text>
+          <Box llx="414.46" lly="605.47" urx="440.65" ury="598.47"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="442.59" lly="605.47" urx="450.25" ury="598.47"/>
+        </Word>
+        <Word>
+          <Text>trop-plein</Text>
+          <Box llx="452.19" lly="605.47" urx="480.84" ury="598.47"/>
+        </Word>
+        <Word>
+          <Text>invisible</Text>
+          <Box llx="482.79" lly="605.47" urx="505.99" ury="598.47"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="632.48" urx="570.30" ury="607.47">
+        <Word>
+          <Text>•</Text>
+          <Box llx="409.02" lly="614.47" urx="412.52" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>Meuble</Text>
+          <Box llx="414.46" lly="614.47" urx="436.63" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>sous-vasque</Text>
+          <Box llx="438.58" lly="614.47" urx="477.20" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>1</Text>
+          <Box llx="479.15" lly="614.47" urx="483.04" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>tiroir</Text>
+          <Box llx="484.99" lly="614.47" urx="497.82" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>(</Text>
+          <Box llx="499.77" lly="614.47" urx="501.46" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>existe</Text>
+          <Box llx="501.46" lly="614.47" urx="518.82" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>aussi</Text>
+          <Box llx="520.77" lly="614.47" urx="536.19" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="538.14" lly="614.47" urx="545.53" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>hauteur</Text>
+          <Box llx="547.48" lly="614.47" urx="570.30" ury="607.47"/>
+        </Word>
+        <Word>
+          <Text>2</Text>
+          <Box llx="414.46" lly="623.48" urx="418.35" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>tiroirs</Text>
+          <Box llx="420.30" lly="623.48" urx="436.50" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>).</Text>
+          <Box llx="436.50" lly="623.48" urx="440.14" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>Coloris</Text>
+          <Box llx="442.08" lly="623.48" urx="462.96" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>chêne</Text>
+          <Box llx="464.90" lly="623.48" urx="483.32" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>décor</Text>
+          <Box llx="485.27" lly="623.48" urx="502.65" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>Mérino</Text>
+          <Box llx="504.59" lly="623.48" urx="525.21" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="525.21" lly="623.48" urx="527.15" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>Prise</Text>
+          <Box llx="529.10" lly="623.48" urx="544.01" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="545.96" lly="623.48" urx="553.61" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>main</Text>
+          <Box llx="555.55" lly="623.48" urx="570.07" ury="616.48"/>
+        </Word>
+        <Word>
+          <Text>bronze</Text>
+          <Box llx="414.46" lly="632.48" urx="435.08" ury="625.48"/>
+        </Word>
+        <Word>
+          <Text>G0166</Text>
+          <Box llx="437.03" lly="632.48" urx="457.78" ury="625.48"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="659.48" urx="583.28" ury="634.48">
+        <Word>
+          <Text>•</Text>
+          <Box llx="409.02" lly="641.48" urx="412.52" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>Existe</Text>
+          <Box llx="414.46" lly="641.48" urx="432.35" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="434.29" lly="641.48" urx="441.68" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>32</Text>
+          <Box llx="443.63" lly="641.48" urx="451.41" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>coloris</Text>
+          <Box llx="453.36" lly="641.48" urx="472.94" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="473.81" lly="641.48" urx="475.76" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>10</Text>
+          <Box llx="477.71" lly="641.48" urx="485.49" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>thermoformés</Text>
+          <Box llx="487.44" lly="641.48" urx="529.57" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>(</Text>
+          <Box llx="531.52" lly="641.48" urx="533.20" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>tons</Text>
+          <Box llx="533.20" lly="641.48" urx="546.29" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>unis</Text>
+          <Box llx="548.24" lly="641.48" urx="560.42" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>ou</Text>
+          <Box llx="562.36" lly="641.48" urx="570.02" ury="634.48"/>
+        </Word>
+        <Word>
+          <Text>bois</Text>
+          <Box llx="414.46" lly="650.48" urx="427.03" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>),</Text>
+          <Box llx="427.03" lly="650.48" urx="430.67" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>11</Text>
+          <Box llx="432.61" lly="650.48" urx="440.40" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>laques</Text>
+          <Box llx="442.34" lly="650.48" urx="462.05" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>mates</Text>
+          <Box llx="463.99" lly="650.48" urx="482.53" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="484.48" lly="650.48" urx="490.18" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>11</Text>
+          <Box llx="492.13" lly="650.48" urx="499.91" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>laques</Text>
+          <Box llx="501.86" lly="650.48" urx="521.56" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>brillantes</Text>
+          <Box llx="523.51" lly="650.48" urx="550.08" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="550.08" lly="650.48" urx="552.03" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>26</Text>
+          <Box llx="553.97" lly="650.48" urx="561.76" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>coloris</Text>
+          <Box llx="563.70" lly="650.48" urx="583.28" ury="643.48"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="414.46" lly="659.48" urx="422.11" ury="652.48"/>
+        </Word>
+        <Word>
+          <Text>prise</Text>
+          <Box llx="424.06" lly="659.48" urx="438.58" ury="652.48"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="440.52" lly="659.48" urx="448.17" ury="652.48"/>
+        </Word>
+        <Word>
+          <Text>main</Text>
+          <Box llx="450.12" lly="659.48" urx="464.64" ury="652.48"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="668.49" urx="579.54" ury="661.49">
+        <Word>
+          <Text>•</Text>
+          <Box llx="409.02" lly="668.49" urx="412.52" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>Miroir</Text>
+          <Box llx="414.46" lly="668.49" urx="431.06" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>contour</Text>
+          <Box llx="433.00" lly="668.49" urx="456.22" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>avec</Text>
+          <Box llx="458.16" lly="668.49" urx="472.30" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>éclairage</Text>
+          <Box llx="474.25" lly="668.49" urx="501.10" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>LED</Text>
+          <Box llx="503.05" lly="668.49" urx="515.75" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="517.70" lly="668.49" urx="523.40" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>interrupteur</Text>
+          <Box llx="525.35" lly="668.49" urx="559.96" ury="661.49"/>
+        </Word>
+        <Word>
+          <Text>tactile</Text>
+          <Box llx="561.91" lly="668.49" urx="579.54" ury="661.49"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="699.74" urx="525.95" ury="674.74">
+        <Word>
+          <Text>Réf</Text>
+          <Box llx="409.02" lly="681.74" urx="420.42" ury="674.74"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="420.42" lly="681.74" urx="422.36" ury="674.74"/>
+        </Word>
+        <Word>
+          <Text>SFFP091GF2792</Text>
+          <Box llx="424.31" lly="681.74" urx="478.53" ury="674.74"/>
+        </Word>
+        <Word>
+          <Text>-</Text>
+          <Box llx="480.48" lly="681.74" urx="483.33" ury="674.74"/>
+        </Word>
+        <Word>
+          <Text>SIHT040</Text>
+          <Box llx="485.27" lly="681.74" urx="513.02" ury="674.74"/>
+        </Word>
+        <Word>
+          <Text>Prix</Text>
+          <Box llx="409.02" lly="690.74" urx="420.29" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>hors</Text>
+          <Box llx="422.24" lly="690.74" urx="435.46" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>éco-participation</Text>
+          <Box llx="437.41" lly="690.74" urx="487.98" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="488.85" lly="690.74" urx="490.80" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>2331,60</Text>
+          <Box llx="492.74" lly="690.74" urx="518.95" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="520.70" lly="690.74" urx="525.95" ury="683.74"/>
+        </Word>
+        <Word>
+          <Text>+</Text>
+          <Box llx="409.02" lly="699.74" urx="413.22" ury="692.74"/>
+        </Word>
+        <Word>
+          <Text>éco-participation</Text>
+          <Box llx="415.16" lly="699.74" urx="465.73" ury="692.74"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="466.60" lly="699.74" urx="468.55" ury="692.74"/>
+        </Word>
+        <Word>
+          <Text>1,34</Text>
+          <Box llx="470.50" lly="699.74" urx="484.12" ury="692.74"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="485.87" lly="699.74" urx="491.12" ury="692.74"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="409.02" lly="711.22" urx="479.56" ury="701.72">
+        <Word>
+          <Text>Total</Text>
+          <Box llx="409.02" lly="711.22" urx="428.03" ury="701.72"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="429.21" lly="711.22" urx="431.85" ury="701.72"/>
+        </Word>
+        <Word>
+          <Text>2</Text>
+          <Box llx="434.49" lly="711.22" urx="439.78" ury="701.72"/>
+        </Word>
+        <Word>
+          <Text>332,94</Text>
+          <Box llx="441.01" lly="711.22" urx="470.06" ury="701.72"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="472.44" lly="711.22" urx="479.56" ury="701.72"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="411.85" lly="738.24" urx="450.55" ury="728.24">
+        <Word>
+          <Text>OPTION</Text>
+          <Box llx="411.85" lly="738.24" urx="450.55" ury="728.24"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="411.85" lly="757.66" ulx="411.85" uly="741.66" urx="524.92" ury="741.66" lrx="524.92" lry="757.66">
+        <Word>
+          <Text>•</Text>
+          <Box llx="411.85" lly="748.66" urx="415.35" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>Mi-colonne</Text>
+          <Box llx="417.49" lly="748.66" urx="451.07" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>1</Text>
+          <Box llx="453.21" lly="748.66" urx="457.11" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>porte</Text>
+          <Box llx="459.25" lly="748.66" urx="475.07" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>+</Text>
+          <Box llx="477.21" lly="748.66" urx="481.41" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>1</Text>
+          <Box llx="483.55" lly="748.66" urx="487.44" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>grand</Text>
+          <Box llx="489.59" lly="748.66" urx="507.09" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>tiroir</Text>
+          <Box llx="509.23" lly="748.66" urx="522.07" ury="741.66"/>
+        </Word>
+        <Word>
+          <Text>Réf</Text>
+          <Box llx="417.49" lly="757.66" urx="428.90" ury="750.66"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="428.90" lly="757.66" urx="430.84" ury="750.66"/>
+        </Word>
+        <Word>
+          <Text>UHIC040GF2792</Text>
+          <Box llx="432.98" lly="757.66" urx="487.32" ury="750.66"/>
+        </Word>
+        <Word>
+          <Text>:</Text>
+          <Box llx="488.17" lly="757.66" urx="490.12" ury="750.66"/>
+        </Word>
+        <Word>
+          <Text>698,95</Text>
+          <Box llx="492.26" lly="757.66" urx="516.72" ury="749.66"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="518.92" lly="757.66" urx="524.92" ury="749.66"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="451.47" lly="798.04" urx="567.75" ury="791.04">
+        <Word>
+          <Text>•</Text>
+          <Box llx="451.47" lly="798.04" urx="454.22" ury="792.54"/>
+        </Word>
+        <Word>
+          <Text>Innovation</Text>
+          <Box llx="455.75" lly="798.04" urx="487.25" ury="791.04"/>
+        </Word>
+        <Word>
+          <Text>!</Text>
+          <Box llx="489.00" lly="798.04" urx="490.75" ury="791.04"/>
+        </Word>
+        <Word>
+          <Text>Plan</Text>
+          <Box llx="492.51" lly="798.04" urx="505.69" ury="791.04"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="507.44" lly="798.04" urx="513.27" ury="791.04"/>
+        </Word>
+        <Word>
+          <Text>façades</Text>
+          <Box llx="515.02" lly="798.04" urx="538.82" ury="791.04"/>
+        </Word>
+        <Word>
+          <Text>ultra-fins</Text>
+          <Box llx="540.57" lly="798.04" urx="567.75" ury="791.04"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="63.19" lly="848.39" urx="586.39" ury="840.39">
+        <Word>
+          <Text>Prix</Text>
+          <Box llx="63.19" lly="848.39" urx="75.88" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>donnés</Text>
+          <Box llx="78.03" lly="848.39" urx="103.29" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="105.44" lly="848.39" urx="113.78" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="115.94" lly="848.39" urx="120.34" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>TTC</Text>
+          <Box llx="122.49" lly="848.39" urx="136.83" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="136.81" lly="848.39" urx="139.01" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>TVA</Text>
+          <Box llx="141.16" lly="848.39" urx="154.77" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>à</Text>
+          <Box llx="156.92" lly="848.39" urx="161.03" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>20</Text>
+          <Box llx="163.19" lly="848.39" urx="171.97" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>%,</Text>
+          <Box llx="171.95" lly="848.39" urx="181.17" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>valables</Text>
+          <Box llx="183.32" lly="848.39" urx="210.44" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>au</Text>
+          <Box llx="212.59" lly="848.39" urx="220.93" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>1</Text>
+          <Box llx="223.09" lly="848.39" urx="227.49" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>er</Text>
+          <Box llx="227.46" lly="845.72" urx="231.30" ury="841.06"/>
+        </Word>
+        <Word>
+          <Text>janvier</Text>
+          <Box llx="233.46" lly="848.39" urx="254.89" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>2017</Text>
+          <Box llx="257.04" lly="848.39" urx="274.59" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="274.56" lly="848.39" urx="276.76" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>Prix</Text>
+          <Box llx="278.92" lly="848.39" urx="291.61" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>susceptibles</Text>
+          <Box llx="293.76" lly="848.39" urx="335.88" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>d</Text>
+          <Box llx="338.03" lly="848.39" urx="342.58" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="342.55" lly="848.39" urx="344.76" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>évolution</Text>
+          <Box llx="344.73" lly="848.39" urx="374.91" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>pendant</Text>
+          <Box llx="377.06" lly="848.39" urx="405.08" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>la</Text>
+          <Box llx="407.24" lly="848.39" urx="412.79" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>durée</Text>
+          <Box llx="414.94" lly="848.39" urx="434.22" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>du</Text>
+          <Box llx="436.38" lly="848.39" urx="445.15" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>catalogue</Text>
+          <Box llx="447.30" lly="848.39" urx="480.43" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="480.40" lly="848.39" urx="482.60" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>Renseignez-vous</Text>
+          <Box llx="484.76" lly="848.39" urx="542.95" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="545.11" lly="848.39" urx="553.45" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>magasin</Text>
+          <Box llx="555.60" lly="848.39" urx="584.21" ury="840.39"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="584.19" lly="848.39" urx="586.39" ury="840.39"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="598.94" lly="837.05" ulx="592.44" uly="837.05" urx="592.44" ury="760.35" lrx="598.94" lry="760.35">
+        <Word>
+          <Text>Prix</Text>
+          <Box llx="598.94" lly="837.05" ulx="592.44" uly="837.05" urx="592.44" ury="827.10" lrx="598.94" lry="827.10"/>
+        </Word>
+        <Word>
+          <Text>donnés</Text>
+          <Box llx="598.94" lly="825.21" ulx="592.44" uly="825.21" urx="592.44" ury="805.42" lrx="598.94" lry="805.42"/>
+        </Word>
+        <Word>
+          <Text>hors</Text>
+          <Box llx="598.94" lly="803.54" ulx="592.44" uly="803.54" urx="592.44" ury="791.87" lrx="598.94" lry="791.87"/>
+        </Word>
+        <Word>
+          <Text>robinetterie</Text>
+          <Box llx="598.94" lly="789.98" ulx="592.44" uly="789.98" urx="592.44" ury="760.35" lrx="598.94" lry="760.35"/>
+        </Word>
+      </Box>
+    </Para>
+  </Content>
+</Page>

@@ -1,0 +1,42 @@
+<page uid="17">
+	<ref type="goto">
+		<id><![CDATA[0544.0000]]></id>
+		<url><![CDATA[544]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0544.0001]]></id>
+		<url><![CDATA[551]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0544.0002]]></id>
+		<url><![CDATA[558]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0544.0003]]></id>
+		<url><![CDATA[559]]></url>
+	</ref>
+	<zone id="810" rec="72|554|414|178">
+		<id><![CDATA[1489764878889_3698_945]]></id>
+		<rec><![CDATA[72|554|414|178]]></rec>
+		<zone id="811" rec="85|568|208|34">
+			<id><![CDATA[1489764886012_4754_946]]></id>
+			<rec><![CDATA[85|568|208|34]]></rec>
+			<ref><![CDATA[0544.0000]]></ref>
+		</zone>
+		<zone id="812" rec="85|604|388|34">
+			<id><![CDATA[1489764886012_4754_946]]></id>
+			<rec><![CDATA[85|604|388|34]]></rec>
+			<ref><![CDATA[0544.0001]]></ref>
+		</zone>
+		<zone id="813" rec="85|641|358|34">
+			<id><![CDATA[1489764886012_4754_946]]></id>
+			<rec><![CDATA[85|641|358|34]]></rec>
+			<ref><![CDATA[0544.0002]]></ref>
+		</zone>
+		<zone id="814" rec="85|678|322|33">
+			<id><![CDATA[1489764886012_4754_946]]></id>
+			<rec><![CDATA[85|678|322|33]]></rec>
+			<ref><![CDATA[0544.0003]]></ref>
+		</zone>
+	</zone>
+</page>

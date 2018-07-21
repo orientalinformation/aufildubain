@@ -1,0 +1,2385 @@
+<?xml version="1.0"?>
+<doc>
+  <system>
+    <variables>
+      <var id="zoomMapOpen"><![CDATA[0]]></var>
+      <var id="mainBackgroundColor"><![CDATA[#fefefe]]></var>
+      <var id="menuBackgroundColor"><![CDATA[#ccd4dc]]></var>
+      <var id="mainTextColor"><![CDATA[#242f3b]]></var>
+      <var id="secondaryTextColor"><![CDATA[#fff]]></var>
+      <var id="secondaryBgColor"><![CDATA[#ccd4dc]]></var>
+      <var id="mainColor"><![CDATA[#242f3b]]></var>
+      <var id="overlayColor"><![CDATA[#000]]></var>
+      <var id="separatorColor"><![CDATA[#CDCED0]]></var>
+      <var id="altBgColor"><![CDATA[#242f3b]]></var>
+      <var id="altTextColor"><![CDATA[#fff]]></var>
+      <var id="searchBgColor"><![CDATA[#fff]]></var>
+      <var id="searchBorderColor"><![CDATA[#dfdfdf]]></var>
+      <var id="defaultFontFace"><![CDATA[Arial]]></var>
+      <var id="colorBgPanels"><![CDATA[#FDC03B]]></var>
+      <!-- #8b8b8b -->
+      <var id="colorBgTop"><![CDATA[#348BBC]]></var>
+      <!-- #000000 -->
+      <var id="colorMenuIcon"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorPanelIcons"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorPanelClose"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorPanelDownloadBtn"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorPanelPrintBtn"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorPanelShareBtn"><![CDATA[#ffffff]]></var>
+      <!-- ffffff -->
+      <var id="colorMenuSeparator"><![CDATA[#73AFD1]]></var>
+      <!-- #4d4d4d -->
+      <var id="colorBgArrows"><![CDATA[#fdc03b]]></var>
+      <!-- #8b8b8b -->
+      <var id="colorArrows"><![CDATA[#ffffff]]></var>
+      <!-- #ffffff -->
+      <var id="colorBgZoomIcons"><![CDATA[#fdc03b]]></var>
+      <!-- #8b8b8b -->
+      <var id="colorZoomIcons"><![CDATA[#ffffff]]></var>
+      <!-- #ffffff -->
+      <var id="colorBgPageNumber"><![CDATA[#fdc03b]]></var>
+      <!-- #8b8b8b -->
+      <var id="colorPageNumber"><![CDATA[#ffffff]]></var>
+      <!-- #ffffff -->
+      <var id="colorPageSlider"><![CDATA[#fdc03b]]></var>
+      <!-- #8b8b8b -->
+    </variables>
+    <!-- skins resources -->
+    <skins>
+      <skin skinId="mainBackgroundSkin" src="background.jpg" pos="0|0" size="100%|100%"/>
+      <skin skinId="logoSkin" src="but_logo_easy.png" pos="0|0" size="179|42"/>
+    </skins>
+    <systemResources>
+      <altTexts>
+        <altText id="default">
+          <item size="400|20" skin="color=#8b8b8b">
+            <txt id="altText" size="100%-30|100%-20" pos="15|10" color="{var:altTextColor}" textSize="12" font="{var:defaultFontFace}"/>
+          </item>
+        </altText>
+      </altTexts>
+    </systemResources>
+    <sliders>
+      <slider id="default" width="8" scrollbarColor="#8b8b8b" railColor="#ffffff"/>
+    </sliders>
+    <!-- txtStyles resources -->
+    <txtStyles>
+      <txtStyle id="default" size="12" color="{var:mainTextColor}" font="{var:defaultFontFace}"/>
+      <txtStyle id="loadingMessageStyle" size="14" color="{var:colorMenuIcon}" font="{var:defaultFontFace}" upperCase="1" bold="1" align="center"/>
+      <txtStyle id="errorMessageStyle" size="14" color="{var:mainTextColor}" font="{var:defaultFontFace}" bold="1" align="center"/>
+    </txtStyles>
+    <!-- actions -->
+    <actions>
+      <!-- SYSTEM ACTIONS -->
+      <actionDesc id="textAutoscroll">
+        <action name="applyTextScrollEasing" trigger="dragStart" target="self" params=""/>
+      </actionDesc>
+      <actionDesc id="setState">
+        <action name="applyStateChanges" target="self" trigger="mouseenter" params="state=over"/>
+        <action name="applyStateChanges" target="self" trigger="mouseleave" params="state=def"/>
+        <action name="applyStateChanges" target="self" trigger="click" params="state=selected"/>
+      </actionDesc>
+      <!-- MAINFRAME ACTIONS -->
+      <actionDesc id="mainframeActions">
+        <actionQueue trigger="customError">
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.6,onPressActionId=closeErrorMessage,overlayId=errorOverlay"/>
+          <action name="showErrorMessage" target="mainframe" params="resourceId=customErrorTemplate,messageContainerId=errorMessage,closeAfter=2000"/>
+        </actionQueue>
+        <actionQueue trigger="mailSentFromForm">
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.6,onPressActionId=closeMailSentMessage,overlayId=errorOverlay"/>
+          <action name="showErrorMessage" target="mainframe" params="resourceId=stfSuccessTemplate,closeAfter=2000"/>
+          <action name="track" target="mainframe" params="action=415"/>
+        </actionQueue>
+        <actionQueue trigger="mailNotSentFromForm">
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.6,onPressActionId=closeMailNotSentMessage,overlayId=errorOverlay"/>
+          <action name="showErrorMessage" target="mainframe" params="resourceId=stfErrorTemplate,closeAfter=2000"/>
+          <action name="track" target="mainframe" params="action=417"/>
+        </actionQueue>
+        <!-- first / last page actions -->
+        <actionQueue trigger="catalogFirstPage">
+          <!-- aici se pot ascunde sau dezactiva elemente ce nu trebuie sa apara pe prima pagina -->
+        </actionQueue>
+        <actionQueue trigger="catalogFirstPageLeft,catalogLastPageLeft">
+          <!-- aici se pot reafisa elementele ascunse pe coperta sau ultima pagina -->
+        </actionQueue>
+        <actionQueue trigger="catalogLastPage">
+          <!-- aici se pot ascunde sau dezactiva elemente ce nu trebuie sa apara pe ultima pagina -->
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="closeErrorMessage">
+        <actionQueue trigger="click,keyEnter,keyEscape,closeCustomError">
+          <action name="closeOverlay" target="mainframe" params="duration=300,overlayId=errorOverlay"/>
+          <action name="closeResource" target="mainframe" params="resourceId=customErrorTemplate"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="closeMailSentMessage">
+        <actionQueue trigger="click,keyEnter,keyEscape,closeCustomError">
+          <action name="closeOverlay" target="mainframe" params="duration=0,overlayId=mailOverlay"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300,overlayId=errorOverlay"/>
+          <action name="closeResource" target="mainframe" params="resourceId=stfSuccessTemplate"/>
+          <!-- <action name="remove" target="mainframe" params="id=catalogueMailContainer" /> -->
+          <actionLib name="closeSendMail"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="closeMailNotSentMessage">
+        <actionQueue trigger="click,keyEnter,keyEscape,closeCustomError">
+          <action name="closeOverlay" target="mainframe" params="duration=0,overlayId=mailOverlay"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300,overlayId=errorOverlay"/>
+          <action name="closeResource" target="mainframe" params="resourceId=stfErrorTemplate"/>
+          <!-- <action name="remove" target="mainframe" params="id=catalogueMailContainer" /> -->
+          <actionLib name="closeSendMail"/>
+        </actionQueue>
+      </actionDesc>
+      <!-- ACTION LIBS -->
+      <!-- GENERAL ACTIONS -->
+      <actionDesc id="applyVerticalEasing">
+        <action name="applyEasing" trigger="dragStart" target="self" params="allowVerticalScrolling=true,allowHorizontalScrolling=false"/>
+      </actionDesc>
+      <actionDesc id="applyHorizontalEasing">
+        <action name="applyEasing" trigger="dragStart" target="self" params="allowVerticalScrolling=false,allowHorizontalScrolling=true"/>
+      </actionDesc>
+      <!-- HEADER ACTIONS -->
+      <!-- pagination actions -->
+      <actionDesc id="updateNumbering">
+        <action name="setPageNumbering" trigger="applicationReady,pageChangedCatalog,orientationChangedCatalog,catalogTypeChanged" target="currentPageText" params="pageSource=catalog,numberingSource=catalog,separator= - "/>
+      </actionDesc>
+      <actionDesc id="setTextPage">
+        <action name="setTextPage" trigger="initialization" target="self" params="source=catalog,displayValue={params:displayValue},graphic={params:graphic}"/>
+      </actionDesc>
+      <!-- scroller actions -->
+      <actionDesc id="goToPage">
+        <actionQueue trigger="click">
+          <action name="toggleZoomPageCatalog" target="catalog" params="scale=2,duration=0.3,force=zoomOut"/>
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+          <actionLib name="resetOpenedModules"/>
+          <action name="hide" target="bookmarks"/>
+          <action name="goToPageCatalog" target="{params:target}" params="page={params:page},duration=0.3"/>
+          <action name="show" target="bookmarks"/>
+          <action name="highlightKeyword" target="{params:target}" params="page={params:page},animated=true,persistent=true"/>
+          <action name="track" target="{params:target}" params="action=210,params=currentPage"/>
+        </actionQueue>
+      </actionDesc>
+      <!-- maps -->
+      <actionDesc id="mapMultirefActions">
+        <actionQueue trigger="click">
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.6,onPressActionId=closeMultirefPopover"/>
+          <action name="showMultilinkPopover" target="mainframe" params="positioning=nearTouch,maxHeight=600"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="closeMultirefPopover">
+        <actionQueue trigger="keyEscape,click,orientationChanged">
+          <action name="closeResource" target="mainframe" params="resourceId=mapMultilinkResource"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="urlRefActions" templateId="refActionsTemplate" templateParams="#actionName=urlRef,#trackingId=610"/>
+      <actionDesc id="urlMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=urlRef,#trackingId=610"/>
+      <actionDesc id="xurlRefActions" templateId="refActionsTemplate" templateParams="#actionName=xurlRef,#trackingId=610"/>
+      <actionDesc id="xurlMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=xurlRef,#trackingId=610"/>
+      <actionDesc id="xurl1RefActions" templateId="refActionsTemplate" templateParams="#actionName=xurl1Ref,#trackingId=610"/>
+      <actionDesc id="xurl1MultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=xurl1Ref,#trackingId=610"/>
+      <actionDesc id="xurl2RefActions" templateId="refActionsTemplate" templateParams="#actionName=xurl2Ref,#trackingId=610"/>
+      <actionDesc id="xurl2MultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=xurl2Ref,#trackingId=610"/>
+      <actionDesc id="yurlRefActions" templateId="refActionsTemplate" templateParams="#actionName=yurlRef,#trackingId=610"/>
+      <actionDesc id="yurlMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=yurlRef,#trackingId=610"/>
+      <actionDesc id="yurl1RefActions" templateId="refActionsTemplate" templateParams="#actionName=yurl1Ref,#trackingId=610"/>
+      <actionDesc id="yurl1MultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=yurl1Ref,#trackingId=610"/>
+      <actionDesc id="yurl2RefActions" templateId="refActionsTemplate" templateParams="#actionName=yurl2Ref,#trackingId=610"/>
+      <actionDesc id="yurl2MultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=yurl2Ref,#trackingId=610"/>
+      <actionDesc id="pdfRefActions" templateId="refActionsTemplate" templateParams="#actionName=pdfRef,#trackingId=610"/>
+      <actionDesc id="pdfMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=pdfRef,#trackingId=610"/>
+      <actionDesc id="audioRefActions" templateId="mediaRefActionsTemplate" templateParams="#actionName=audioRef,#trackingId=610"/>
+      <actionDesc id="audioMultilinkRefActions" templateId="mediaMultilinkRefActionsTemplate" templateParams="#actionName=audioRef,#trackingId=610"/>
+      <actionDesc id="diapoRefActions" templateId="mediaRefActionsTemplate" templateParams="#actionName=diapoRef,#trackingId=610"/>
+      <actionDesc id="diapoMultilinkRefActions" templateId="mediaMultilinkRefActionsTemplate" templateParams="#actionName=diapoRef,#trackingId=610"/>
+      <actionDesc id="mediaRefActions" templateId="mediaRefActionsTemplate" templateParams="#actionName=mediaRef,#trackingId=610"/>
+      <actionDesc id="mediaMultilinkRefActions" templateId="mediaMultilinkRefActionsTemplate" templateParams="#actionName=mediaRef,#trackingId=610"/>
+      <actionDesc id="videoRefActions" templateId="mediaRefActionsTemplate" templateParams="#actionName=videoRef,#trackingId=610"/>
+      <actionDesc id="videoMultilinkRefActions" templateId="mediaMultilinkRefActionsTemplate" templateParams="#actionName=videoRef,#trackingId=610"/>
+      <actionDesc id="embedVideoRefActions" templateId="refActionsTemplate" templateParams="#actionName=embedVideoRef,#trackingId=610"/>
+      <actionDesc id="embedVideoMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=embedVideoRef,#trackingId=610"/>
+      <actionDesc id="htmlPanelRefActions" templateId="mediaRefActionsTemplate" templateParams="#actionName=mediaRef,#trackingId=610"/>
+      <actionDesc id="htmlPanelMultilinkRefActions" templateId="mediaMultilinkRefActionsTemplate" templateParams="#actionName=mediaRef,#trackingId=610"/>
+      <actionDesc id="closeMedia">
+        <actionQueue trigger="click">
+          <action name="closeMedia" target="mainframe"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300,overlayId=mediaOverlay"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="videoYTRefActions" templateId="refActionsTemplate" templateParams="#actionName=videoYTRef,#trackingId=610"/>
+      <actionDesc id="videoYTMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=videoYTRef,#trackingId=610"/>
+      <actionDesc id="ldcRefActions">
+        <actionQueue trigger="singleClick">
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.8,onPressActionId=closeLdc,overlayId=ldcOverlay"/>
+          <action name="slideInResource" target="mainframe" params="resourceId=ldcContainer,direction=right,duration=300"/>
+          <action name="ldcRef" target="self" params="mapsSourceId={params:source},resourceId=ldcContainer,templateId=ldcTemplate,templateType=xml,templateCaching=false,refId={params:refId},page={params:page}"/>
+          <action name="track" target="self" params="action=610"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="closeLdc">
+        <actionQueue trigger="click">
+          <action name="closeOverlay" target="mainframe" params="duration=300,overlayId=ldcOverlay"/>
+          <action name="slideOutResource" target="mainframe" params="resourceId=ldcContainer,direction=right,duration=300"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="ldcMultilinkRefActions">
+        <actionQueue trigger="click">
+          <action name="closeResource" target="mainframe" params="resourceId=mapMultilinkResource"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300"/>
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.8,onPressActionId=closeLdc,overlayId=ldcOverlay"/>
+          <action name="slideInResource" target="mainframe" params="resourceId=ldcContainer,direction=right,duration=300"/>
+          <action name="ldcRef" target="self" params="mapsSourceId={params:source},resourceId=ldcContainer,templateId=ldcTemplate,templateType=xml,templateCaching=false"/>
+          <action name="track" target="self" params="action=610"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="gotoRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=gotoRef,#trackingId=620"/>
+      <actionDesc id="gotoMultilinkRefActions" templateId="gotoMultilinkRefActionsTemplate" templateParams="#actionName=gotoRef,#trackingId=620"/>
+      <actionDesc id="goto1RefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=goto1Ref,#trackingId=620"/>
+      <actionDesc id="goto1MultilinkRefActions" templateId="gotoMultilinkRefActionsTemplate" templateParams="#actionName=goto1Ref,#trackingId=620"/>
+      <actionDesc id="internalRefActions" templateId="refActionsTemplate" templateParams="#actionName=internalRef,#trackingId=610"/>
+      <actionDesc id="internalMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=internalRef,#trackingId=610"/>
+      <actionDesc id="share_facebookRefActions" templateId="refActionsTemplate" templateParams="#actionName=share_facebookRef,#trackingId=610"/>
+      <actionDesc id="share_facebookMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=share_facebookRef,#trackingId=610"/>
+      <actionDesc id="share_googleplusRefActions" templateId="refActionsTemplate" templateParams="#actionName=share_googleplusRef,#trackingId=610"/>
+      <actionDesc id="share_googleplusMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=share_googleplusRef,#trackingId=610"/>
+      <actionDesc id="share_linkedinRefActions" templateId="refActionsTemplate" templateParams="#actionName=share_linkedinRef,#trackingId=610"/>
+      <actionDesc id="share_linkedinMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=share_linkedinRef,#trackingId=610"/>
+      <actionDesc id="share_pinterestRefActions" templateId="refActionsTemplate" templateParams="#actionName=share_pinterestRef,#trackingId=610"/>
+      <actionDesc id="share_pinterestMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=share_pinterestRef,#trackingId=610"/>
+      <actionDesc id="share_twitterRefActions" templateId="refActionsTemplate" templateParams="#actionName=share_twitterRef,#trackingId=610"/>
+      <actionDesc id="share_twitterMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=share_twitterRef,#trackingId=610"/>
+      <actionDesc id="containerPopupRefActions" templateId="refActionsTemplate" templateParams="#actionName=containerPopupRef,#trackingId=610"/>
+      <actionDesc id="containerPopupMultilinkRefActions" templateId="multilinkRefActionsTemplate" templateParams="#actionName=containerPopupRef,#trackingId=610"/>
+      <actionDesc id="facebookRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=facebookRef,#trackingId="/>
+      <actionDesc id="googleRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=googleRef,#trackingId="/>
+      <actionDesc id="pinterestRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=pinterestRef,#trackingId="/>
+      <actionDesc id="twitterRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=twitterRef,#trackingId="/>
+      <actionDesc id="linkedinRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=linkedinRef,#trackingId="/>
+      <actionDesc id="myspaceRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=myspaceRef,#trackingId="/>
+      <actionDesc id="diggRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=diggRef,#trackingId="/>
+      <actionDesc id="deliciousRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=deliciousRef,#trackingId="/>
+      <actionDesc id="emailRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=emailRef,#trackingId="/>
+      <actionDesc id="printRefActions" templateId="gotoRefActionsTemplate" templateParams="#actionName=printRef,#trackingId="/>
+      <actionDesc id="zoomRefActions">
+        <actionQueue trigger="click">
+          <action name="hideNotes" target="catalog"/>
+          <action name="hide" target="bookmarks"/>
+          <action name="zoomRef" target="self" params="mapsSourceId={params:source},duration=0.3,scale=3,overlayColor={var:overlayColor},overlayOpacity=0.6,useSizes=true"/>
+          <action name="setVariable" params="name=zoomMapOpen,value=1"/>
+          <!--
+                    <action name="track"         target="self" params="action=610"/>
+                    -->
+        </actionQueue>
+      </actionDesc>
+      <actionLib id="closeZoom">
+        <action name="show" target="bookmarks"/>
+        <action name="showNotes" target="catalog"/>
+        <action name="closeZoomMap" target="catalog" params="duration=0.3"/>
+        <action name="setVariable" params="name=zoomMapOpen,value=0"/>
+      </actionLib>
+      <actionDesc id="closeZoomMap">
+        <actionQueue trigger="click,doubleClick,resizeEnd">
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="zoomMapActions">
+        <!-- <action name="applyZoomMapEasing" trigger="dragStart" target="self" params=""/> -->
+        <action name="applyZoomMapScrolling" trigger="zoomMapReady,mousemove" target="self"/>
+        <actionQueue trigger="click,resizeEnd">
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="zoomMapRotatedActions">
+        <action name="applyZoomMapEasing" trigger="dragStart" target="self" params="invert=true,rotation={params:rotation}"/>
+        <actionQueue trigger="click,doubleClick,resizeEnd">
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+        </actionQueue>
+      </actionDesc>
+      <actionDesc id="openURL">
+        <actionQueue trigger="click">
+          <action name="openURL" target="mainframe" params="url={params:url}"/>
+          <!--
+                    <action name="track"   target="mainframe" params="action=">
+                    -->
+        </actionQueue>
+      </actionDesc>
+    </actions>
+    <templates>
+      <template id="refActionsTemplate">
+        <actionQueue trigger="click">
+          <action name="#actionName" target="self" params="mapsSourceId={params:source}"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="multilinkRefActionsTemplate">
+        <actionQueue trigger="click">
+          <action name="closeResource" target="mainframe" params="resourceId=mapMultilinkResource"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300"/>
+          <action name="#actionName" target="self" params="mapsSourceId={params:source}"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="mediaRefActionsTemplate">
+        <actionQueue trigger="click">
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.9,onPressActionId=closeMedia,overlayId=mediaOverlay"/>
+          <action name="#actionName" target="self" params="mapsSourceId={params:source}"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="mediaMultilinkRefActionsTemplate">
+        <actionQueue trigger="click">
+          <action name="closeResource" target="mainframe" params="resourceId=mapMultilinkResource"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300"/>
+          <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.9,onPressActionId=closeMediaDiaporama"/>
+          <action name="#actionName" target="self" params="mapsSourceId={params:source}"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="gotoRefActionsTemplate">
+        <actionQueue trigger="click">
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+          <action name="toggleZoomPageCatalog" target="{params:source}" params="duration=0.3,force=zoomOut"/>
+          <action name="#actionName" target="self" params="mapsSourceId={params:source}"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="gotoMultilinkRefActionsTemplate">
+        <actionQueue trigger="click">
+          <action name="closeResource" target="mainframe" params="resourceId=mapMultilinkResource"/>
+          <action name="closeOverlay" target="mainframe" params="duration=300"/>
+          <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+          <action name="toggleZoomPageCatalog" target="{params:source}" params="duration=0.3,force=zoomOut"/>
+          <action name="track" target="self" params="action=#trackingId"/>
+        </actionQueue>
+      </template>
+      <template id="defaultLoadingTemplate">
+        <item id="loadingMessageWrapper" size="100%|150" pos="0|center">
+          <txt id="summaryLoadingMessage" size="80%|40" pos="10%|40" txtStyle="loadingMessageStyle"><![CDATA[{lang:#messageId}]]></txt>
+          <txt size="32|32" pos="50%-16|100" color="{var:mainColor}" textSize="32" align="center" font="v7-font-icon" class="icon-spinner"/>
+        </item>
+      </template>
+      <template id="defaultCheckboxTemplate">
+        <on>
+          <txt size="100%|100%" font="v7-font-icon" textSize="14" align="center" class="checkbox-checked" color="{var:mainColor}"/>
+        </on>
+        <off>
+          <txt size="100%|100%" font="v7-font-icon" textSize="14" align="center" class="checkbox-unchecked" color="{var:mainColor}"/>
+        </off>
+      </template>
+      <!-- default button template -->
+      <template id="button" h5_skinStyle="border-radius: 2px; border: 1px solid {var:mainColor};" skin="color={var:mainColor}" over="skin.color=#fff,label.textColor={var:mainTextColor}" duration="0.3" handCursor="true">
+        <txt id="label" size="100%|14" pos="0|center" font="{var:defaultFontFace}" color="{var:secondaryTextColor}" align="center" textSize="12" upperCase="1" bold="1"><![CDATA[{lang:#textId}]]></txt>
+      </template>
+    </templates>
+    <!-- modules settings -->
+    <medias>
+      <details>
+        <txtStyles>
+          <!-- media diaporama -->
+          <txtStyle id="captionTitleStyle" font="{var:defaultFontFace}" size="20" color="{var:mainColor}" bold="1"/>
+          <txtStyle id="captionDescStyle" font="{var:defaultFontFace}" size="14" color="{var:mainColor}"/>
+        </txtStyles>
+        <skins>
+          <!-- media video -->
+          <skin skinId="mediaVideoSkin" color="{var:mainBackgroundColor}"/>
+        </skins>
+        <templates>
+          <!-- media diaporama -->
+          <template id="mediaButton" size="36|36" skin="border=1px solid {var:mainColor},radius=2" handCursor="true">
+            <txt font="v7-font-icon" textSize="20" size="100%|20" pos="0|8" align="center" class="#class" color="{var:mainColor}"/>
+          </template>
+          <template id="mediaNavButton" size="30|30" handCursor="true">
+            <txt id="icon" font="v7-font-icon" textSize="14" size="100%|20" pos="0|8" align="center" class="#class" color="{var:secondaryTextColor}"/>
+          </template>
+          <template id="mediaDiaporamaTemplate" type="slideshow" action="id:mediaDiaporamaActions">
+            <mediaContainer id="mediaContainer" pos="0|0" size="100%|100%" action="id:mediaContainerActions" autoresize="false">
+              <conditions>
+                <condition device="phone">
+                  <item id="mediaToolbar" size="100%|80" pos="0|bottom" skinId="toolbarSkin">
+                    <!-- captions -->
+                    <item id="captionContainer">
+                      <txt id="captionTitle" size="100%-80|20" pos="40|5" txtStyle="captionTitleStyle" action="id:captionActions;params:captionProp=title,source=mediaContainer,target=self"/>
+                      <txt id="captionDesc" size="100%-80|40" pos="40|30" txtStyle="captionDescStyle" action="id:captionActions;params:captionProp=description,source=mediaContainer,target=self"/>
+                    </item>
+                    <!-- navigation buttons -->
+                    <item id="mediaPrevBtn" size="30|30" pos="5|center" skin="color={var:mainColor}" h5_skinStyle="border-radius: 2px;" action="id:mediaPrevActions" altId="mediaPrevAlt">
+                      <item pos="0|0" templateId="mediaNavButton" templateParams="#class=icon-chevron-prev"/>
+                    </item>
+                    <item id="mediaNextBtn" size="30|30" pos="right-5|center" skin="color={var:mainColor}" h5_skinStyle="border-radius: 2px;" altId="mediaNextAlt" action="id:mediaNextActions">
+                      <item pos="0|0" templateId="mediaNavButton" templateParams="#class=icon-chevron-next"/>
+                    </item>
+                  </item>
+                </condition>
+                <condition device="tablet,desktop">
+                  <!-- captions -->
+                  <item id="captionContainer" size="100%|80" pos="0|bottom" skinId="toolbarSkin">
+                    <txt id="captionTitle" size="100%-20|20" pos="10|50" txtStyle="captionTitleStyle" action="id:captionActions;params:captionProp=title,source=mediaContainer,target=self"/>
+                    <txt id="captionDesc" size="100%-20|40" pos="10|30" txtStyle="captionDescStyle" action="id:captionActions;params:captionProp=description,source=mediaContainer,target=self"/>
+                  </item>
+                  <!-- navigation buttons -->
+                  <item id="mediaPrevBtn" size="60|30" pos="13|center" skin="color={var:mainColor}" h5_skinStyle="border-radius: 2px;" action="id:mediaPrevActions" altId="mediaPrevAlt">
+                    <item pos="15|0" templateId="mediaNavButton" templateParams="#class=icon-chevron-prev"/>
+                  </item>
+                  <item id="mediaNextBtn" size="60|30" pos="right-13|center" skin="color={var:mainColor}" h5_skinStyle="border-radius: 2px;" altId="mediaNextAlt" action="id:mediaNextActions">
+                    <item pos="15|0" templateId="mediaNavButton" templateParams="#class=icon-chevron-next"/>
+                  </item>
+                </condition>
+              </conditions>
+            </mediaContainer>
+          </template>
+          <!-- media video -->
+          <template id="mediaVideoTemplate" pos="center" size="80%" mediaVideoId="media" skinId="mediaVideoSkin" action="id:mediaVideoActions" handCursor="true">
+            <mediaContainer id="mediaContainer" _pos="center|center" _size="75%|75%" action="id:mediaVideoContainerActions" autoresize="false"/>
+          </template>
+          <!-- media audio -->
+          <template id="mediaAudioTemplate" pos="0|0" size="100%|100%" mediaAudioId="media" action="id:mediaAudioActions" handCursor="true">
+            <mediaContainer id="mediaContainer" pos="0|0" size="100%|100%" action="id:mediaAudioContainerActions" autoresize="false"/>
+          </template>
+        </templates>
+        <actions>
+          <!-- media diaporama -->
+          <actionDesc id="mediaDiaporamaActions">
+            <!--
+			            <actionQueue trigger="pressOnParent"><action name="closeResource" target="mainframe" params="resourceId=media" /><action name="closeOverlay"  target="mainframe" params="duration=250" /></actionQueue>
+			            -->
+          </actionDesc>
+          <actionDesc id="mediaContainerActions">
+            <actionQueue trigger="pressOnParent">
+              <action name="remove" target="mainframe" params="id=media"/>
+              <action name="closeOverlay" target="mainframe" params="duration=250"/>
+            </actionQueue>
+            <action name="previousPageMediaDiaporama" trigger="swipeRightNormal,validDragRightScroller" target="mediaContainer" params="duration=325"/>
+            <action name="nextPageMediaDiaporama" trigger="swipeLeftNormal,validDragLeftScroller" target="mediaContainer" params="duration=325"/>
+            <action name="dragPageMediaDiaporama" trigger="dragNormal" target="mediaContainer"/>
+            <action name="toggleDisplayOnPageChange" trigger="mediaContainerScrollerPageChanged" target="mediaPrevBtn" params="pageSource=mediaContainer,hideOnPage=first"/>
+            <action name="toggleDisplayOnPageChange" trigger="mediaContainerScrollerPageChanged" target="mediaNextBtn" params="pageSource=mediaContainer,hideOnPage=last"/>
+            <action name="animate" trigger="dragStart" target="mediaPrevBtn,mediaNextBtn,captionContainer" params="duration=0,alpha=0"/>
+            <!-- if we did not change the page and we revert the container to its original position, we show the buttons after the animation ends -->
+            <action name="animate" trigger="mediaContainerScrollerPageRepositioned" target="mediaPrevBtn,mediaNextBtn,captionContainer" params="duration=0,alpha=1"/>
+            <!-- if we did change the page and placed the container to its new position, we show the buttons after the animation ends -->
+            <action name="animate" trigger="mediaContainerScrollerPageChanged" target="mediaPrevBtn,mediaNextBtn,captionContainer" params="duration=0.2,alpha=1"/>
+            <action name="repositionAfterDragMediaDiaporama" trigger="dragEndNormalMediaContainer" target="mediaContainer" params="duration=300"/>
+            <actionQueue trigger="click">
+              <action name="toggleVisibilityAnimated" target="mediaToolbar" params="hide=bottom,duration=250" condition="device==phone"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="closeDiaporamaActions">
+            <actionQueue trigger="press">
+              <action name="closeMedia" target="mainframe"/>
+              <action name="closeOverlay" target="mainframe" params="duration=250"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="mediaPrevActions">
+            <action name="previousPageMediaDiaporama" trigger="press" target="mediaContainer" params="duration=325"/>
+            <!--<action name="resizeWithMediaContainerImage" trigger="mediaContainerResized" target="mediaPrevBtn" />-->
+          </actionDesc>
+          <actionDesc id="mediaNextActions">
+            <action name="nextPageMediaDiaporama" trigger="press" target="mediaContainer" params="duration=325"/>
+          </actionDesc>
+          <actionDesc id="captionActions">
+            <action name="updateTextFromCaption" trigger="mediaContainerScrollerPageChanged" target="{params:target}" params="captionProp={params:captionProp},source={params:source}"/>
+          </actionDesc>
+          <!-- media video -->
+          <actionDesc id="mediaVideoContainerActions">
+            <actionQueue trigger="pressOnParent,iframeDivPressed">
+              <actionLib name="closeMediaVideo"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="mediaVideoActions">
+            <actionQueue trigger="pressOnParent,click">
+              <actionLib name="closeMediaVideo"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="closeVideoActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeMediaVideo"/>
+            </actionQueue>
+          </actionDesc>
+          <actionLib id="closeMediaVideo">
+            <action name="remove" target="mainframe" params="id=media"/>
+            <action name="closeOverlay" target="mainframe" params="duration=250"/>
+          </actionLib>
+          <!-- media audio -->
+          <actionDesc id="mediaAudioContainerActions">
+            <actionQueue trigger="pressOnParent,iframeDivPressed">
+              <actionLib name="closeMediaAudio"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="closeAudioActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeMediaAudio"/>
+            </actionQueue>
+          </actionDesc>
+          <actionLib id="closeMediaAudio">
+            <action name="remove" target="mainframe" params="id=media"/>
+            <action name="closeOverlay" target="mainframe" params="duration=250"/>
+          </actionLib>
+        </actions>
+      </details>
+    </medias>
+    <modules>
+      <!-- catalog settings -->
+      <catalog id="catalogDefault" _navigationType="flip">
+        <search active="true" _searchTextZipUrl="{global:appFolder}/data/txt.zip" searchTextXMLUrl="common/data/text.xml" keywordsPath="common/res/" highlight="true"/>
+        <pages nr="576" normalSize="777|1100" offset="4" catalogType="2" data="{global:appFolder}/data/" _pageNumberingXml="common/config/pageNumbering.xml" useHdAbove="480" borderWidth="0" borderColor="#FFFFFF" useShadow="true" _pngText="true" diaporamaSize="91|130" centerFirstLast="true"/>
+        <maps active="true" data="{global:appFolder}/data/" baseUrl="http://localhost/" finUrl="page=10" mapsConfigXml="{global:appFolder}/config/mapsConfigFile.xml" mapsZipUrl="{global:appFolder}/data/maps.zip" mediasConfigXml="{global:appFolder}/config/medias.xml"/>
+        <prices active="false" data="html/data/prices/" _pricesZipUrl="html/data/prices.zip" src="prices.xml" _fallback="" _prefix="#date" priceFileSuffix="p" currency="&#x20AC;" defaultFontFace="Arial" currencyFontFace="Arial" noPriceValue="N.C.">
+          <priceTemplates>
+            <priceTemplate id="dynamicPrice1"><![CDATA[<span>#{bigPrice},#{smallPrice} #{currency}</span>]]></priceTemplate>
+          </priceTemplates>
+          <adjustments>
+            <adjust x="0" y="0" fontSize="0-100"/>
+          </adjustments>
+        </prices>
+        <pageSizes>
+          <pageSize size="353|500" name="common/data/0000_500x.jpg"/>
+          <pageSize size="494|700" name="common/data/0000_700x.jpg"/>
+          <pageSize size="636|900" name="common/data/0000_900x.jpg"/>
+          <pageSize size="777|1100" name="common/data/0000_1100x.jpg"/>
+          <pageSize size="919|1300" name="common/data/0000_1300x.jpg"/>
+          <pageSize size="1060|1500" name="common/data/0000_1500x.jpg"/>
+        </pageSizes>
+      </catalog>
+      <catalogDiaporama id="defaultCatalogDiaporama" type="grid" _type="horizontalList" source="catalog" useCatalogBorders="true" pageTemplateId="diaporamaPage" autoLoad="0">
+        <currentPage borderWidth="2" borderColor="#FF0000"/>
+        <standardPage borderWidth="0" borderColor="#FFFFFF"/>
+      </catalogDiaporama>
+      <annotation id="defaultNotes" type="verticalList" templateId="noteListTemplate" loadingTemplateId="notesLoadingTemplate" catalogId="catalog"/>
+    </modules>
+    <appConfig>
+      <!-- common settings -->
+      <appId>34678</appId>
+      <!-- html5 settings -->
+      <dataCaching>true</dataCaching>
+      <tracking enabled="false"/>
+      <deepLinking active="true"/>
+      <tapEffect enabled="false"/>
+      <!-- <sharing>
+                <shareUrl type="mail">
+                    <![CDATA[]]>
+                </shareUrl>
+            </sharing> -->
+    </appConfig>
+    <!-- resources -->
+    <resources>
+      <!-- alt text popover -->
+      <resource id="defaultAltTextResource">
+        <item id="defaultAltTextResource" size="150|24" pos="0|0" skinId="altTextBg">
+          <txt id="defaultAltText" size="140|20" pos="2|2" txtStyle="altTextStyle"/>
+        </item>
+      </resource>
+      <!-- map multilink resources -->
+      <resource id="mapMultilinkResource">
+        <item id="mapMultilinkResource" size="250|200" pos="0|0" skin="color={var:menuBackgroundColor}" h5_skinStyle="border-radius: 2px;">
+          <details>
+            <actions>
+              <actionDesc id="multilinkContainerActions">
+                <action name="applyEasing" trigger="dragStart" target="self" params="allowVerticalScrolling=true,allowHorizontalScrolling=false"/>
+              </actionDesc>
+            </actions>
+          </details>
+          <item id="multilinkContainer" action="id:multilinkContainerActions"/>
+        </item>
+      </resource>
+      <!-- multilink reference types templates -->
+      <resource id="multilinkRef_default">
+        <item id="multilinkRef_default" size="100%|40" pos="0|0" useHandCursor="true" over="skin.color=#E9EEF3,listArrow.textColor={var:mainTextColor}">
+          <details>
+            <txtStyles>
+              <txtStyle id="multilinkRef_defaultTitleStyle" color="{var:mainTextColor}" font="{var:defaultFontFace}" size="14"/>
+            </txtStyles>
+          </details>
+          <txt id="multilinkRef_defaultTitle" size="100%-30|20" pos="10|10" defaultText="" txtStyle="multilinkRef_defaultTitleStyle"/>
+          <txt id="listArrow" size="20|20" pos="right|center+1" font="v7-font-icon" class="icon-chevron-next" color="{var:separatorColor}" textSize="14" align="center"/>
+          <item size="100%|1" pos="0|bottom" skin="color={var:separatorColor}"/>
+        </item>
+      </resource>
+      <!--
+            // template for ALL the goto refs
+            <resource id="multilinkRef_goto"><item id="multilinkRef_goto"      size="290|40" pos="0|0"  skinId="multilinkRef_defaultSkin" useHandCursor="true"><txt  id="multilinkRef_gotoTitle" size="280|20" pos="5|15" defaultText="" txtStyle="multilinkRef_defaultTitleStyle" /></item></resource>
+
+            // template ONLY for the ref with the id 0004.0001
+            <resource id="multilinkRef_0004.0001"><item id="multilinkRef_0004.0001"      size="290|40" pos="0|0"  skinId="multilinkRef_defaultSkin" useHandCursor="true"><txt  id="multilinkRef_0004.0001Title" size="280|20" pos="5|15" defaultText="" txtStyle="multilinkRef_defaultTitleStyle" /></item></resource>
+            -->
+      <resource id="customErrorTemplate">
+        <item id="customErrorTemplate" size="320|120" pos="center|center" skinId="color:#ffffff" class="roundCorners">
+          <details>
+            <txtStyles>
+              <txtStyle id="errorTitleStyle" size="14" color="#FFFFFF" font="Verdana" upper="1"/>
+              <txtStyle id="errorTextStyle" size="12" color="#000000" font="Verdana"/>
+            </txtStyles>
+          </details>
+          <item id="errorMessageHeader" size="100%|33" skinId="color:#f8712b" class="roundCornersTop">
+            <txt font="v7-font-icon" class="icon-warning" size="25|25" pos="5|4" textSize="25" color="#FFFFFF"/>
+            <txt id="errorMessageTitle" size="100%-40|20" pos="35|8" defaultTextId="" txtStyle="errorTitleStyle">&gt;
+                            <![CDATA[{lang:customErrorTitle}]]></txt>
+          </item>
+          <txt id="errorMessage" size="100%-20|100%-60" pos="10|50" txtStyle="errorTextStyle"/>
+        </item>
+      </resource>
+    </resources>
+    <languages currentLanguage="fr">
+      <language id="fr" src="desktop/config/translation_fr.xml"/>
+     
+    </languages>
+    <libraries>
+      <library id="tags" src="common/res/tags.json"/>
+    </libraries>
+  </system>
+  <!-- mainframe -->
+  <preload>
+    <load>
+      
+      <file src="{global:appFolder}/config/translation_fr.xml" optional="true"/>
+     
+      <file src="common/res/scrollshop.xml"/>
+      <file src="common/res/tags.json" optional="true"/>
+    </load>
+    <preloader skin="color=#fff">
+      <!-- <img id="preloadLogo" size="179|42" pos="center|center" src="logo_preload.png"/> -->
+    </preloader>
+  </preload>
+  <mainframe action="id:mainframeActions">
+    <item id="mainBackground" skinId="mainBackgroundSkin" visible="1" size="100%|100%" pos="0|0"/>
+    <catalog id="catalog" catalogId="catalogDefault" size="100%-80|100%-120" pos="40|80" action="id:catalogActions;params:target=catalog">
+      <details>
+        <actions>
+          <actionDesc id="catalogActions">
+            <actionQueue trigger="catalogLoaded">
+              <action name="highlightKeyword" target="{params:target}" params="keyword={GET:highlight},animated=true,persistent=true"/>
+            </actionQueue>
+            <actionQueue trigger="catalogLoaded,startMapAnimations">
+              <action name="startMapAnimations" target="{params:target}"/>
+            </actionQueue>
+            <actionQueue trigger="#route.page.changed">
+              <action name="toggleZoomPageCatalog" target="{params:target}" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="goToPageCatalog" target="{params:target}" params="page={hash:page},duration=0.3"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="page={hash:page},animated=true,persistent=true"/>
+            </actionQueue>
+            <action name="track" trigger="catalogLoaded" target="mainframe" params="action=110-120,params=refferal"/>
+            <!-- pinch related -->
+            <!--
+                        <action name="pinchZoomPageCatalog" trigger="pinch" target="{params:target}" params="minScale=0.5,maxScale=4"/><action name="repositionAfterPinchCatalog" trigger="pinchEnd" target="{params:target}" params="minScale=1,maxScale=3,duration=0.3"/>
+                        -->
+            <!-- zoom -->
+            <action name="toggleZoomPageCatalog" trigger="doubleClick" target="{params:target}" params="scale=2,duration=0.3"/>
+            <actionQueue trigger="dragStartZoomCatalog">
+              <action name="applyEasingZoomCatalog" target="{params:target}"/>
+            </actionQueue>
+            <action name="stopEasingCatalog" trigger="touchstart,mousedown" target="{params:target}"/>
+            <action name="toggleZoomPageCatalog" trigger="resizeWhileZoomedCatalog,orientationChanged" target="{params:target}" params="duration=0,force=zoomOut"/>
+            <actionQueue trigger="#catalog.willZoomIn">
+              <action name="hideMapsForZoomedPage" target="{params:target}"/>
+              <action name="hideNotes" target="{params:target}"/>
+              <action name="hide" target="previousButGroup,nextButGroup,leftButZoom,rightButZoom,pageNumberLeft,pageNumberRight,bookmarks,sliderWrapper"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.hasZoomedOut">
+              <action name="showMapsForNormalPage" target="{params:target}"/>
+              <action name="showNotes" target="{params:target}"/>
+              <action name="show" target="previousButGroup,nextButGroup,leftButZoom,rightButZoom,pageNumberLeft,pageNumberRight,bookmarks,sliderWrapper"/>
+              <action name="hide" target="previousButGroup,leftButZoom,pageNumberLeft" condition="{id:catalog.currentPage}==1"/>
+              <action name="hide" target="nextButGroup,rightButZoom,pageNumberRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}"/>
+              <action name="hide" target="nextButGroup,rightButZoom,pageNumberRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}-1"/>
+            </actionQueue>
+            <!-- dragging -->
+            <action name="dragPageCatalog" trigger="dragNormalCatalog" target="{params:target}"/>
+            <actionQueue trigger="dragEndNormalCatalog">
+              <action name="repositionAfterDragCatalog" target="{params:target}" params="duration=0.3"/>
+            </actionQueue>
+            <!-- navigation related -->
+            <actionQueue trigger="swipeBackNormalCatalog,validDragBackCatalog,keyArrowBack">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="previousPageCatalog" target="{params:target}" params="duration=0.3"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="animated=true,persistent=true"/>
+              <!-- <action name="track" target="{params:target}" params="action=210,params=currentPage"/> -->
+            </actionQueue>
+            <actionQueue trigger="swipeNextNormalCatalog,validDragNextCatalog,keyArrowNext">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="nextPageCatalog" target="{params:target}" params="duration=0.3"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="animated=true,persistent=true"/>
+              <!-- <action name="track" target="{params:target}" params="action=210,params=currentPage"/> -->
+            </actionQueue>
+            <actionQueue trigger="orientationChangedCatalog,catalogTypeChanged,resizeEnd">
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+    </catalog>
+    <!-- <progressBar id="progressBarCatalog" size="100%|5" pos="0|bottom" fillColor="{var:colorBgArrows}" skin="color=#ccd4dc" action="id:progressBarActions">
+            <details>
+                <actions>
+                    <actionDesc id="progressBarActions">
+                        <action name="updateProgressFromCatalog" trigger="pageChangedCatalog,applicationReady" target="progressBarCatalog" params="catalogId=catalog" />
+                    </actionDesc>
+                </actions>
+            </details>
+        </progressBar> -->
+    <item id="sliderWrapper" size="80%|9" pos="10%|100%-20">
+      <slider id="sliderCatalog" size="100%-26|9" pos="0|0" skinId="sliderSkin" target="catalog">
+        <details>
+          <skins>
+            <skin id="sliderSkin">
+              <skin id="sliderLeft" size="18|9" pos="0|0" src="sliderBgLeft@2x.png"/>
+              <skin id="sliderMiddle" size="100%-36|9" pos="18|0" src="sliderBg@2x.png"/>
+              <skin id="sliderRight" size="18|9" pos="right|0" src="sliderBgRight@2x.png"/>
+            </skin>
+          </skins>
+          <txtStyles>
+            <txtStyle id="sliderPaginationStyle" font="Helvetica" size="10" color="#ffffff" align="center"/>
+          </txtStyles>
+          <actions>
+            <!-- slider internal actions -->
+            <actionDesc id="moveSliderToPosition">
+              <actionQueue trigger="click">
+                <action name="moveSliderToPosition" target="sliderBall"/>
+                <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                <action name="goToPageCatalog" target="catalog" params="page=initiatorsGoToPage"/>
+              </actionQueue>
+            </actionDesc>
+            <actionDesc id="sliderActions">
+              <action name="showSliderPageIndicator" trigger="dragStart" target="self" params="resourceId=sliderPageIndicatorResource"/>
+              <action name="dragSliderAndShowPageIndicator" trigger="drag" target="self"/>
+              <actionQueue trigger="dragEnd">
+                <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                <action name="dragEndSliderAndHidePageIndicator" target="self"/>
+              </actionQueue>
+              <actionQueue trigger="dragEndSlider">
+                <action name="goToPageCatalog" target="catalog" params="page=initiatorsGoToPage"/>
+              </actionQueue>
+              <action name="moveSliderToPagePosition" trigger="pageChangedCatalog" target="self"/>
+            </actionDesc>
+            <!-- slider indicator page numbering -->
+            <actionDesc id="updateSliderIndicatorNumbering">
+              <actionQueue trigger="sliderReady,pageChangedSlider">
+                <action name="setPageNumbering" target="currentSliderPageText" params="pageSource=sliderCatalog,numberingSource=catalog,separator= - "/>
+                <action name="updateSliderPagePreview" target="sliderPagePreview" params="pageSource=sliderCatalog,numberingSource=catalog"/>
+              </actionQueue>
+            </actionDesc>
+          </actions>
+          <resources>
+            <!-- slider's page indicator resource -->
+            <resource id="sliderPageIndicatorResource">
+              <item id="sliderPageIndicatorResource" size="110|95" pos="0|0" skin="color={var:colorPageSlider}" h5_skinStyle="border-radius: 10px;">
+                <pagePreview id="sliderPagePreview" size="102|72" pos="4|4" number="currentPage" mode="current" source="catalog" quality="low"/>
+                <txt id="currentSliderPageText" defaultText="" size="102|16" pos="4|82" txtStyle="sliderPaginationStyle" color="#ffffff" align="center" textSize="10" action="id:updateSliderIndicatorNumbering"/>
+              </item>
+            </resource>
+          </resources>
+        </details>
+        <sliderIndicator id="sliderBall" size="51|9" pos="50%-w/2|50%-h/2" skin="color={var:colorPageSlider},shape=roundRect" _skin="img=sliderIndicator@2x.png" handCursor="true" tint="{var:colorPageSlider}"/>
+      </slider>
+    </item>
+    <bookmarks id="bookmarks" source="catalog" size="50|0" pos="{#catalog.x}+{#catalog.pageX}+{#catalog.pageW}+2|{#catalog.y}+{#catalog.pageY}+10" type="verticalList">
+      <details>
+        <templates>
+          <template id="bookmarkBg" size="100%|100%" pos="0|0" textSize="25" font="v7-font-icon" color="{var:mainColor}"/>
+          <template id="bookmarkIcon" size="100%|100%" textSize="12" font="v7-font-icon" class="icon-checkmark" color="{var:secondaryTextColor}"/>
+        </templates>
+        <actions>
+          <actionDesc id="toggleBookmark">
+            <actionQueue trigger="click">
+              <action name="toggleBookmark" target="catalog" params="page={params:page}"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="goToPageBookmark">
+            <actionQueue trigger="click">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="goToPageCatalog" target="catalog" params="page={params:page},duration=0.3" _confirmation="customConfirmation"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="page={params:page},animated=true,persistent=true"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+      <bookmarkTemplate size="25|21" h5_style="position: relative;" handCursor="true" altId="bookmarkPageAlt">
+        <item id="bookmarkBg" size="100|20" pos="-75|0" skin="color={var:colorBgPanels},shape=poly,points:0;0;0;20;10;15;20;20;20;0"/>
+        <txt id="bookmarkPage" size="100%|12" pos="-2|3" color="{var:secondaryTextColor}" fontSize="12" align="center"><![CDATA[#page]]></txt>
+      </bookmarkTemplate>
+    </bookmarks>
+    <item id="previousButGroup" size="32|116" pos="4|50%-h/2" action="id:hideNavButtons">
+      <details>
+        <templates>
+          <template id="navButton" size="30|30">
+            <txt id="icon" font="v7-font-icon" textSize="14" size="100%|100%" pos="0|0" align="center" class="#class" color="{var:colorBgTop}" h5_style="line-height: 30px;"/>
+          </template>
+        </templates>
+        <actions>
+          <actionDesc id="hideNavButtons">
+            <actionQueue trigger="applicationReady">
+              <action name="hide" target="firstPageButton,previousPageButton,previousButGroup,bookmarkLeftPage" condition="{id:catalog.currentPage}==1"/>
+              <action name="hide" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage" condition="{id:catalog.currentPage}=={id:catalog.lastPage}"/>
+              <action name="hide" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage" condition="{id:catalog.currentPage}=={id:catalog.lastPage}-1"/>
+              <action name="disable" target="firstPageButton,previousPageButton" condition="{id:catalog.currentPage}==1"/>
+              <action name="disable" target="nextButGroupBtnLast,nextButGroupBtnRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}"/>
+              <action name="disable" target="nextButGroupBtnLast,nextButGroupBtnRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}-1"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.firstPageReached">
+              <action name="hide" target="firstPageButton,previousPageButton,previousButGroup,bookmarkLeftPage"/>
+              <action name="disable" target="firstPageButton,previousPageButton"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.firstPageLeft">
+              <action name="show" target="firstPageButton,previousPageButton,previousButGroup,bookmarkLeftPage"/>
+              <action name="enable" target="firstPageButton,previousPageButton"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.lastPageReached">
+              <action name="hide" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage"/>
+              <action name="disable" target="nextButGroupBtnLast,nextButGroupBtnRight"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.lastPageLeft">
+              <action name="show" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage"/>
+              <action name="enable" target="nextButGroupBtnLast,nextButGroupBtnRight"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="previousPageActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="previousPageCatalog" target="catalog" params="duration=0.5"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="animated=true,persistent=true"/>
+              <action name="track" target="catalog" params="action=210,params=currentPage"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+      <item id="previousButGroupBg" skin="color={var:colorBgArrows}" size="32|116" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <item id="previousPageButton" size="32|59" pos="center|50%-59" altId="previousPageButtonAlt" action="id:previousPageActions" over="icon.x=0" disable="alpha=0.3" duration="0.3">
+        <item id="icon" size="25|25" pos="center|center" skin="fontIcon=menuIcon-catalogArrowPrevious" tint="{var:colorArrows}"/>
+      </item>
+      <item size="17|2" pos="center|center+1">
+        <item size="17|1" skin="color=#616161" pos="0|0"/>
+        <item size="17|1" skin="color=#aeaeae" pos="0|1"/>
+      </item>
+      <item id="firstPageButton" size="32|59" pos="center|50%" altId="firstPageButtonAlt" action="id:goToPage;params:page=1,target=catalog" over="icon.x=4" disable="alpha=0.3" duration="0.3">
+        <item id="icon" size="15|15" pos="center|center" skin="fontIcon=menuIcon-catalogArrowFirst" tint="{var:colorArrows}"/>
+      </item>
+    </item>
+    <item id="nextButGroup" size="32|116" pos="100%-35|50%-h/2">
+      <details>
+        <actions>
+          <actionDesc id="nextPageActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <action name="hide" target="bookmarks"/>
+              <action name="nextPageCatalog" target="catalog" params="duration=0.5"/>
+              <action name="show" target="bookmarks"/>
+              <action name="highlightKeyword" target="catalog" params="animated=true,persistent=true"/>
+              <action name="track" target="catalog" params="action=210,params=currentPage"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+      <item id="nextButGroupBg" skin="color={var:colorBgArrows}" size="32|116" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <item id="nextButGroupBtnRight" size="31|59" pos="50%-w/2|50%-59" altId="nextPageButtonAlt" action="id:nextPageActions" over="icon.x=6" disable="alpha=0.3" duration="0.3" tint="{var:colorArrows}">
+        <item id="icon" size="25|25" pos="center|center" skin="fontIcon=menuIcon-catalogArrowNext" tint="{var:colorArrows}"/>
+      </item>
+      <item size="17|2" pos="center|center+1">
+        <item size="17|1" skin="color=#616161" pos="0|0"/>
+        <item size="17|1" skin="color=#aeaeae" pos="0|1"/>
+      </item>
+      <item id="nextButGroupBtnLast" size="32|59" pos="50%-w/2|50%" altId="lastPageButtonAlt" action="id:goToPage;params:page=lastPage,target=catalog" over="icon.x=12" disable="alpha=0.3" duration="0.3" tint="{var:colorArrows}">
+        <item id="icon" size="15|15" pos="center|center" skin="fontIcon=menuIcon-catalogArrowLast" tint="{var:colorArrows}"/>
+      </item>
+    </item>
+    <item id="leftButZoom" size="25|25" pos="10|100%-70" action="id:hidePaginationButtons,updatePageNumbers">
+      <details>
+        <actions>
+          <actionDesc id="zoomInLeftActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="scale=2,duration=0.3,force=zoomIn"/>
+              <!-- <action name="show" target="leftZoomOutButton"/>
+                            <action name="hide" target="leftButZoomBtn"/> -->
+            </actionQueue>
+            <actionQueue trigger="#catalog.hasZoomedIn">
+              <action name="show" target="leftZoomOutButton"/>
+              <action name="hide" target="leftButZoomBtn"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="zoomOutLeftActions">
+            <actionQueue trigger="click">
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <!-- <action name="show" target="leftButZoomBtn"/>
+                            <action name="hide" target="leftZoomOutButton"/> -->
+            </actionQueue>
+            <actionQueue trigger="#catalog.hasZoomedOut">
+              <action name="show" target="leftButZoomBtn"/>
+              <action name="hide" target="leftZoomOutButton"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="hidePaginationButtons">
+            <actionQueue trigger="applicationReady">
+              <action name="hide" target="firstPageButton,previousPageButton,previousButGroup,bookmarkLeftPage,pageNumberLeft,leftButZoom" condition="{id:catalog.currentPage}==1"/>
+              <action name="hide" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage,pageNumberRight,rightButZoom," condition="{id:catalog.currentPage}=={id:catalog.lastPage}"/>
+              <action name="hide" target="nextButGroupBtnLast,nextButGroupBtnRight,nextButGroup,bookmarkRightPage,pageNumberRight,rightButZoom," condition="{id:catalog.currentPage}=={id:catalog.lastPage}-1"/>
+              <action name="disable" target="firstPageButton,previousPageButton" condition="{id:catalog.currentPage}==1"/>
+              <action name="disable" target="nextButGroupBtnLast,nextButGroupBtnRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}"/>
+              <action name="disable" target="nextButGroupBtnLast,nextButGroupBtnRight" condition="{id:catalog.currentPage}=={id:catalog.lastPage}-1"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.firstPageReached">
+              <action name="hide" target="leftButZoom,pageNumberLeft"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.firstPageLeft">
+              <action name="show" target="leftButZoom,pageNumberLeft"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.lastPageReached">
+              <action name="hide" target="rightButZoom,pageNumberRight"/>
+            </actionQueue>
+            <actionQueue trigger="#catalog.lastPageLeft">
+              <action name="show" target="rightButZoom,pageNumberRight"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="updatePageNumbers">
+            <actionQueue trigger="pageChangedCatalog,orientationChanged">
+              <action name="setText" target="pageNumberLeftText,helpLeftPageNumber" params="text={id:catalog.leftPageNumber}"/>
+              <action name="setText" target="pageNumberRightText,helpRightPageNumber" params="text={id:catalog.rightPageNumber}"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+      <item id="leftButZoomBg" skin="color={var:colorBgZoomIcons}" size="25|25" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <item id="leftButZoomBtn" altId="zoomInButtonAlt" action="id:zoomInLeftActions" size="25|25" pos="0|0" tint="{var:colorZoomIcons}">
+        <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomIn" tint="{var:colorZoomIcons}"/>
+      </item>
+      <item id="leftZoomOutButton" altId="zoomOutButtonAlt" action="id:zoomOutLeftActions" visible="0">
+        <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomOut" tint="{var:colorZoomIcons}"/>
+      </item>
+    </item>
+    <item id="rightButZoom" size="25|25" pos="100%-35|100%-70">
+      <details>
+        <actions>
+          <actionDesc id="zoomInRightActions">
+            <actionQueue trigger="click">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="scale=2,duration=0.3,force=zoomIn"/>
+              <!-- <action name="show" target="rightZoomOutButton"/>
+                            <action name="hide" target="rightButZoomBtn"/> -->
+            </actionQueue>
+            <actionQueue trigger="#catalog.hasZoomedIn">
+              <action name="show" target="rightZoomOutButton"/>
+              <action name="hide" target="rightButZoomBtn"/>
+            </actionQueue>
+          </actionDesc>
+          <actionDesc id="zoomOutRightActions">
+            <actionQueue trigger="click">
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <!-- <action name="show" target="rightButZoomBtn"/>
+                            <action name="hide" target="rightZoomOutButton"/> -->
+            </actionQueue>
+            <actionQueue trigger="#catalog.hasZoomedOut">
+              <action name="show" target="rightButZoomBtn"/>
+              <action name="hide" target="rightZoomOutButton"/>
+            </actionQueue>
+          </actionDesc>
+        </actions>
+      </details>
+      <item id="rightButZoomBg" skin="color={var:colorBgZoomIcons}" size="25|25" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <item id="rightButZoomBtn" altId="zoomInButtonAlt" action="id:zoomInRightActions" size="25|25" pos="0|0" tint="{var:colorZoomIcons}">
+        <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomIn" tint="{var:colorZoomIcons}"/>
+      </item>
+      <item id="rightZoomOutButton" altId="zoomOutButtonAlt" action="id:zoomOutRightActions" visible="0">
+        <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomOut" tint="{var:colorZoomIcons}"/>
+      </item>
+    </item>
+    <item id="pageNumberLeft" size="25|25" pos="10|100%-42">
+      <item id="pageNumberLeftBg" skin="color={var:colorBgPageNumber}" size="25|25" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <txt id="pageNumberLeftText" size="100%|16" pos="50%-w/2|50%-h/2" textSize="12" color="{var:colorPageNumber}" align="center" tint="{var:colorPageNumber}"><![CDATA[{id:catalog.leftPageNumber}]]></txt>
+    </item>
+    <item id="pageNumberRight" size="25|25" pos="100%-35|100%-42">
+      <item id="pageNumberRightBg" skin="color={var:colorBgPageNumber}" size="25|25" pos="0|0" tint="{var:colorBgArrows}" src="#ffffff"/>
+      <txt id="pageNumberRightText" size="100%|16" pos="50%-w/2|50%-h/2" textSize="12" color="{var:colorPageNumber}" align="center" tint="{var:colorPageNumber}"><![CDATA[{id:catalog.rightPageNumber}]]></txt>
+    </item>
+    <item id="bgTopLine" size="100%|8" skin="color={var:colorBgPanels}" pos="0|42" bgcolor="{var:colorBgPanels}"/>
+    <item id="bgTop" size="100%|42" pos="0|0" skin="color={var:colorBgTop}" tint="{var:colorBgTop}" bgcolor="{var:colorBgTop}"/>
+    <item id="bgPanels" size="100%|0" skin="color={var:colorBgPanels}" pos="0|42" alpha="1"/>
+    <item id="header" size="100%|42">
+      <item id="menuCenter" size="800|42" pos="560|0" layout="horizontal">
+        <details>
+          <templates>
+            <template id="headerMenuItem" size="65|100%" over="buttonBottomBorder.skin.alpha=1" duration="0.3">
+              <item size="#size" pos="center|center" skin="fontIcon=#class" tint="{var:colorMenuIcon}"/>
+              <item id="buttonBottomBorder" size="30|1" pos="center|36" skin="color={var:colorMenuIcon},alpha=0"/>
+            </template>
+            <template id="roundButton" size="65|42" skin="color={var:colorMenuIcon},shape=circle" over="icon.scale=1.1" duration="0.3">
+              <txt id="icon" font="v7-font-icon" textSize="16" size="100%|20" pos="0|7" align="center" class="#class" color="{var:colorBgTop}"/>
+            </template>
+          </templates>
+          <variables>
+            <var id="openedModule"><![CDATA[none]]></var>
+          </variables>
+          <actions>
+            <actionLib id="resetOpenedModules">
+              <actionLib name="closeZoom" condition="{var:zoomMapOpen}==1"/>
+              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+              <!-- remove active search -->
+              <action name="removeOverflow" target="searchResultsOutputWrapper"/>
+              <action name="removeOverflow" target="searchSuggestionsOutputWrapper"/>
+              <action name="clearItemContent" target="searchResultsOutput"/>
+              <action name="clearItemContent" target="searchSuggestionsOutput"/>
+              <action name="hide" target="searchResultsOutputWrapper"/>
+              <action name="hide" target="searchSuggestionsOutputWrapper"/>
+              <action name="remove" target="mainframe" params="id=searchContainer,duration=0.3"/>
+              <!-- reset active panel -->
+              <action name="resetClickCount" target="{var:moduleBtn}"/>
+              <action name="closeOverlay" target="mainframe" condition="'{var:moduleOverlay}'!=='none'" params="overlayId={var:moduleOverlay}"/>
+              <action name="setVariable" params="name=openedModule,value=none"/>
+              <action name="remove" target="mainframe" params="id={var:moduleContainer},duration=0.3"/>
+              <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+              <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+            </actionLib>
+          </actions>
+        </details>
+        <item id="summaryBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="0|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="summaryBtn" altId="summaryBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-summaryBtn,#size=16|16" action="id:openSummary" visible="1" tint="{var:colorMenuIcon}" size="65|100%" pos="1|0" tradid="panelSummaryAlt">
+          <details>
+            <actions>
+              <actionDesc id="openSummary">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="add" target="mainframe" params="id=summaryContainer,duration=0.3"/>
+                  <action name="setVariables" params="openedModule=summary,moduleContainer=summaryContainer,moduleBtn=summaryBtn"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                  <action name="animate" target="summaryContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeSummary"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeSummary">
+                <actionQueue trigger="click">
+                  <actionLib name="closeSummary"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeSummary">
+                <action name="resetClickCount" target="summaryBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="summaryContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=summaryContainer"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+              <actionDesc id="summaryActions">
+                <action name="applyEasing" trigger="dragStart" target="self" params="allowHorizontalScrolling=false"/>
+              </actionDesc>
+              <actionDesc id="summaryChapterGoToPage">
+                <actionQueue trigger="click">
+                  <actionLib name="closeSummary"/>
+                  <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                  <action name="hide" target="bookmarks"/>
+                  <action name="goToPageCatalog" target="catalog" params="page={params:page},duration=0.3"/>
+                  <action name="show" target="bookmarks"/>
+                  <action name="highlightKeyword" target="catalog" params="page={params:page},keyword={params:keyword},animated=true,persistent=true"/>
+                  <action name="track" target="catalog" params="action=230,params=currentPage"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="summaryChapterOpenSubChapters">
+                <actionQueue trigger="click">
+                  <action name="toggleSummarySubChapters" target="self"/>
+                </actionQueue>
+              </actionDesc>
+            </actions>
+            <txtStyles>
+              <txtStyle id="summaryChapterStyle" size="12" font="{var:defaultFontFace}" color="{var:secondaryTextColor}" bold="1"/>
+            </txtStyles>
+            <resources>
+              <resource id="summaryContainer">
+                <item id="summaryContainer" size="100%|100%-50" pos="center|50">
+                  <item action="id:closeSummary"/>
+                  <item id="summaryContent" size="500|100%-100" pos="center|75" sliderId="default">
+                    <summary id="summary" pos="0|0" xmlUrl="common/config/summary.xml" source="catalog" type="list" _type="accordion" loadingTemplateId="summaryLoadingTemplate">
+                      <details>
+                        <templates>
+                          <template id="summaryChapter0" size="100%-15|40" pos="0|0" handCursor="true" over="bg.alpha=0.3" duration="0.5">
+                            <item id="bg" skin="color=#ffffff" alpha="0"/>
+                            <txt id="chapterTitle" role="title" size="100%-20|20" pos="10|15" txtStyle="summaryChapterStyle" color="#000000"/>
+                            <item id="chapterActionZone" role="action-target" size="100%|40" pos="0|0"/>
+                            <item role="subchapters-wrapper" size="100%|1" pos="0|40" visible="false"/>
+                          </template>
+                          <template id="summaryChapter1" size="100%-30|40" pos="15|0" handCursor="true" over="bg.alpha=0.3" duration="0.5">
+                            <item id="bg" skin="color=#ffffff" alpha="0"/>
+                            <txt id="chapterTitle" role="title" size="100%-20|20" pos="10|15" txtStyle="summaryChapterStyle" color="#000000"/>
+                            <item id="chapterActionZone" role="action-target" size="100%|40" pos="0|0"/>
+                            <item role="subchapters-wrapper" size="100%|1" pos="0|40" visible="false"/>
+                          </template>
+                        </templates>
+                      </details>
+                    </summary>
+                  </item>
+                  <item size="500|25" pos="center|50">
+                    <txt size="100%|15" textSize="20" _autoSize="left" color="#000000"><![CDATA[SOMMAIRE]]></txt>
+                    <item skin="color=#000000" size="481|1" pos="center-7|100%-h"/>
+                  </item>
+                  <item size="32|32" pos="100%-42|2" action="id:closeSummary" handCursor="true" altId="panelCloseAlt">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+              <resource id="summaryLoadingTemplate">
+                <item id="summaryLoadingTemplate">
+                  <item id="loadingMessageWrapper" size="100%|150" pos="0|center">
+                    <txt id="summaryLoadingMessage" size="80%|40" pos="10%|40" txtStyle="loadingMessageStyle"><![CDATA[{lang:defaultLoadingMessage}]]></txt>
+                    <txt size="32|32" pos="50%-16|100" color="{var:colorMenuIcon}" textSize="32" align="center" font="v7-font-icon" class="icon-spinner"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="searchBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="66|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="searchBtn" altId="searchBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-searchBtn,#size=16|16" action="id:openSearch" visible="1" tint="{var:colorMenuIcon}" size="65|100%" pos="67|0">
+          <details>
+            <actions>
+              <actionDesc id="openSearch">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="showOverlay" target="mainframe" params="overlayId=searchOverlay,insertBefore=header,color={var:overlayColor},duration=300,opacity=0,onPressActionId=closeSearch"/>
+                  <action name="setVariables" params="openedModule=search,moduleOverlay=searchOverlay,moduleContainer=searchContainer,moduleBtn=searchBtn"/>
+                  <action name="add" target="mainframe" params="id=searchContainer,insertBefore=searchResultsOutputWrapper"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=57"/>
+                  <action name="animate" target="searchContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeSearch"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeSearch">
+                <actionQueue trigger="click">
+                  <actionLib name="closeSearch"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeSearch">
+                <action name="removeOverflow" target="searchResultsOutputWrapper"/>
+                <action name="removeOverflow" target="searchSuggestionsOutputWrapper"/>
+                <action name="clearItemContent" target="searchResultsOutput"/>
+                <action name="clearItemContent" target="searchSuggestionsOutput"/>
+                <action name="animate" target="searchResultsOutputWrapper" params="duration=0,alpha=0,h=0"/>
+                <action name="hide" target="searchResultsOutputWrapper"/>
+                <action name="hide" target="searchSuggestionsOutputWrapper"/>
+                <action name="closeOverlay" target="mainframe" params="overlayId=searchOverlay"/>
+                <action name="resetClickCount" target="searchBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleOverlay=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="searchContainer" params="duration=0.3,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=searchContainer,duration=0.3"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+            </actions>
+            <resources>
+              <resource id="searchContainer">
+                <item id="searchContainer" size="100%|57" pos="0|50" alpha="0">
+                  <details>
+                    <txtStyles>
+                      <txtStyle id="searchInputStyle" font="{var:defaultFontFace}" size="12" color="{var:mainColor}" border="0" selectable="1" backgroundColor="transparent"/>
+                      <txtStyle id="searchResultFormat" font="{var:defaultFontFace}" size="12" color="{var:secondaryTextColor}"/>
+                      <txtStyle id="searchLabelFormat" font="{var:defaultFontFace}" size="14" color="{var:secondaryTextColor}" align="left"/>
+                      <txtStyle id="searchTextStyle" border="0" borderColor="#000000" background="1" backgroundColor="rgba(0,0,0,0)" selectable="1" font="{var:defaultFontFace}" size="14" color="{var:secondaryTextColor}" align="left"/>
+                      <txtStyle id="searchResultPageNumberFormat" font="{var:defaultFontFace}" size="14" color="{var:secondaryTextColor}"/>
+                      <txtStyle id="searchResultExcerptFormat" font="{var:defaultFontFace}" size="10" color="{var:secondaryTextColor}"/>
+                      <txtStyle id="searchNoResultMessageFormat" font="{var:defaultFontFace}" size="14" color="#ff0000" bold="1"/>
+                      <txtStyle id="searchLoadingMessageStyle" font="{var:defaultFontFace}" size="14" color="{var:defaultTextColor}" bold="1" align="center" upper="1"/>
+                    </txtStyles>
+                    <variables>
+                      <var id="searchOverlay"><![CDATA[0]]></var>
+                    </variables>
+                    <actions>
+                      <actionDesc id="clearSearch">
+                        <actionQueue trigger="focus">
+                          <action name="clearText" target="self"/>
+                          <!-- <action name="animate" target="searchResultsOutputWrapper" params="duration=0,h=100%-100" />
+													<action name="animate" target="searchSuggestionsOutputWrapper" params="duration=0,h=100%-100" /> -->
+                          <!-- <action name="clearItemContent" target="searchSuggestionsOutput" />
+													<action name="clearItemContent" target="searchResultsOutput" /> -->
+                          <!-- <action name="hide" target="searchResultsOutputWrapper" /> -->
+                          <action name="show" target="searchSuggestionsOutputWrapper"/>
+                          <action name="generateSearchSuggestionFields" target="searchSuggestionsOutput" params="templateId=searchAutocompleteResult"/>
+                          <action name="show" target="searchPanelResetSearch"/>
+                        </actionQueue>
+                        <actionQueue trigger="keyEnter">
+                          <action name="animate" target="searchSuggestionsOutputWrapper" params="duration=0,h=100%-100"/>
+                          <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                          <action name="show" target="searchResultsOutputWrapper"/>
+                          <action name="hide" target="searchSuggestionsOutputWrapper"/>
+                          <action name="getTextAndSearch" target="self" params="inputId=searchInput,outputId=searchResultsOutput,source=catalog,maxChars=110,highlightColor={var:mainColor},maxResults=50,layout=grid"/>
+                          <action name="animate" target="searchResultsOutputWrapper" params="duration=0.3,alpha=1,h=100%-100"/>
+                        </actionQueue>
+                        <action name="generateSearchSuggestions" trigger="input" target="searchInput" params="inputId=searchInput,outputId=searchSuggestionsOutput,templateId=searchAutocompleteResult,minimumLength=2,minimumLength=3,minimumLength=3,minimumLength=3"/>
+                      </actionDesc>
+                      <actionDesc id="clearSearchInput">
+                        <actionQueue trigger="click">
+                          <action name="clearText" target="searchInput"/>
+                          <action name="clearItemContent" target="searchResultsOutput"/>
+                          <action name="clearItemContent" target="searchSuggestionsOutput"/>
+                          <action name="clearHighlightedKeyword" target="catalog"/>
+                          <action name="hide" target="searchPanelResetSearch"/>
+                        </actionQueue>
+                      </actionDesc>
+                      <actionDesc id="searchKeyword">
+                        <actionQueue trigger="click">
+                          <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                          <action name="show" target="searchResultsOutputWrapper"/>
+                          <action name="hide" target="searchSuggestionsOutputWrapper"/>
+                          <action name="getTextAndSearch" target="self" params="inputId=searchInput,outputId=searchResultsOutput,source=catalog,maxChars=110,highlightColor={var:mainColor},maxResults=50,layout=grid"/>
+                          <action name="animate" target="searchResultsOutputWrapper" params="duration=0.3,alpha=1,h=100%-100"/>
+                          <action name="animate" target="searchSuggestionsOutputWrapper" params="duration=0,h=100%-100"/>
+                        </actionQueue>
+                      </actionDesc>
+                      <actionDesc id="searchActions">
+                        <action name="applyEasing" trigger="dragStart" target="self" params="allowHorizontalScrolling=false"/>
+                      </actionDesc>
+                      <actionDesc id="searchSuggestion">
+                        <actionQueue trigger="click">
+                          <action name="setSearchSuggestion" target="searchInput" params="templateId=searchAutocompleteResult,suggestion={params:suggestion}"/>
+                          <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                          <action name="show" target="searchResultsOutputWrapper"/>
+                          <action name="hide" target="searchSuggestionsOutputWrapper"/>
+                          <action name="getTextAndSearch" target="self" params="inputId=searchInput,outputId=searchResultsOutput,source=catalog,maxChars=100,highlightColor={var:mainColor},maxResults=50,layout=grid"/>
+                          <action name="animate" target="searchResultsOutputWrapper" params="duration=0.3,alpha=1,h=100%-100"/>
+                          <action name="animate" target="searchSuggestionsOutputWrapper" params="duration=0,h=100%-100"/>
+                        </actionQueue>
+                      </actionDesc>
+                      <actionDesc id="searchResultGoToPage">
+                        <actionQueue trigger="click">
+                          <actionLib name="closeSearch"/>
+                          <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                          <action name="hide" target="bookmarks"/>
+                          <action name="goToPageCatalog" target="catalog" params="page={params:page},duration=0.3"/>
+                          <action name="show" target="bookmarks"/>
+                          <action name="clearHighlightedKeyword" target="catalog"/>
+                          <action name="highlightKeyword" target="catalog" params="page={params:page},keyword={params:keyword},animated=true,persistent=true"/>
+                          <action name="track" target="catalog" params="action=260,params=currentPage"/>
+                        </actionQueue>
+                      </actionDesc>
+						<actionDesc id="loadMoreSearchResults">
+							<actionQueue trigger="click">
+								<action name="loadMoreSearchResults" target="searchResultsOutput" params="startFrom={params:startFrom}"/>
+							</actionQueue>
+						</actionDesc>
+                    </actions>
+                    <skins>
+                      <skin id="searchSkin" color="{var:colorBgPanels}" alpha="0.8">
+                        <skin size="100%|1" pos="0|bottom" color="{var:colorMenuIcon}"/>
+                      </skin>
+                    </skins>
+                    <resources>
+                      <resource id="searchAutocompleteResult">
+                        <item id="searchAutocompleteResult" size="100%|22" pos="0|0" handCursor="true" skinId="searchSkin">
+                          <txt id="searchAutocompleteResultText" role="search-result" size="100%-10|22" pos="5|0" txtStyle="searchTextStyle" tint="#ffffff"/>
+                        </item>
+                      </resource>
+                      <resource id="searchNoResult">
+                        <item id="searchNoResult" size="100%|50" pos="0|0" _skinId="searchSkin">
+                          <txt id="searchNoResultMessage" role="search-result" size="100%-30|30" pos="15|12" defaultTextId="searchNoResult" txtStyle="searchTextStyle" bold="1" tint="{var:colorMenuIcon}" align="center"/>
+                        </item>
+                      </resource>
+                      <resource id="searchSuggestion">
+                        <item id="searchSuggestion" size="100%|40" pos="0|0" handCursor="true" skinId="searchSkin">
+                          <txt id="searchSuggestionText" role="search-result" size="100%-30|30" pos="14|12" txtStyle="searchTextStyle" tint="#ffffff"/>
+                        </item>
+                      </resource>
+                      <resource id="searchAlternatives">
+                        <item id="searchAlternatives" size="100%|100" pos="0|0" handCursor="true" skinId="searchSkin">
+                          <txt id="searchAlternativesText" role="search-result" size="100%-30|100%-20" pos="14|12" txtStyle="searchTextStyle" bold="1" scrollable="false" tint="{var:colorMenuIcon}"/>
+                        </item>
+                      </resource>
+                      <resource id="searchResult">
+                        <item id="searchResult" size="440|150" pos="0|0" handCursor="true">
+                          <item size="100%-10|100%-10" pos="5|5" skin="color={var:colorBgTop}" alpha="0.2"/>
+                          <item id="searchResultPage" size="92|130" pos="10|10" role="search-page-preview" altId="searchResultPageAlt"/>
+                          <txt id="searchResultPageNumber" size="20|20" pos="150|20" role="search-page" txtStyle="searchTextStyle" textSize="12" bold="1" tint="{var:colorPanelPrintBtn}" alpha="0"/>
+                          <txt id="searchResultExcerpt" size="100%-130|110" pos="120|20" role="search-excerpt" txtStyle="searchTextStyle" textSize="14" scrollable="false" tint="{var:colorPanelPrintBtn}"/>
+                        </item>
+                      </resource>
+                      <resource id="searchLoadingScreen">
+                        <item id="searchLoadingScreen" skinStyle="color:{var:colorBgPanels};alpha:0.6">
+                          <txt id="searchLoadingMessage" size="80%|40" pos="10%|40" txtStyle="loadingMessageStyle" tint="{var:colorPanelPrintBtn}"><![CDATA[{lang:defaultLoadingMessage}]]></txt>
+                          <txt size="32|32" pos="50%-16|100" color="{var:colorPanelPrintBtn}" textSize="32" align="center" font="v7-font-icon" class="icon-spinner"/>
+                        </item>
+                      </resource>
+						<resource id="searchMoreResultsButton">
+							<item id="searchMoreResultsButton" size="100%|50" pos="0|0" handCursor="true">
+								<item role="action-target" size="230|30" pos="0|5" skinStyle="color:{var:colorBgTop};border:1px solid #242f3b;radius:2px;alpha:0.2">
+									<txt role="label" size="100%|12" pos="center|center" txtStyle="color:#ffffff;size:12;font:{var:defaultFontFace};align:center;"><![CDATA[{lang:showMoreResults}]]></txt>
+								</item>
+							</item>
+						</resource>
+                    </resources>
+                  </details>
+                  <item id="searchInputBg" size="230|20" pos="50%-100|12" skin="color=#ffffff" tint="#ffffff" src="#ffffff"/>
+                  <item size="228|18" pos="50%-99|13" skinId="#ffffff"/>
+                  <txt id="searchInput" size="215|20" pos="50%-100|12" type="input" placeholderTextId="searchPlaceholder" textStyle="default" border="0" background="1" backgroundColor="transparent" action="id:clearSearch"/>
+                  <item id="searchPanelResetSearch" size="15|15" pos="50%+116|14" action="id:clearSearchInput" visible="0" handCursor="true" tint="{var:colorBgTop}">
+                    <txt size="15|15" align="center" color="{var:colorBgTop}" textSize="14"><![CDATA[&times;]]></txt>
+                  </item>
+                  <item id="searchPanelSearchBtn" size="14|14" pos="50%+139|14" altId="searchBtnAlt" skin="fontIcon=menuIcon-searchBtn" action="id:searchKeyword" tint="#ffffff"/>
+                  <item id="panelSearchClose" size="32|32" pos="100%-47|2" action="id:closeSearch" handCursor="true" altId="panelCloseAlt" tint="{var:colorPanelClose}">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="diaporamaBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="132|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="diaporamaBtn" altId="diaporamaBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-diaporamaBtn,#size=16|16" action="id:openDiaporama" visible="1" tint="{var:colorMenuIcon}" size="65|100%" pos="133|0">
+          <details>
+            <actions>
+              <actionDesc id="openDiaporama">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="setVariables" params="openedModule=diaporama,moduleContainer=diaporamaContainer,moduleBtn=diaporamaBtn"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                  <action name="add" target="mainframe" params="id=diaporamaContainer,duration=0.3"/>
+                  <action name="animate" target="diaporamaContainer" params="duration=0.2,alpha=1"/>
+                  <action name="loadDiaporama" target="diaporamaCatalog"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeDiaporama"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeDiaporama">
+                <actionQueue trigger="click">
+                  <actionLib name="closeDiaporama"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeDiaporama">
+                <action name="resetClickCount" target="diaporamaBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="diaporamaContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=diaporamaContainer,animation=slideDown,duration=0.3"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+            </actions>
+            <resources>
+              <resource id="diaporamaContainer">
+                <item id="diaporamaContainer" size="100%|100%-50" pos="center|50" alpha="0">
+                  <item action="id:closeDiaporama"/>
+                  <item id="diaporamaWrapper" size="100%-30|100%-80" pos="15|40">
+                    <catalogDiaporama id="diaporamaCatalog" catalogDiaporamaId="defaultCatalogDiaporama" loadingTemplateId="diaporamaLoadingTemplate" sliderId="default">
+                      <details>
+                        <actions>
+                          <actionDesc id="diaporamaActions">
+                            <action name="applyEasingDiaporama" trigger="dragStart" target="self"/>
+                            <action name="updatePagesDiaporama" trigger="easeMoveDiaporama" target="self"/>
+                            <action name="updateSelectedPageDiaporama" trigger="pageChangedScroller" target="self"/>
+                          </actionDesc>
+                          <actionDesc id="staticDiaporamaActions">
+                            <action name="updateSelectedPageDiaporama" trigger="pageChangedScroller" target="self"/>
+                          </actionDesc>
+                          <actionDesc id="diaporamaGoToPage">
+                            <actionQueue trigger="click">
+                              <actionLib name="closeDiaporama"/>
+                              <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                              <action name="hide" target="bookmarks"/>
+                              <action name="goToPageCatalog" target="catalog" params="page={params:page},duration=0.3"/>
+                              <action name="show" target="bookmarks"/>
+                              <action name="highlightKeyword" target="catalog" params="page={params:page},animated=true,persistent=true"/>
+                              <action name="track" target="catalog" params="action=250,params=currentPage"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="diaporamaNextActions">
+                            <actionQueue trigger="click">
+                              <action name="scrollDiaporama" target="diaporamaCatalog" params="direction=forward,distance=180,duration=0.3"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="diaporamaPrevActions">
+                            <actionQueue trigger="click">
+                              <action name="scrollDiaporama" target="diaporamaCatalog" params="direction=back,distance=180,duration=0.3"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                        <txtStyles>
+                          <txtStyle id="diaporamaNumberStyle" font="Arial" color="#ffffff" size="14"/>
+                        </txtStyles>
+                        <resources>
+                          <resource id="diaporamaPage">
+                            <item id="diaporamaPage" size="300|190" pos="center|0" handCursor="true">
+                              <pagePreview role="diaporama-graphic" size="260|160" pos="10|5" number="none" mode="current" quality="low" source="catalog" handCursor="true" centerFirstLast="true" altId="diaporamaPageAlt"/>
+                              <item id="diaporamaNumberLabel" size="100%|20" pos="center-10|bottom-4">
+                                <txt id="diaporamaNumbersCentered" txtStyle="diaporamaNumberStyle"/>
+                              </item>
+                            </item>
+                          </resource>
+                          <resource id="diaporamaLoadingTemplate">
+                            <item id="diaporamaLoadingTemplate" size="400|100%" pos="center|0">
+                              <txt size="100%|40" pos="0|20" color="{var:colorMenuIcon}" defaultTextId="defaultLoadingMessage" txtStyle="loadingMessageStyle"/>
+                              <txt size="32|32" pos="50%-16|60" color="{var:colorMenuIcon}" textSize="32" align="center" font="v7-font-icon" class="icon-spinner"/>
+                            </item>
+                          </resource>
+                        </resources>
+                      </details>
+                    </catalogDiaporama>
+                  </item>
+                  <item size="32|32" pos="100%-38|0" action="id:closeDiaporama" handCursor="true" altId="panelCloseAlt">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="downloadBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="198|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="downloadBtn" altId="downloadBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-downloadBtn,#size=16|16" action="id:openDownload" visible="1" tint="{var:colorMenuIcon}" size="65|100%" pos="199|0">
+          <details>
+            <actions>
+              <actionDesc id="openDownload">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="showOverlay" target="mainframe" params="overlayId=downloadOverlay,insertBefore=header,color={var:overlayColor},duration=300,opacity=0,onPressActionId=closeDownload"/>
+                  <action name="setVariables" params="openedModule=download,moduleOverlay=downloadOverlay,moduleContainer=downloadContainer,moduleBtn=downloadBtn"/>
+                  <action name="add" target="mainframe" params="id=downloadContainer,duration=0.3"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=57"/>
+                  <action name="animate" target="downloadContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeDownload"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeDownload">
+                <actionQueue trigger="click">
+                  <actionLib name="closeDownload"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeDownload">
+                <action name="closeOverlay" target="mainframe" params="overlayId=downloadOverlay"/>
+                <action name="resetClickCount" target="downloadBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleOverlay=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="downloadContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=downloadContainer,animation=slideDown,duration=0.3"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+            </actions>
+            <skins/>
+            <resources>
+              <resource id="downloadContainer">
+                <item id="downloadContainer" size="100%|57" pos="0|50" alpha="0">
+                  <downloads id="download" templateName="downloadTemplate_" fitType="none" source="catalog">
+                    <details>
+                      <txtStyles>
+                        <txtStyle id="downloadLabelStyle" size="13" bold="0" color="{var:colorPanelDownloadBtn}" font="{var:defaultFontFace}"/>
+                      </txtStyles>
+                      <actions>
+                        <actionDesc id="downloadPage">
+                          <action name="downloadPage" trigger="click" target="self" params="source=catalog,page={params:page},graphic={params:graphic},path={params:path}"/>
+                        </actionDesc>
+                      </actions>
+                      <resources>
+                        <resource id="downloadTemplate_1">
+                          <item id="downloadTemplate_1" layout="horizontal" spacing="18" pos="center|10" size="100%|20">
+                            <item id="page1Wrapper" size="240|20" action="id:downloadPage;params:source=catalog,page=current" handCursor="true">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfLeft" tint="{var:colorPanelDownloadBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="downloadCurrentPage" txtStyle="downloadLabelStyle" altId="" tint="{var:colorPanelDownloadBtn}"/>
+                            </item>
+                            <item id="pageCatalogWrapper" size="240|20" action="id:downloadPage;params:source=catalog,page=localURL,path=common/data/catalogue.pdf" handCursor="true">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfCatalog" tint="{var:colorPanelDownloadBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="downloadCatalog" txtStyle="downloadLabelStyle" altId="" tint="{var:colorPanelDownloadBtn}"/>
+                            </item>
+                          </item>
+                        </resource>
+                        <resource id="downloadTemplate_2">
+                          <item id="downloadTemplate_2" layout="horizontal" spacing="18" pos="center|10" size="100%|20">
+                            <item id="downLeft" size="240|20" action="id:downloadPage;params:source=catalog,page=left" handCursor="true" pos="50%-370|center" tint="{var:colorPanelDownloadBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfLeft" tint="{var:colorPanelDownloadBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="downloadLeftPage" txtStyle="downloadLabelStyle" altId="" tint="{var:colorPanelDownloadBtn}"/>
+                            </item>
+                            <item id="downRight" size="240|20" action="id:downloadPage;params:source=catalog,page=right" handCursor="true" pos="50%-w/2|center" tint="{var:colorPanelDownloadBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfRight" tint="{var:colorPanelDownloadBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="downloadRightPage" txtStyle="downloadLabelStyle" altId="" tint="{var:colorPanelDownloadBtn}"/>
+                            </item>
+                            <item id="downAll" size="240|20" action="id:downloadPage;params:source=catalog,page=localURL,path=common/data/catalogue.pdf" handCursor="true" pos="50%+120|center" tint="{var:colorPanelDownloadBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfCatalog" tint="{var:colorPanelDownloadBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="downloadCatalog" txtStyle="downloadLabelStyle" altId="" tint="{var:colorPanelDownloadBtn}"/>
+                            </item>
+                          </item>
+                        </resource>
+                      </resources>
+                    </details>
+                  </downloads>
+                  <item id="panelPdfClose" size="32|32" pos="100%-41|2" action="id:closeDownload" handCursor="true" altId="panelCloseAlt" tint="{var:colorPanelClose}">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="printBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="264|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="printBtn" altId="printBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-printBtn,#size=16|16" action="id:openPrint" visible="1" tint="{var:colorMenuIcon}" size="65|100%" pos="265|0">
+          <details>
+            <actions>
+              <actionDesc id="openPrint">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="showOverlay" target="mainframe" params="overlayId=printOverlay,insertBefore=header,color={var:overlayColor},duration=300,opacity=0,onPressActionId=closePrint"/>
+                  <action name="setVariables" params="openedModule=print,moduleOverlay=printOverlay,moduleContainer=printContainer,moduleBtn=printBtn"/>
+                  <action name="add" target="mainframe" params="id=printContainer,duration=0.3"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=57"/>
+                  <action name="animate" target="printContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closePrint"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closePrint">
+                <actionQueue trigger="click">
+                  <actionLib name="closePrint"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closePrint">
+                <action name="closeOverlay" target="mainframe" params="overlayId=printOverlay"/>
+                <action name="resetClickCount" target="printBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleOverlay=none,moduleContainer=none,moduleBtn=none"/>
+                <!-- <action name="setVariable" params="name=openedModule,value=none" /> -->
+                <action name="animate" target="printContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=printContainer,duration=0.3"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+            </actions>
+            <skins/>
+            <resources>
+              <resource id="printContainer">
+                <item id="printContainer" size="100%|57" pos="0|50" alpha="0">
+                  <downloads id="print" templateName="printTemplate_" fitType="none" source="catalog">
+                    <details>
+                      <txtStyles>
+                        <txtStyle id="printLabelStyle" size="13" bold="0" color="{var:colorPanelPrintBtn}" font="{var:defaultFontFace}"/>
+                      </txtStyles>
+                      <actions>
+                        <actionDesc id="printPage">
+                          <action name="printPage" trigger="click" target="self" params="source=catalog,page={params:page},graphic={params:graphic},path={params:path}"/>
+                        </actionDesc>
+                        <actionDesc id="printDynamicPage">
+                          <action name="printDynamicPage" trigger="click" target="self" params="source=catalog,page={params:page}"/>
+                        </actionDesc>
+                      </actions>
+                      <resources>
+                        <resource id="printTemplate_1">
+                          <item id="printTemplate_1" layout="horizontal" spacing="18" pos="center|10" size="100%|20">
+                            <item id="printCurrent" size="220|20" action="id:printPage;params:source=catalog,page=current" handCursor="true">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfLeft" tint="{var:colorPanelPrintBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="printCurrentPage" txtStyle="printLabelStyle" altId="" tint="{var:colorPanelPrintBtn}"/>
+                            </item>
+                          </item>
+                        </resource>
+                        <resource id="printTemplate_2">
+                          <item id="printTemplate_2" layout="horizontal" spacing="18" pos="center|10" size="100%|20">
+                            <item id="printLeft" size="220|20" action="id:printPage;params:source=catalog,page=left" handCursor="true" pos="50%-340|center" tint="{var:colorPanelPrintBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfLeft" tint="{var:colorPanelPrintBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="printLeftPage" txtStyle="printLabelStyle" altId="" tint="{var:colorPanelPrintBtn}"/>
+                            </item>
+                            <item id="printRight" size="220|20" action="id:printPage;params:source=catalog,page=right" handCursor="true" pos="50%-w/2|center" tint="{var:colorPanelPrintBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfRight" tint="{var:colorPanelPrintBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="printRightPage" txtStyle="printLabelStyle" altId="" tint="{var:colorPanelPrintBtn}"/>
+                            </item>
+                            <item id="printDouble" size="220|20" action="id:printPage;params:source=catalog,page=double" handCursor="true" pos="50%+110|center" tint="{var:colorPanelPrintBtn}">
+                              <item size="20|20" pos="10|center" skin="fontIcon=menuIcon-panelPdfDouble" tint="{var:colorPanelPrintBtn}"/>
+                              <txt size="100%-40|16" pos="40|center" defaultTextId="printDoublePage" txtStyle="printLabelStyle" altId="" tint="{var:colorPanelPrintBtn}"/>
+                            </item>
+                          </item>
+                        </resource>
+                      </resources>
+                    </details>
+                  </downloads>
+                  <item id="panelPrintClose" size="32|32" pos="100%-41|2" action="id:closePrint" handCursor="true" altId="panelCloseAlt" tint="{var:colorPanelClose}">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="shareBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="330|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="shareBtn" altId="shareBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-shareBtn,#size=16|16" action="id:openShare" visible="1" disabledOffline="true" disable="visible=false" tint="{var:colorMenuIcon}" size="65|100%" pos="331|0" tradid="panelShareAlt">
+          <details>
+            <actions>
+              <actionDesc id="openShare">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="showOverlay" target="mainframe" params="overlayId=shareOverlay,insertBefore=header,color={var:overlayColor},duration=300,opacity=0,onPressActionId=closeShare"/>
+                  <action name="setVariables" params="openedModule=share,moduleOverlay=shareOverlay,moduleContainer=shareContainer,moduleBtn=shareBtn"/>
+                  <action name="add" target="mainframe" params="id=shareContainer"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=57"/>
+                  <action name="animate" target="shareContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeShare"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeShare">
+                <actionQueue trigger="click">
+                  <actionLib name="closeShare"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeShare">
+                <action name="closeOverlay" target="mainframe" params="overlayId=shareOverlay"/>
+                <action name="resetClickCount" target="shareBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleOverlay=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="shareContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=shareContainer"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+            </actions>
+            <resources>
+              <resource id="shareContainer">
+                <item id="shareContainer" size="100%|57" pos="0|50" alpha="0">
+                  <details>
+                    <templates>
+                      <template id="shareItem" size="34|33" handCursor="true">
+                        <item skin="color={var:colorPanelShareBtn},shape=circle"/>
+                        <item size="100%-4|100%-4" pos="2|2" skin="color={var:colorBgPanels},shape=circle"/>
+                        <!-- <txt font="v7-font-icon" size="16|16" pos="center|center" align="center" textSize="16" class="#class" color="{var:colorPanelShareBtn}" /> -->
+                        <item size="15|15" pos="center|center" skin="fontIcon=#class" tint="{var:colorPanelShareBtn}"/>
+                      </template>
+                    </templates>
+                  </details>
+                  <item id="shareContentItems" layout="horizontal" spacing="5" pos="center|4" size="100%|33">
+                    <item id="shareEmailBtn" size="34|33" action="id:sendMail" altId="shareEmailAlt" visible="1" tint="{var:colorPanelShareBtn}" handCursor="true" pos="0|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="sendMail">
+                            <actionQueue trigger="click">
+                              <actionLib name="closeShare"/>
+                              <action name="track" params="action=410"/>
+                              <action name="setVariables" params="openedModule=mail,moduleContainer=catalogueMailContainer"/>
+                              <action name="add" target="mainframe" params="id=catalogueMailContainer"/>
+                              <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                              <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                              <action name="animate" target="catalogueMailContainer" params="duration=0.2,alpha=1"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="closeSendMail">
+                            <actionQueue trigger="click">
+                              <actionLib name="closeSendMail"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionLib id="closeSendMail">
+                            <action name="setVariables" params="openedModule=none,moduleContainer=none,moduleBtn=none"/>
+                            <action name="animate" target="catalogueMailContainer" params="duration=0.2,alpha=0"/>
+                            <action name="remove" target="mainframe" params="id=catalogueMailContainer"/>
+                            <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                            <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+                          </actionLib>
+                          <actionDesc id="sendMailFromForm">
+                            <actionQueue trigger="press">
+                              <action name="sendMailFromForm" target="mainframe" params="url={params:url},lang={params:lang},containerId=backgroundMailWrapper,oldVersion={params:oldVersion},catalogId=catalog"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="sendMailActions">
+                            <actionQueue trigger="sendMailFormError">
+                              <action name="showOverlay" target="mainframe" params="color={var:overlayColor},duration=300,opacity=0.6,onPressActionId=closeFormErrorMessage,overlayId=errorOverlay"/>
+                              <action name="showErrorMessage" target="mainframe" params="resourceId=stfFormErrorTemplate,closeAfter=2000"/>
+                              <action name="track" target="mainframe" params="action=417"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="closeFormErrorMessage">
+                            <actionQueue trigger="click">
+                              <action name="closeOverlay" target="mainframe" params="overlayId=errorOverlay,duration=300"/>
+                              <action name="remove" target="mainframe" params="id=stfFormErrorTemplate"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                        <resources>
+                          <resource id="catalogueMailContainer">
+                            <item id="catalogueMailContainer" size="100%|100%-50" pos="center|50" alpha="0" action="id:sendMailActions">
+                              <details>
+                                <txtStyles>
+                                  <txtStyle id="mailLabelStyle" size="12" font="{var:defaultFontFace}" color="{var:mainColor}" bold="1"/>
+                                  <txtStyle id="mailInputStyle" size="12" font="{var:defaultFontFace}" color="{var:mainColor}" border="0" borderColor="{var:separatorColor}"/>
+                                  <txtStyle id="mailCommentStyle" size="12" font="{var:defaultFontFace}" color="{var:colorMenuIcon}" bold="0"/>
+                                </txtStyles>
+                              </details>
+                              <item action="id:closeSendMail"/>
+                              <item size="100%|33" pos="center|4" layout="horizontal" spacing="5">
+                                <item id="catalogueMailContainerEmailBtn" size="34|33" pos="{#shareEmailBtn.x}|{#shareEmailBtn.y}" tint="{var:colorPanelShareBtn}">
+                                  <item skin="color={var:colorPanelShareBtn},shape=circle"/>
+                                  <item size="100%-4|100%-4" pos="2|2" skin="color={var:colorBgPanels},shape=circle"/>
+                                  <item size="20|10" pos="center|center" skin="fontIcon=menuIcon-shareEmailBtn" tint="{var:colorPanelShareBtn}"/>
+                                </item>
+                              </item>
+                              <item id="backgroundMailWrapper" size="374|468" pos="center|center">
+                                <item skin="color=#ffffff,radius=4" size="100%|22" pos="0|69"/>
+                                <txt id="stfInputFirstName" size="100%-20|16" pos="10|72" txtStyle="mailInputStyle" type="input" placeholderTextId="mailFirstNameLabel" required="true" autosaveType="standard"/>
+                                <item skin="color=#ffffff,radius=4" size="100%|22" pos="0|108"/>
+                                <txt id="stfInputLastName" size="100%-20|16" pos="10|111" txtStyle="mailInputStyle" type="input" placeholderTextId="mailLastNameLabel" required="true" autosaveType="standard"/>
+                                <item skin="color=#ffffff,radius=4" size="100%|22" pos="0|148"/>
+                                <txt id="stfInputFrom" size="100%-20|16" pos="10|151" txtStyle="mailInputStyle" type="input" placeholderTextId="mailEmailLabel" required="true" autosaveType="standard"/>
+                                <item skin="color=#ffffff,radius=4" size="100%|22" pos="0|189"/>
+                                <txt id="stfInputTo" size="100%-20|16" pos="10|192" txtStyle="mailInputStyle" type="input" placeholderTextId="mailRecipientLabel" required="true" autosaveType="standard"/>
+                                <item skin="color=#ffffff,radius=4" size="100%|90" pos="0|228"/>
+                                <txt id="stfInputMessage" size="100%-20|90" pos="10|228" txtStyle="mailInputStyle" type="textarea" placeholderTextId="mailMessageLabel" autosaveType="standard"/>
+                                <txt size="100%-20|15" pos="10|336" txtStyle="mailCommentStyle"><![CDATA[{lang:mailComment}]]></txt>
+                                <item id="stfSendBtn" size="95|28" pos="100%-w|359" skin="color=#348BBC,radius=4" action="id:sendMailFromForm;params:url=http://www.interactivpdf.com/mail_easy_publication/default/externals/sendtofriend/index.php,lang=pt" handCursor="true">
+                                  <txt size="100%|20" pos="center|8" txtStyle="mailLabelStyle" align="center" color="#ffffff" upperCase="0"><![CDATA[{lang:mailDesktopSendLabel}]]></txt>
+                                </item>
+                              </item>
+                              <item size="32|32" pos="100%-42|2" action="id:closeSendMail" handCursor="true" altId="panelCloseAlt">
+                                <item skin="color={var:colorPanelClose},shape=circle"/>
+                                <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                                <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                              </item>
+                            </item>
+                          </resource>
+                          <resource id="stfSuccessTemplate">
+                            <item id="stfSuccessTemplate" size="320|120" pos="center|center" skin="color=#ffffff" class="roundCorners">
+                              <txt id="stfSuccessMessage" size="100%-10|100%-50" pos="5|52" defaultTextId="panelMailAlertSuccess" txtStyle="errorMessageStyle" align="center"/>
+                            </item>
+                          </resource>
+                          <resource id="stfErrorTemplate">
+                            <item id="stfErrorTemplate" size="320|120" pos="center|center" skin="color=#ffffff" class="roundCorners">
+                              <txt id="stfErrorMessage" size="100%-10|100%-50" pos="5|52" defaultTextId="panelMailAlertError" txtStyle="errorMessageStyle" align="center"/>
+                            </item>
+                          </resource>
+                          <resource id="stfFormErrorTemplate">
+                            <item id="stfFormErrorTemplate" size="320|120" pos="center|center" skin="color=#ffffff" class="roundCorners">
+                              <txt id="errorMessage" size="100%-10|100%-50" pos="5|52" defaultTextId="panelMailAlertError" txtStyle="errorMessageStyle" align="center"/>
+                            </item>
+                          </resource>
+                        </resources>
+                      </details>
+                      <item skin="color={var:colorPanelShareBtn},shape=circle"/>
+                      <item size="100%-4|100%-4" pos="2|2" skin="color={var:colorBgPanels},shape=circle"/>
+                      <item size="20|10" pos="center|center" skin="fontIcon=menuIcon-shareEmailBtn" tint="{var:colorPanelShareBtn}"/>
+                    </item>
+                    <item id="shareFacebookBtn" size="34|33" templateId="shareItem" templateParams="#class=menuIcon-shareFacebookBtn" action="id:shareFacebook" altId="shareFacebookAlt" visible="0" tint="{var:colorPanelShareBtn}" handCursor="true" pos="39|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="shareFacebook">
+                            <actionQueue trigger="click">
+                              <action name="shareFacebook" trigger="click" target="mainframe" params="url="/>
+                              <action name="track" target="mainframe" params="action=420"/>
+                            </actionQueue>
+                          </actionDesc>
+                          <actionDesc id="shareFacebookFeed">
+                            <action name="shareFacebookFeed" trigger="click" target="mainframe" params="app_id=,link=,picture=,name=facebookFeedName,caption=facebookFeedCaption,description=facebookFeedDescription,redirect_uri="/>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                    </item>
+                    <item id="shareTwitterBtn" size="34|33" templateId="shareItem" templateParams="#class=menuIcon-shareTwitterBtn" action="id:shareTwitter" altId="shareTwitterAlt" visible="0" tint="{var:colorPanelShareBtn}" handCursor="true" pos="78|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="shareTwitter">
+                            <actionQueue trigger="click">
+                              <action name="shareTwitter" trigger="click" target="mainframe" params="text=twitterText"/>
+                              <action name="track" target="mainframe" params="action=430"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                    </item>
+                    <item id="sharePinterestBtn" size="34|33" templateId="shareItem" templateParams="#class=menuIcon-sharePinterestBtn" action="id:sharePinterest" altId="sharePinterestAlt" visible="0" tint="{var:colorPanelShareBtn}" handCursor="true" pos="117|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="sharePinterest">
+                            <actionQueue trigger="click">
+                              <action name="sharePinterest" trigger="click" target="mainframe" params="media={global:appFolder}/data/0001.jpg"/>
+                              <action name="track" target="mainframe" params="action=450"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                    </item>
+                    <item id="shareLinkedinBtn" size="34|33" templateId="shareItem" templateParams="#class=menuIcon-shareLinkedinBtn" action="id:shareLinkedIn" altId="shareLinkedinAlt" visible="0" tint="{var:colorPanelShareBtn}" handCursor="true" pos="156|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="shareLinkedIn">
+                            <actionQueue trigger="click">
+                              <action name="shareLinkedIn" trigger="click" target="mainframe" params="url=,title=linkedinTitle,summary=linkedinSummary,source=linkedinSource"/>
+                              <action name="track" target="mainframe" params="action=440"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                    </item>
+                    <item id="shareGooglePlusBtn" size="34|33" templateId="shareItem" templateParams="#class=menuIcon-shareGooglePlusBtn" action="id:shareGplus" altId="shareGplusAlt" visible="0" tint="{var:colorPanelShareBtn}" handCursor="true" pos="195|50%-h/2">
+                      <details>
+                        <actions>
+                          <actionDesc id="shareGplus">
+                            <actionQueue trigger="click">
+                              <action name="shareGooglePlus" target="mainframe" params="url="/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                    </item>
+                  </item>
+                  <item id="panelShareClose" size="32|32" pos="100%-42|2" action="id:closeShare" handCursor="true" altId="panelCloseAlt" tint="{var:colorPanelClose}">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="markerBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" pos="396|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="markerBtn" size="65|100%" tint="{var:colorMenuIcon}" visible="0" pos="397|0">
+          <bookmarkBtn source="catalog" handCursor="true" page="left" action="id:markerBtnActions;params:page=left" mainButton="true" tint="{var:colorMenuIcon}" autoHideOnZoom="false">
+            <details>
+              <actionDesc id="markerBtnActions">
+                <actionQueue trigger="click">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="toggleBookmark" target="catalog" params="page={params:page}"/>
+                </actionQueue>
+                <actionQueue trigger="mouseenter">
+                  <action name="animate" target="markerBtnAddBorder" params="duration=0.3,alpha=1"/>
+                  <action name="animate" target="markerBtnRemoveBorder" params="duration=0.3,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="mouseleave">
+                  <action name="animate" target="markerBtnAddBorder" params="duration=0.3,alpha=0"/>
+                  <action name="animate" target="markerBtnRemoveBorder" params="duration=0.3,alpha=0"/>
+                </actionQueue>
+              </actionDesc>
+            </details>
+            <off altId="addBookmarkButtonAlt">
+              <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-bookmarkBtnAdd" tint="{var:colorMenuIcon}"/>
+              <item id="markerBtnAddBorder" size="30|1" pos="center|36" skin="color={var:colorMenuIcon}" alpha="0"/>
+            </off>
+            <on altId="removeBookmarkButtonAlt">
+              <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-bookmarkBtnRemove" tint="{var:colorMenuIcon}"/>
+              <item id="markerBtnRemoveBorder" size="30|1" pos="center|36" skin="color={var:colorMenuIcon}" alpha="0"/>
+            </on>
+          </bookmarkBtn>
+        </item>
+        <item id="addNotesBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="0" pos="462|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="addNotesBtn" templateId="headerMenuItem" templateParams="#class=menuIcon-addNotesBtn,#size=15|15" action="id:addNotesBtnActions" altId="addNotesBtnAlt" visible="0" size="65|100%" pos="463|0" tint="{var:colorMenuIcon}">
+          <details>
+            <actions>
+              <actionDesc id="showNotesBtnActions">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="setVariables" params="openedModule=notes,moduleContainer=notesListContainer,moduleBtn=showNotesBtn"/>
+                  <action name="animate" target="bgTopLine" params="duration=0.3,alpha=0,wait=false"/>
+                  <action name="animate" target="bgPanels" params="duration=0.3,h=100%"/>
+                  <action name="add" target="mainframe" params="id=notesListContainer,duration=0.3"/>
+                  <action name="animate" target="notesListContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeNotesList"/>
+                </actionQueue>
+                <actionQueue trigger="notesNotFound">
+                  <action name="show" target="notesAlert"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeNotesList">
+                <actionQueue trigger="click">
+                  <actionLib name="closeNotesList"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeNotesList">
+                <action name="resetClickCount" target="showNotesBtn"/>
+                <action name="setVariables" params="openedModule=none,moduleContainer=none,moduleBtn=none"/>
+                <action name="animate" target="notesListContainer" params="duration=0.2,alpha=0"/>
+                <action name="remove" target="mainframe" params="id=notesListContainer,animation=slideDown,duration=0.3"/>
+                <action name="animate" target="bgPanels" params="duration=0.3,h=0,wait=false"/>
+                <action name="animate" target="bgTopLine" params="duration=0.3,alpha=1"/>
+              </actionLib>
+              <actionDesc id="addNotesBtnActions">
+                <actionQueue trigger="click">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="drawNote" target="catalog" params="templateId=noteTemplate"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="noteActions">
+                <action name="bringNoteToFront" trigger="mousedown,touchstart" target="self" params="catalogId=catalog"/>
+              </actionDesc>
+              <actionDesc id="dragNote">
+                <action name="dragNote" trigger="drag" target="self" params="dragTarget=parent"/>
+                <action name="saveNotePosition" trigger="dragEnd" target="self" params="catalogId=catalog"/>
+              </actionDesc>
+              <actionDesc id="resizeNote">
+                <action name="bringNoteToFront" trigger="mousedown,touchstart" target="parent" params="catalogId=catalog"/>
+                <action name="resizeNote" trigger="drag" target="self" params="minSizeX=150,minSizeY=100,maxSizeX=600,maxSizeY=400"/>
+                <action name="saveNotePosition" trigger="dragEnd" target="parent" params="catalogId=catalog"/>
+              </actionDesc>
+              <actionDesc id="noteTextActions">
+                <action name="saveNoteText" trigger="blur" target="self" params="catalogId=catalog"/>
+              </actionDesc>
+              <!-- to fix -->
+              <actionDesc id="goToNote">
+                <actionQueue trigger="click">
+                  <actionLib name="closeNotesList"/>
+                  <action name="toggleZoomPageCatalog" target="catalog" params="duration=0.3,force=zoomOut"/>
+                  <action name="hide" target="bookmarks"/>
+                  <action name="goToPageCatalog" target="catalog" params="page={params:page},duration=0.3"/>
+                  <action name="show" target="bookmarks"/>
+                  <action name="highlightKeyword" target="catalog" params="page={params:page},animated=true,persistent=true"/>
+                  <action name="track" target="catalog" params="action=210,params=currentPage"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="deleteNote">
+                <actionQueue trigger="click">
+                  <action name="removeNote" target="catalog" params="noteId={params:noteId}"/>
+                  <action name="removeVerticalListNote" target="mainframe" params="noteId={params:noteId},notesId=catalogAnnotations"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="removeNote">
+                <actionQueue trigger="click">
+                  <action name="removeNote" target="catalog" params="noteId={params:noteId}"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="notesActions">
+                <action name="applyEasing" trigger="dragStart" target="self" params="allowVerticalScrolling=true,allowHorizontalScrolling=false"/>
+              </actionDesc>
+            </actions>
+            <skins>
+              <skin id="noteMenuSkin" color="{var:mainColor}" alpha="0.8">
+                <skin size="100%|1" pos="0|bottom" color="{var:separatorColor}"/>
+              </skin>
+            </skins>
+            <txtStyles>
+              <txtStyle id="noteTextStyle" border="0" background="0" selectable="1" font="{var:defaultFontFace}" size="12" color="#000000" bold="0"/>
+              <txtStyle id="noteTitleStyle" border="0" background="0" selectable="1" font="{var:defaultFontFace}" size="12" color="#ffffff" bold="0"/>
+              <txtStyle id="noteMenuTitleStyle" size="16" bold="0" color="#ffffff" font="{var:defaultFontFace}"/>
+              <txtStyle id="noteMenuLabelStyle" size="12" bold="1" color="{var:secondaryTextColor}" font="{var:defaultFontFace}"/>
+              <txtStyle id="noteListPageStyle" font="{var:defaultFontFace}" size="12" color="{var:mainTextColor}" bold="1" upperCase="1"/>
+              <txtStyle id="noteListTextStyle" font="{var:defaultFontFace}" size="11" color="#ffffff" bold="0"/>
+              <txtStyle id="noteListDeleteStyle" font="{var:defaultFontFace}" size="11" color="#ff6a2e" bold="1" align="right"/>
+              <txtStyle id="searchNoResultsStyle" font="{var:defaultFontFace}" size="12" color="#ffffff"/>
+            </txtStyles>
+            <templates>
+              <template id="noteMenuItem" size="100%|33" handCursor="true" skinId="noteMenuSkin">
+                <txt font="v7-font-icon" size="20|20" pos="15|6" class="#class" textSize="20" align="center" color="{var:secondaryTextColor}"/>
+                <txt size="100%-50|20" pos="45|10" defaultTextId="#labelId" txtStyle="noteMenuLabelStyle"/>
+              </template>
+            </templates>
+            <sliders>
+              <slider id="notesSlider" width="8" scrollbarColor="#8b8b8b" railColor="#ffffff"/>
+            </sliders>
+            <resources>
+              <resource id="noteTemplate">
+                <item id="noteTemplate" size="170|180" pos="10|10" action="id:noteActions" h5_style="box-shadow: 6px 6px 4px -5px {var:mainColor};">
+                  <item skin="color={var:colorBgTop}"/>
+                  <item id="noteHeader" size="100%|30" pos="0|0" action="id:dragNote">
+                    <item skin="color={var:colorBgTop}"/>
+                    <item id="closeNoteBtn" size="14|14" pos="100%-24|center" skin="fontIcon=menuIcon-panelClose" handCursor="true" altId="annotationItemCloseAlt" tint="{var:colorMenuIcon}"/>
+                    <txt id="noteTitle" size="120|25" pos="6|7" defaultTextId="noteTextTitle" txtStyle="noteTitleStyle" color="{var:colorMenuIcon}"/>
+                  </item>
+                  <txt id="noteText" size="100%-10|100%-40" pos="4|35" action="id:noteTextActions" txtStyle="noteTextStyle" type="textarea" placeholderTextId="defaultAnnotationInputText" color="{var:colorMenuIcon}"/>
+                </item>
+              </resource>
+              <resource id="notesListContainer">
+                <item id="notesListContainer" size="100%|100%-50" pos="center|50" alpha="0">
+                  <item id="notesListBg" skin="color={var:colorBgTop}" alpha="0" action="id:closeNotesList"/>
+                  <!-- <txt id="notesListTitle" size="100%-50|20" pos="7|17" defaultTextId="notesPanelTitle" txtStyle="noteMenuTitleStyle" upperCase="1" color="{var:colorMenuIcon}" /> -->
+                  <item id="notesListWrapper" size="100%-1|100%-80" pos="5|50" sliderId="notesSlider">
+                    <annotation id="catalogAnnotations" action="id:notesActions" annotationId="defaultNotes" loadingTemplateId="notesLoadingTemplate" layout="grid"/>
+                  </item>
+                  <item id="notesAlert" size="225|72" pos="center|center+30" visible="false">
+                    <item skin="color={var:colorBgTop}"/>
+                    <txt id="notesAlertTxt" size="100%|20" pos="center|center" txtStyle="searchNoResultsStyle" align="center" color="{var:colorMenuIcon}"><![CDATA[{lang:noAnnotationsText}]]></txt>
+                  </item>
+                  <item id="closeNotesListButton" size="32|32" pos="100%-42|2" action="id:closeNotesList" handCursor="true">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+              <resource id="noteListTemplate">
+                <item id="noteListTemplate" size="300|140">
+                  <item size="100%-10|100%-10" pos="5|5" skin="border=1px solid #000000"/>
+                  <pagePreview id="notePagePreview" size="120|120" pos="10|10" number="" mode="single" source="catalog" handCursor="true" quality="low" _altId="searchResultImgAlt"/>
+                  <txt id="noteListText" size="100%-140|100%-43" pos="135|8" txtStyle="noteListTextStyle" type="textarea" border="0" tint="{var:colorMenuIcon}"/>
+                  <item id="noteListDelBtn" size="11|11" pos="100%-w-11|100%-h-15" skin="fontIcon=menuIcon-panelClose" handCursor="true" altId="annotationItemCloseAlt" tint="{var:colorMenuIcon}"/>
+                </item>
+              </resource>
+              <resource id="notesLoadingTemplate">
+                <item id="notesLoadingTemplate" size="100%|100%" pos="0|0">
+                  <txt id="notesLoadingText" size="90%|60" pos="center|center" defaultTextId="defaultLoadingMessage" txtStyle="loadingMessageStyle"/>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="showNotesBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="0" pos="528|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="showNotesBtn" templateId="headerMenuItem" templateParams="#class=menuIcon-showNotesBtn,#size=15|15" action="id:showNotesBtnActions" altId="showNotesBtnAlt" visible="0" size="65|100%" pos="529|0" tint="{var:colorMenuIcon}"/>
+        <item id="scrollshopBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="0" pos="594|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="scrollshopBtn" altId="scrollshopBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-scrollshopBtn,#size=15|15" action="id:openScrollshop" tint="{var:colorMenuIcon}" visible="0" size="65|100%" pos="595|0">
+          <details>
+            <actions>
+              <actionDesc id="openScrollshop">
+                <actionQueue trigger="firstClick">
+                  <actionLib name="resetOpenedModules"/>
+                  <action name="setVariables" params="openedModule=scrollshop,moduleOverlay=none,moduleContainer=scrollshopContainer,moduleBtn=scrollshopBtn"/>
+                  <action name="add" target="mainframe" params="id=scrollshopContainer,insertBefore=headerBackground"/>
+                  <!-- ,animation=slideDown,duration=0.3 -->
+                  <action name="initScrollshop" target="scrollshop"/>
+                  <action name="animate" target="scrollshopContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="#get.view=scrollshop">
+                  <action name="setVariables" params="openedModule=scrollshop,moduleOverlay=none,moduleContainer=scrollshopContainer"/>
+                  <action name="add" target="mainframe" params="id=scrollshopContainer,insertBefore=headerBackground"/>
+                  <action name="initScrollshop" target="scrollshop"/>
+                  <action name="animate" target="scrollshopContainer" params="duration=0.2,alpha=1"/>
+                </actionQueue>
+                <actionQueue trigger="secondClick">
+                  <actionLib name="closeScrollshop"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeScrollshop">
+                <actionQueue trigger="click">
+                  <actionLib name="closeScrollshop"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeZoomScrollshop">
+                <actionQueue trigger="click">
+                  <action name="closeZoomScrollshopItem" target="scrollshop" params="duration=0.3"/>
+                </actionQueue>
+              </actionDesc>
+              <actionDesc id="closeZoomScrollshopAndGoToPage">
+                <actionQueue trigger="click">
+                  <action name="closeZoomScrollshopItem" target="scrollshop" params="duration=0.3"/>
+                  <action name="hide" target="bookmarks"/>
+                  <action name="goToPageCatalog" target="catalog" params="page={params:page}"/>
+                  <action name="show" target="bookmarks"/>
+                  <actionLib name="closeScrollshop"/>
+                  <action name="highlightKeyword" target="catalog" params="page={params:page},animated=true,persistent=true"/>
+                </actionQueue>
+              </actionDesc>
+              <actionLib id="closeScrollshop">
+                <action name="resetClickCount" target="scrollshopBtn"/>
+                <action name="setVariable" params="name=openedModule,value=none"/>
+                <action name="animate" target="scrollshopContainer" params="duration=0.2,alpha=0"/>
+                <action name="destroyScrollshop" target="scrollshop"/>
+                <action name="remove" target="mainframe" params="id=scrollshopContainer,animation=slideDown,duration=0.9"/>
+              </actionLib>
+              <actionDesc id="scrollshopItemAction">
+                <actionQueue trigger="click">
+                  <action name="zoomScrollshopItem" target="scrollshop" params="duration=0.5,overlayColor=#000000,overlayOpacity=0,itemAction=closeZoomScrollshopAndGoToPage,itemAltId=scrollshopZoomedItemAlt"/>
+                </actionQueue>
+              </actionDesc>
+            </actions>
+            <resources>
+              <resource id="scrollshopContainer">
+                <item id="scrollshopContainer" size="100%|100%-50" pos="0|50" alpha="0">
+                  <item skin="color={var:colorBgPanels}" alpha="0.2"/>
+                  <item size="100%-50|50" pos="25|10">
+                    <scrollshopFilterGroup id="tagCloud" pos="centerLeft|0" spacing="10" layout="horizontal" layoutAlign="center" source="scrollshop" tagsLibraryId="tags" highlightedUrlTags="true">
+                      <details>
+                        <templates>
+                          <template id="tagTemplate" size="100|32" skin="color=#fff,shape=roundRect,border=1px solid #ccc" handCursor="true" over="skin.color=#eee,tagLabel.textColor=#000" duration="0.3" select="skin.color={var:mainColor},tagLabel.textColor=#fff">
+                            <txt id="tagLabel" role="tag-name" size="100%-20|20" pos="10|6" textSize="14" align="center" font="{var:defaultFontFace}" color="#000"/>
+                          </template>
+                        </templates>
+                        <actions>
+                          <actionDesc id="filterScrollshop">
+                            <actionQueue trigger="click">
+                              <action name="filterScrollshop" target="scrollshop" params="tagIds={params:tagIds},tagCloudId=tagCloud"/>
+                            </actionQueue>
+                          </actionDesc>
+                        </actions>
+                      </details>
+                      <scrollshopTag templateId="tagTemplate"/>
+                      <scrollshopAllTags templateId="tagTemplate"/>
+                    </scrollshopFilterGroup>
+                  </item>
+                  <item size="100%-50|100%-70" pos="25|60">
+                    <scrollshop id="scrollshop" source="catalog" itemWidth="250" startingItems="50" itemsPerLoad="50" tagsLibraryId="tags" dataUrl="common/res/scrollshop.xml" sliderId="default" spacingX="5" spacingY="5"/>
+                  </item>
+                  <item size="32|32" pos="100%-42|2" action="id:closeScrollshop" handCursor="true" altId="panelCloseAlt">
+                    <item skin="color={var:colorPanelClose},shape=circle"/>
+                    <item size="100%-2|100%-2" pos="1|1" skin="color={var:colorBgPanels},shape=circle"/>
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-panelClose" tint="{var:colorPanelClose}"/>
+                  </item>
+                </item>
+              </resource>
+            </resources>
+          </details>
+        </item>
+        <item id="fullscreenBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="0" pos="660|0">
+          <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+        </item>
+        <item id="fullscreenBtn" size="65|100%" tint="{var:colorMenuIcon}" visible="0" pos="661|0">
+          <details>
+            <actionDesc id="toggleFullscreen">
+              <actionQueue trigger="click">
+                <action name="toggleFullscreen"/>
+              </actionQueue>
+              <actionQueue trigger="onNormalScreen">
+                <action name="show" target="fullscreen"/>
+                <action name="hide" target="normalscreen"/>
+              </actionQueue>
+              <actionQueue trigger="onFullscreen">
+                <action name="hide" target="fullscreen"/>
+                <action name="show" target="normalscreen"/>
+              </actionQueue>
+            </actionDesc>
+          </details>
+          <item id="normalscreen" altId="normalscreenBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-normalscreenBtn,#size=15|15" action="id:toggleFullscreen" visible="0"/>
+          <item id="fullscreen" altId="fullScreenBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-fullscreenBtn,#size=15|15" action="id:toggleFullscreen"/>
+        </item>
+        <!-- <item id="menuBtnSeparator" size="1|100%" tint="{var:colorMenuSeparator}" visible="1" >
+					<item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}" />
+				</item> -->
+      </item>
+      <item id="helpBtnSeparator" size="1|100%" pos="100%-66|50%-h/2" tint="{var:colorMenuSeparator}" visible="1">
+        <item size="1|17" pos="0|center" skin="color={var:colorMenuSeparator}"/>
+      </item>
+      <item id="helpBtn" pos="100%-65|0" size="65|100%" altId="helpBtnAlt" templateId="headerMenuItem" templateParams="#class=menuIcon-helpBtn,#size=16|16" action="id:openHelp" visible="1" tint="{var:colorMenuIcon}">
+        <details>
+          <actions>
+            <actionDesc id="openHelp">
+              <actionQueue trigger="click">
+                <actionLib name="resetOpenedModules"/>
+                <action name="add" target="mainframe" params="id=helpContainer,animation=fade,duration=0.3"/>
+              </actionQueue>
+            </actionDesc>
+            <actionDesc id="closeHelp">
+              <actionQueue trigger="click">
+                <action name="remove" target="mainframe" params="id=helpContainer,animation=fade,duration=0.3"/>
+              </actionQueue>
+            </actionDesc>
+          </actions>
+          <resources>
+            <resource id="helpContainer">
+              <item id="helpContainer" action="id:closeHelp">
+                <details>
+                  <txtStyles>
+                    <txtStyle id="helpLabelStyle" size="13" color="#fff" font="{var:defaultFontFace}"/>
+                  </txtStyles>
+                </details>
+                <item skin="color=#000000,alpha=0.6"/>
+                <!-- header logo help -->
+                <item size="1|70" pos="{#logoBtn.x}+{#logoBtn.w}/2-20|{#logoBtn.under}+10" skin="color=#fff"/>
+                <txt id="helpLogoLabel" size="100|60" pos="{#logoBtn.x}|{#logoBtn.under}+80" txtStyle="helpLabelStyle" align="center"><![CDATA[{lang:helpLogo}]]></txt>
+                <!-- center menu help-->
+                <item id="helpContainerMenuCenter">
+                  <!-- summary -->
+                  <item id="helpSummaryBtn" size="65|{#summaryBtn.h}" pos="{#menuCenter.x}+{#summaryBtn.x}|{#summaryBtn.y}" visible="{id:summaryBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-summaryBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpSummaryLine" size="1|20" pos="{#menuCenter.x}+{#summaryBtn.x}+{#summaryBtn.w}/2|{#summaryBtn.under}+10" skin="color=#fff" visible="{id:summaryBtn.visible}"/>
+                  <txt id="helpSummaryLabel" size="250|20" pos="{#menuCenter.x}+{#summaryBtn.x}+{#summaryBtn.w}/2-w+30|{#helpSummaryLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:summaryBtn.visible}"><![CDATA[{lang:helpSummary}]]></txt>
+                  <!-- search -->
+                  <item id="helpSearchBtn" size="65|{#searchBtn.h}" pos="{#menuCenter.x}+{#searchBtn.x}|{#searchBtn.y}" visible="{id:searchBtn.visible}">
+                    <item size="17|17" pos="center|center" skin="fontIcon=menuIcon-searchBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpSearchLine" size="1|50" pos="{#menuCenter.x}+{#searchBtn.x}+{#searchBtn.w}/2|{#searchBtn.under}+10" skin="color=#fff" visible="{id:searchBtn.visible}"/>
+                  <txt id="helpSearchLabel" size="250|20" pos="{#menuCenter.x}+{#searchBtn.x}+{#searchBtn.w}/2-w|{#helpSearchLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:searchBtn.visible}"><![CDATA[{lang:helpSearch}]]></txt>
+                  <!-- diaporama -->
+                  <item id="helpDiaporamaBtn" size="65|{#diaporamaBtn.h}" pos="{#menuCenter.x}+{#diaporamaBtn.x}|{#diaporamaBtn.y}" visible="{id:diaporamaBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-diaporamaBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpDiaporamaLine" size="1|80" pos="{#menuCenter.x}+{#diaporamaBtn.x}+{#diaporamaBtn.w}/2|{#diaporamaBtn.under}+10" skin="color=#fff" visible="{id:diaporamaBtn.visible}"/>
+                  <txt id="helpDiaporamaLabel" size="250|20" pos="{#menuCenter.x}+{#diaporamaBtn.x}+{#diaporamaBtn.w}/2-w|{#helpDiaporamaLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:diaporamaBtn.visible}"><![CDATA[{lang:helpDiaporama}]]></txt>
+                  <!-- download -->
+                  <item id="helpDownloadBtn" size="65|{#downloadBtn.h}" pos="{#menuCenter.x}+{#downloadBtn.x}|{#downloadBtn.y}" visible="{id:downloadBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-downloadBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpDownloadLine" size="1|110" pos="{#menuCenter.x}+{#downloadBtn.x}+{#downloadBtn.w}/2|{#downloadBtn.under}+10" skin="color=#fff" visible="{id:downloadBtn.visible}"/>
+                  <txt id="helpDownloadLabel" size="250|20" pos="{#menuCenter.x}+{#downloadBtn.x}+{#downloadBtn.w}/2-w|{#helpDownloadLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:downloadBtn.visible}"><![CDATA[{lang:helpDownload}]]></txt>
+                  <!-- print -->
+                  <item id="helpPrintBtn" size="65|{#printBtn.h}" pos="{#menuCenter.x}+{#printBtn.x}|{#printBtn.y}" visible="{id:printBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-printBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpPrintLine" size="1|140" pos="{#menuCenter.x}+{#printBtn.x}+{#printBtn.w}/2|{#printBtn.under}+10" skin="color=#fff" visible="{id:printBtn.visible}"/>
+                  <txt id="helpPrintLabel" size="250|20" pos="{#menuCenter.x}+{#printBtn.x}+{#printBtn.w}/2-w|{#helpPrintLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:printBtn.visible}"><![CDATA[{lang:helpPrint}]]></txt>
+                  <!-- share -->
+                  <item id="helpShareBtn" size="65|{#shareBtn.h}" pos="{#menuCenter.x}+{#shareBtn.x}|{#shareBtn.y}" visible="{id:shareBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-shareBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpShareLine" size="1|170" pos="{#menuCenter.x}+{#shareBtn.x}+{#shareBtn.w}/2|{#shareBtn.under}+10" skin="color=#fff" visible="{id:shareBtn.visible}"/>
+                  <txt id="helpShareLabel" size="250|40" pos="{#menuCenter.x}+{#shareBtn.x}+{#shareBtn.w}/2-w|{#helpShareLine.under}+5" txtStyle="helpLabelStyle" align="right" visible="{id:shareBtn.visible}"><![CDATA[{lang:helpShare}]]></txt>
+                  <!-- bookmark -->
+                  <item id="helpMarkerBtn" size="65|{#markerBtn.h}" pos="{#menuCenter.x}+{#markerBtn.x}|{#markerBtn.y}" visible="{id:markerBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-bookmarkBtnAdd" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpMarkerLine" size="1|140" pos="{#menuCenter.x}+{#markerBtn.x}+{#markerBtn.w}/2|{#markerBtn.under}+10" skin="color=#fff" visible="{id:markerBtn.visible}"/>
+                  <txt id="helpMarkerLabel" size="250|40" pos="{#menuCenter.x}+{#markerBtn.x}+{#markerBtn.w}/2|{#helpMarkerLine.under}+5" txtStyle="helpLabelStyle" align="left" visible="{id:markerBtn.visible}"><![CDATA[{lang:helpBookmark}]]></txt>
+                  <!-- add notes-->
+                  <item id="helpAddNotesBtn" size="65|{#addNotesBtn.h}" pos="{#menuCenter.x}+{#addNotesBtn.x}|{#addNotesBtn.y}" visible="{id:addNotesBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-addNotesBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpAddNotesLine" size="1|110" pos="{#menuCenter.x}+{#addNotesBtn.x}+{#addNotesBtn.w}/2|{#addNotesBtn.under}+10" skin="color=#fff" visible="{id:addNotesBtn.visible}"/>
+                  <txt id="helpAddNotesLabel" size="250|40" pos="{#menuCenter.x}+{#addNotesBtn.x}+{#addNotesBtn.w}/2|{#helpAddNotesLine.under}+5" txtStyle="helpLabelStyle" align="left" visible="{id:addNotesBtn.visible}"><![CDATA[{lang:helpAddNotes}]]></txt>
+                  <!-- show notes-->
+                  <item id="helpShowNotesBtn" size="65|{#showNotesBtn.h}" pos="{#menuCenter.x}+{#showNotesBtn.x}|{#showNotesBtn.y}" visible="{id:showNotesBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-showNotesBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpShowNotesLine" size="1|80" pos="{#menuCenter.x}+{#showNotesBtn.x}+{#showNotesBtn.w}/2|{#showNotesBtn.under}+10" skin="color=#fff" visible="{id:showNotesBtn.visible}"/>
+                  <txt id="helpShowNotesLabel" size="250|40" pos="{#menuCenter.x}+{#showNotesBtn.x}+{#showNotesBtn.w}/2|{#helpShowNotesLine.under}+5" txtStyle="helpLabelStyle" align="left" visible="{id:showNotesBtn.visible}"><![CDATA[{lang:helpShowNotes}]]></txt>
+                  <!-- scrollshop -->
+                  <item id="helpScrollshopBtn" size="65|{#scrollshopBtn.h}" pos="{#menuCenter.x}+{#scrollshopBtn.x}|{#scrollshopBtn.y}" visible="{id:scrollshopBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-scrollshopBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpScrollshopLine" size="1|50" pos="{#menuCenter.x}+{#scrollshopBtn.x}+{#scrollshopBtn.w}/2|{#scrollshopBtn.under}+10" skin="color=#fff" visible="{id:scrollshopBtn.visible}"/>
+                  <txt id="helpScrollshopLabel" size="250|40" pos="{#menuCenter.x}+{#scrollshopBtn.x}+{#scrollshopBtn.w}/2|{#helpScrollshopLine.under}+5" txtStyle="helpLabelStyle" align="left" visible="{id:scrollshopBtn.visible}"><![CDATA[{lang:helpScrollshop}]]></txt>
+                  <!-- fullscreen -->
+                  <item id="helpFullscreenBtn" size="65|{#fullscreenBtn.h}" pos="{#menuCenter.x}+{#fullscreenBtn.x}|{#fullscreenBtn.y}" visible="{id:fullscreenBtn.visible}">
+                    <item size="15|15" pos="center|center" skin="fontIcon=menuIcon-fullscreenBtn" tint="{var:colorMenuIcon}"/>
+                  </item>
+                  <item id="helpFullscreenLine" size="1|20" pos="{#menuCenter.x}+{#fullscreenBtn.x}+{#fullscreenBtn.w}/2|{#fullscreenBtn.under}+10" skin="color=#fff" visible="{id:fullscreenBtn.visible}"/>
+                  <txt id="helpFullscreenLabel" size="250|40" pos="{#menuCenter.x}+{#fullscreenBtn.x}+{#fullscreenBtn.w}/2|{#helpFullscreenLine.under}+5" txtStyle="helpLabelStyle" align="left" visible="{id:fullscreenBtn.visible}"><![CDATA[{lang:helpFullscreen}]]></txt>
+                </item>
+                <item id="helpSliderLine" size="1|50" pos="{#sliderWrapper.x}+{#sliderBall.x}+{#sliderBall.w}/2|bottom-30" skinStyle="color:#ffffff"/>
+                <txt id="helpSliderLabel" size="200|14" pos="{#helpSliderLine.x}-w/2|{#helpSliderLine.y}-h-6" txtStyle="helpLabelStyle" align="center"><![CDATA[{lang:helpSlideText}]]></txt>
+                <item size="51|9" pos="{#sliderWrapper.x}+{#sliderBall.x}|100%-20" skin="color={var:colorPageSlider},shape=roundRect"/>
+                <!-- header close button -->
+                <!-- <item id="closehelpBtn" size="30|30" pos="{#helpBtn.x}|{#helpBtn.y}" skin="color=#ff0502,shape=circle" over="icon.scale=1.1" duration="0.3" action="id:closeHelp">
+									<txt id="icon" font="v7-font-icon" textSize="16" size="100%|20" pos="0|7" align="center" class="icon-cross" color="{var:secondaryTextColor}" />
+								</item> -->
+                <!-- navigation buttons help -->
+                <item id="helpLeftNavigationWrapper" size="32|116" pos="4|50%-h/2" action="id:hideNavButtons" visible="{id:previousButGroup.visible}">
+                  <item skin="color={var:colorBgArrows}"/>
+                  <item size="32|59" pos="center|50%-59">
+                    <item id="icon" size="25|25" pos="center|center" skin="fontIcon=menuIcon-catalogArrowPrevious" tint="{var:colorArrows}"/>
+                  </item>
+                  <item size="17|2" pos="center|center+1">
+                    <item size="17|1" skin="color=#616161" pos="0|0"/>
+                    <item size="17|1" skin="color=#aeaeae" pos="0|1"/>
+                  </item>
+                  <item size="32|59" pos="center|50%">
+                    <item id="icon" size="15|15" pos="center|center" skin="fontIcon=menuIcon-catalogArrowFirst" tint="{var:colorArrows}"/>
+                  </item>
+                </item>
+                <txt id="helpLeftNavigationLabel" size="300|20" pos="45|center" txtStyle="helpLabelStyle" visible="{id:previousButGroup.visible}"><![CDATA[{lang:helpLeftNavigation}]]></txt>
+                <item id="helpRightNavigationWrapper" size="32|116" pos="100%-35|50%-h/2" visible="{id:nextButGroup.visible}">
+                  <item skin="color={var:colorBgArrows}"/>
+                  <item size="32|59" pos="center|50%-59">
+                    <item id="icon" size="25|25" pos="center|center" skin="fontIcon=menuIcon-catalogArrowNext" tint="{var:colorArrows}"/>
+                  </item>
+                  <item size="17|2" pos="center|center+1">
+                    <item size="17|1" skin="color=#616161" pos="0|0"/>
+                    <item size="17|1" skin="color=#aeaeae" pos="0|1"/>
+                  </item>
+                  <item size="32|59" pos="center|50%">
+                    <item id="icon" size="15|15" pos="center|center" skin="fontIcon=menuIcon-catalogArrowLast" tint="{var:colorArrows}"/>
+                  </item>
+                </item>
+                <txt id="helpRightNavigationLabel" size="300|20" pos="right-45|center" txtStyle="helpLabelStyle" align="right" visible="{id:nextButGroup.visible}"><![CDATA[{lang:helpRightNavigation}]]></txt>
+                <!-- zoom buttons -->
+                <item id="helpLeftButZoom" size="25|25" pos="10|100%-70" action="id:hidePaginationButtons,updatePageNumbers" visible="{id:leftButZoom.visible}">
+                  <item skin="color={var:colorBgZoomIcons}"/>
+                  <item>
+                    <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomIn" tint="{var:colorZoomIcons}"/>
+                  </item>
+                </item>
+                <txt id="helpLeftButZoomLabel" size="300|20" pos="45|100%-65" txtStyle="helpLabelStyle" visible="{id:leftButZoom.visible}"><![CDATA[{lang:helpLeftZoom}]]></txt>
+                <item id="helpRightButZoom" size="25|25" pos="100%-35|100%-70" visible="{id:rightButZoom.visible}">
+                  <item skin="color={var:colorBgZoomIcons}"/>
+                  <item>
+                    <item id="icon" size="13|13" pos="center|center" skin="fontIcon=menuIcon-catalogZoomIn" tint="{var:colorZoomIcons}"/>
+                  </item>
+                </item>
+                <txt id="helpRightButZoomLabel" size="300|20" pos="right-45|100%-65" txtStyle="helpLabelStyle" align="right" visible="{id:rightButZoom.visible}"><![CDATA[{lang:helpRightZoom}]]></txt>
+                <!-- page numbers -->
+                <item id="helpPageNumberLeft" size="25|25" pos="10|100%-42" visible="{id:pageNumberLeft.visible}">
+                  <item skin="color={var:colorBgPageNumber}"/>
+                  <txt id="helpLeftPageNumber" size="25|16" pos="0|center" textSize="12" color="{var:colorPageNumber}" align="center"><![CDATA[{id:catalog.leftPageNumber}]]></txt>
+                </item>
+                <txt id="helpPageNumberLeftLabel" size="300|20" pos="45|100%-37" txtStyle="helpLabelStyle" visible="{id:pageNumberLeft.visible}"><![CDATA[{lang:helpLeftPageNumber}]]></txt>
+                <item id="helpPageNumberRight" size="25|25" pos="100%-35|100%-42" visible="{id:pageNumberRight.visible}">
+                  <item skin="color={var:colorBgPageNumber}"/>
+                  <txt id="helpRightPageNumber" size="25|16" pos="0|center" textSize="12" color="{var:colorPageNumber}" align="center"><![CDATA[{id:catalog.rightPageNumber}]]></txt>
+                </item>
+                <txt id="helpPageNumberRightLabel" size="300|20" pos="right-45|100%-37" txtStyle="helpLabelStyle" align="right" visible="{id:pageNumberRight.visible}"><![CDATA[{lang:helpRightPageNumber}]]></txt>
+                <!-- mouse navigation help -->
+                <item id="helpMouseWrapper" size="500|204" pos="center-100|center+100">
+                  <item id="helpMouseImage" pos="353|0" size="127|204" skin="img=help_mouse.png"/>
+                  <item size="80|1" pos="296|28" skin="color=#fff"/>
+                  <txt id="helpClickLabel" size="290|20" pos="0|20" txtStyle="helpLabelStyle" align="right"><![CDATA[{lang:helpClick}]]></txt>
+                  <item size="80|1" pos="296|58" skin="color=#fff"/>
+                  <txt id="helpDoubleClickLabel" size="290|20" pos="0|50" txtStyle="helpLabelStyle" align="right"><![CDATA[{lang:helpDoubleClick}]]></txt>
+                </item>
+                <!-- keyboard navigation help -->
+                <!-- <item id="helpKeyboardImage" pos="right-60|bottom-100" size="577|162" skin="img=help_keyboard.png" />
+								<txt id="helpKeyboardLabel" size="250|20" pos="right-70|bottom-70" txtStyle="helpLabelStyle"><![CDATA[{lang:helpKeyboard}]]></txt> -->
+              </item>
+            </resource>
+          </resources>
+        </details>
+      </item>
+    </item>
+    <item id="logoBtn" size="54|70" pos="300|0" skinId="file:logoBtn.png" action="id:goToPage;params:page=1,target=catalog" altId="logoBtnAlt" visible="1"/>
+    <item id="searchResultsOutputWrapper" size="100%-48|0" pos="24|100" visible="0" alpha="0" sliderId="default">
+      <item id="searchResultsOutput"/>
+    </item>
+    <item id="searchSuggestionsOutputWrapper" size="230|100%-100" pos="50%-100|87" visible="0">
+      <item id="searchSuggestionsOutput"/>
+    </item>
+	
+	<item id="preloadAnim" size="100%|100%" action="id:preloadAnimation" h5_style="z-index:999999;">
+            <details>
+                <actionDesc id="preloadAnimation">
+                    <actionQueue trigger="applicationReady">
+                        <action name="animate" target="percentbarOn" params="w=189,duration=1,easing=cubic.easeInOut"/>
+                        <action name="animate" target="preloadContent" params="y=-h,duration=1,easing=cubic.easeInOut,onComplete=preloadDone,delay=1"/>
+                    </actionQueue>
+                    <actionQueue trigger="preloadDone">
+                        <action name="hide" target="preloadAnim" />
+                    </actionQueue>
+                </actionDesc>
+            </details>
+            <item id="preloadContent" size="100%|100%" pos="center|center" skinStyle="color:#dbdde0">
+
+               <!--  <item id="logoPreload" skinStyle="common:data/0001_500x.jpg" size="189|268" pos="center|center"/> -->
+            <!--   <item id="txtPreload" skinStyle="file:preload_txt.png" size="221|24" pos="center-310|center+140"/> -->
+              <!--     <item id="logo2Preload" skinStyle="file:preload.png" size="117|25" pos="center|bottom-90"/> -->
+               <!--  <item id="logo2PreloadLinw" skinStyle="color:#a42f37" size="859|10" pos="center|bottom-120"/> -->
+                <item id="percentbarOff" size="189|12" pos="center|center" skinStyle="color:#fdc03b;radius:5"/>
+                <item id="percentbarOn" size="0|12" pos="{#percentbarOff.x}|{#percentbarOff.y}" skinStyle="color:#358cbd;radius:5"/>
+            </item>
+        </item>
+  </mainframe>
+</doc>
+<!-- generator coreV7 Desktop version 2.6.1 -->

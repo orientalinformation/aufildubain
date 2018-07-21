@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I10" x="15.31" y="886.52" width="69.36" height="404.15"/>
+    <PlacedImage image="I14" x="63.46" y="838.29" width="33.44" height="356.09"/>
+    <PlacedImage image="I12" x="63.46" y="838.29" width="33.44" height="356.09"/>
+    <PlacedImage image="I16" x="63.46" y="769.47" width="239.06" height="310.67"/>
+    <PlacedImage image="I11" x="84.19" y="886.52" width="275.76" height="67.68"/>
+    <PlacedImage image="I20" x="63.46" y="838.29" width="239.06" height="69.38"/>
+    <PlacedImage image="I17" x="301.97" y="838.29" width="34.55" height="344.94"/>
+    <PlacedImage image="I13" x="96.34" y="838.29" width="263.86" height="36.22"/>
+    <PlacedImage image="I4" x="63.46" y="486.38" width="281.97" height="141.26"/>
+    <PlacedImage image="I7" x="309.77" y="556.60" width="35.66" height="35.66"/>
+    <PlacedImage image="I6" x="274.66" y="521.49" width="70.77" height="35.66"/>
+    <PlacedImage image="I18" x="335.96" y="838.29" width="34.83" height="310.67"/>
+    <PlacedImage image="I15" x="96.34" y="838.29" width="263.86" height="36.22"/>
+    <PlacedImage image="I26" x="306.66" y="886.28" width="8.64" height="29.28"/>
+    <PlacedImage image="I26" x="346.40" y="886.38" width="8.64" height="29.28"/>
+    <PlacedImage image="I9" x="344.88" y="838.29" width="35.66" height="71.05"/>
+    <PlacedImage image="I19" x="370.23" y="838.29" width="34.55" height="276.12"/>
+    <PlacedImage image="I8" x="379.98" y="838.29" width="211.76" height="211.76"/>
+    <PlacedImage image="I5" x="344.88" y="627.09" width="246.87" height="211.76"/>
+    <PlacedImage image="I27" x="591.09" y="431.05" width="48.52" height="323.50"/>
+    <PlacedImage image="I21" x="334.70" y="430.87" width="304.81" height="323.22"/>
+    <PlacedImage image="I2" x="63.46" y="345.68" width="281.97" height="282.25"/>
+    <PlacedImage image="I24" x="229.17" y="332.78" width="137.30" height="205.93"/>
+    <Para>
+      <Box llx="118.50" lly="604.97" urx="342.88" ury="476.29">
+        <Word>
+          <Text>EVIERS</Text>
+          <Box llx="118.50" lly="494.29" urx="178.78" ury="476.29"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="184.21" lly="494.29" urx="207.04" ury="476.29"/>
+        </Word>
+        <Word>
+          <Text>SYNTHÈSE</Text>
+          <Box llx="212.48" lly="494.29" urx="303.52" ury="476.29"/>
+        </Word>
+        <Word>
+          <Text>EVIERS</Text>
+          <Box llx="118.50" lly="521.96" urx="178.78" ury="503.96"/>
+        </Word>
+        <Word>
+          <Text>INOX</Text>
+          <Box llx="184.21" lly="521.96" urx="225.46" ury="503.96"/>
+        </Word>
+        <Word>
+          <Text>EVIERS</Text>
+          <Box llx="118.50" lly="549.63" urx="178.78" ury="531.63"/>
+        </Word>
+        <Word>
+          <Text>GRÈS</Text>
+          <Box llx="184.21" lly="549.63" urx="231.46" ury="531.63"/>
+        </Word>
+        <Word>
+          <Text>ROBINETTERIE</Text>
+          <Box llx="118.50" lly="577.30" urx="242.58" ury="559.30"/>
+        </Word>
+        <Word>
+          <Text>CUISINES</Text>
+          <Box llx="118.50" lly="604.97" urx="199.40" ury="586.97"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="204.84" lly="604.97" urx="225.44" ury="586.97"/>
+        </Word>
+        <Word>
+          <Text>CUISINETTES</Text>
+          <Box llx="230.88" lly="604.97" urx="342.88" ury="586.97"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="241.94" lly="730.51" urx="539.55" ury="676.11">
+        <Word>
+          <Text>cuisine</Text>
+          <Box llx="241.94" lly="730.51" urx="539.55" ury="676.11"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I3" x="344.88" y="134.47" width="246.87" height="71.05"/>
+  </Content>
+</Page>

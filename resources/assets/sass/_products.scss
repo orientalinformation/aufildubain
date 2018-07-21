@@ -1,0 +1,169 @@
+/** xs **/
+body {
+
+    .pgrid {
+        a {
+            color:#000;
+        }
+        .pgrid-item {
+            width: 98%;
+            margin-bottom: 10px;
+            @include media-breakpoint-up(md) {
+                width: 46%;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 30%;
+            }
+        }
+    }
+
+    .grid {
+        opacity: 0;
+        transition: ease-in 0.7s;
+        font-size: 13px;
+
+        .grid-item {
+            color: #fff;
+            min-height: 120px;
+            float: left;
+            padding: 4.5px 7.5px;
+
+            .item-block {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: block;
+                height: 100%;
+                border-radius: 15px;
+                border: 1px solid #c0c5c7;
+                position: relative;
+                overflow: hidden;
+                transition: ease-in-out 0.4s;
+                
+                &:before {
+                    border-top: 8px solid transparent;
+                    border-radius: 14px;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background: url(/images/inspirations/backblock-noir.png) center bottom no-repeat;
+                    background-size: 100%;
+                    transition: linear 0.4s;
+                }
+
+                &:hover {
+                    box-shadow: 0px 0px 70px -10px rgba(0, 0, 0, 0.54);
+                    
+                    &:before {
+                        border-color: #00b4dd;
+                        background: url(/images/inspirations/backblock-bleu.png) center bottom no-repeat;
+                    }
+                    .block-textgrid {
+                        transform: translateY(-100%);
+                        top: unset;
+                        &:after {
+                            display: block;
+                        }
+
+                        p {
+                            position: static;
+                            opacity: 1;
+
+                            &:after {
+                                left: 0;
+                            }
+                        }
+
+                        span {
+                            font-size: 1.5em;
+
+                            &.cat {
+                                font-size: 2.25em;
+                            }
+                        }
+                    }
+                }
+
+                .block-textgrid {
+                    position: absolute;
+                    z-index: 11;
+                    width: 100%;
+                    padding: 0 20px 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: linear 0.4s;
+
+                    &:after {
+                        display: none;
+                        position: absolute;
+                        bottom: 10px;
+                        content: "";
+                        width: 50px;
+                        height: 20px;
+                        right: 20px;
+                        background: url("/images/arrow.png") no-repeat top left;
+                        transition: ease-in-out 0.4s;
+                    }
+
+                    span {
+                        display: block;
+                        font-family: "Uni Neue", sans-serif;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        color: #fff;
+                        font-size: 1em;
+
+                        &.cat {
+                            font-size: 1.5em;
+                            font-weight: 900;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 15px;
+                    }
+
+                    p {
+                        color: #fff;
+                        opacity: 0;
+                        position: absolute;
+                        transition: linear 0.4s;
+                    }
+                }
+            }
+        }
+
+        .wrap {
+            padding: 20px !important;
+            margin-left: -16px;
+            
+        }        
+    }
+
+}
+
+
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+@include media-breakpoint-up(xxl) {
+
+}

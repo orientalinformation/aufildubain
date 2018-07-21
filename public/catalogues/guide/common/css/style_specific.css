@@ -1,0 +1,124 @@
+/*extra icons*/
+@font-face {
+    font-family: 'v7-menu-font-icon';
+    src:    url('menu/icomoon.eot?trmnq1');
+    src:    url('menu/icomoon.eot?trmnq1#iefix') format('embedded-opentype'),
+        url('menu/icomoon.ttf?trmnq1') format('truetype'),
+        url('menu/icomoon.woff?trmnq1') format('woff'),
+        url('menu/icomoon.svg?trmnq1#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="menuIcon-"], [class*=" menuIcon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'v7-menu-font-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.menuIcon-addNotesBtn:before {
+    content: "\e91e";
+}
+.menuIcon-showNotesBtn:before {
+    content: "\e91f";
+}
+.menuIcon-helpMouse:before {
+    content: "\e915";
+}
+.menuIcon-panelClose:before {
+    content: "\e916";
+}
+.menuIcon-shareEmailBtn:before {
+    content: "\e917";
+}
+.menuIcon-shareFacebookBtn:before {
+    content: "\e919";
+}
+.menuIcon-shareGooglePlusBtn:before {
+    content: "\e91a";
+}
+.menuIcon-shareLinkedinBtn:before {
+    content: "\e91b";
+}
+.menuIcon-sharePinterestBtn:before {
+    content: "\e91c";
+}
+.menuIcon-shareTwitterBtn:before {
+    content: "\e91d";
+}
+.menuIcon-scrollshopBtn:before {
+    content: "\e914";
+}
+.menuIcon-panelPdfDouble:before {
+    content: "\e913";
+}
+.menuIcon-bookmarkBtnAdd:before {
+    content: "\e918";
+}
+.menuIcon-bookmarkBtnRemove:before {
+    content: "\e900";
+}
+.menuIcon-catalogArrowFirst:before {
+    content: "\e901";
+}
+.menuIcon-catalogArrowLast:before {
+    content: "\e902";
+}
+.menuIcon-catalogArrowNext:before {
+    content: "\e903";
+}
+.menuIcon-catalogArrowPrevious:before {
+    content: "\e904";
+}
+.menuIcon-catalogZoomIn:before {
+    content: "\e905";
+}
+.menuIcon-catalogZoomOut:before {
+    content: "\e906";
+}
+.menuIcon-diaporamaBtn:before {
+    content: "\e907";
+}
+.menuIcon-downloadBtn:before {
+    content: "\e908";
+}
+.menuIcon-fullscreenBtn:before {
+    content: "\e909";
+}
+.menuIcon-helpBtn:before {
+    content: "\e90a";
+}
+.menuIcon-normalscreenBtn:before {
+    content: "\e90b";
+}
+.menuIcon-panelPdfCatalog:before {
+    content: "\e90c";
+}
+.menuIcon-panelPdfLeft:before {
+    content: "\e90d";
+}
+.menuIcon-panelPdfRight:before {
+    content: "\e90e";
+}
+.menuIcon-printBtn:before {
+    content: "\e90f";
+}
+.menuIcon-searchBtn:before {
+    content: "\e910";
+}
+.menuIcon-shareBtn:before {
+    content: "\e911";
+}
+.menuIcon-summaryBtn:before {
+    content: "\e912";
+}
+

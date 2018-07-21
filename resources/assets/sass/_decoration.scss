@@ -1,0 +1,22 @@
+.wave-end {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        background: transparent url('../images/slide-home/after-slider.png') no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-size: contain;
+        background-position: bottom left;
+    }
+}
+
+.hidden {
+    display: none;
+}

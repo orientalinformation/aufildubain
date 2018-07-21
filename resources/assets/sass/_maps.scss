@@ -1,0 +1,30 @@
+/** xs **/
+body.map {
+    *:focus {
+        outline: none;
+    }
+    #map {
+        height: 860px;
+        width: 100%;
+    }
+}
+
+
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+@include media-breakpoint-up(xxl) {
+
+}

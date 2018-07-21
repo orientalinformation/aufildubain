@@ -1,0 +1,28 @@
+.p-error {
+    #main {
+        @include media-breakpoint-up(sm) {
+            margin-top: 200px;
+        }
+        .section-img-left {
+            text-align: center;
+            padding-bottom: 50px;
+            
+            @include media-breakpoint-up(sm) {
+                text-align: unset;
+                padding-bottom: unset;
+                background-position: -170% 20%;
+                .page.title {
+                    &:before {
+                        right: unset;
+                    }
+                }
+            }
+            @include media-breakpoint-up(md) {
+                background-position: unset;
+            }
+            
+        }
+        
+    }
+    
+}

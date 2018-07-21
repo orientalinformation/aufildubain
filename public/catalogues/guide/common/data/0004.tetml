@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <Para>
+      <Box llx="76.03" lly="766.83" urx="484.32" ury="730.83">
+        <Word>
+          <Text>Le</Text>
+          <Box llx="88.33" lly="745.83" urx="104.02" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>réseau</Text>
+          <Box llx="107.89" lly="745.83" urx="150.22" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>BLEU</Text>
+          <Box llx="154.09" lly="745.83" urx="190.87" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>ROUGE</Text>
+          <Box llx="194.74" lly="745.83" urx="245.55" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="245.40" lly="745.83" urx="249.57" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>c</Text>
+          <Box llx="253.44" lly="745.83" urx="261.22" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="261.07" lly="745.83" urx="265.24" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>est</Text>
+          <Box llx="265.09" lly="745.83" urx="284.23" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>115</Text>
+          <Box llx="288.10" lly="745.83" urx="312.82" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>distributeurs</Text>
+          <Box llx="316.69" lly="745.83" urx="394.32" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>indépendants</Text>
+          <Box llx="398.19" lly="745.83" urx="484.32" ury="730.83"/>
+        </Word>
+        <Word>
+          <Text>répartis</Text>
+          <Box llx="76.03" lly="766.83" urx="122.77" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="126.64" lly="766.83" urx="142.33" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>France</Text>
+          <Box llx="146.20" lly="766.83" urx="189.64" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="189.49" lly="766.83" urx="193.66" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>spécialistes</Text>
+          <Box llx="197.53" lly="766.83" urx="270.04" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="273.91" lly="766.83" urx="289.60" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>chauffage</Text>
+          <Box llx="293.47" lly="766.83" urx="355.36" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="359.23" lly="766.83" urx="371.31" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>en</Text>
+          <Box llx="375.18" lly="766.83" urx="390.87" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>salle</Text>
+          <Box llx="394.74" lly="766.83" urx="422.47" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="426.34" lly="766.83" urx="442.59" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>bains</Text>
+          <Box llx="446.46" lly="766.83" urx="480.30" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="480.15" lly="766.83" urx="484.32" ury="751.83"/>
+        </Word>
+        <Word>
+          <Text>qui</Text>
+          <Box llx="208.47" lly="787.83" urx="227.61" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>vous</Text>
+          <Box llx="231.48" lly="787.83" urx="261.58" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>assurent</Text>
+          <Box llx="265.45" lly="787.83" urx="319.41" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>compétence</Text>
+          <Box llx="323.28" lly="787.83" urx="402.79" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="406.66" lly="787.83" urx="418.74" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>proximité</Text>
+          <Box llx="422.61" lly="787.83" urx="480.30" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="480.15" lly="787.83" urx="484.32" ury="772.83"/>
+        </Word>
+        <Word>
+          <Text>Les</Text>
+          <Box llx="195.41" lly="831.40" urx="233.96" ury="809.95"/>
+        </Word>
+        <Word>
+          <Text>professionnels</Text>
+          <Box llx="241.12" lly="831.40" urx="404.03" ury="809.95"/>
+        </Word>
+        <Word>
+          <Text>sont</Text>
+          <Box llx="411.19" lly="831.40" urx="459.26" ury="809.95"/>
+        </Word>
+        <Word>
+          <Text>là</Text>
+          <Box llx="466.42" lly="831.40" urx="486.69" ury="809.95"/>
+        </Word>
+        <Word>
+          <Text>Pour</Text>
+          <Box llx="303.19" lly="339.94" urx="346.80" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>votre</Text>
+          <Box llx="352.05" lly="339.94" urx="397.28" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>salle</Text>
+          <Box llx="402.52" lly="339.94" urx="442.41" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>de</Text>
+          <Box llx="447.66" lly="339.94" urx="471.32" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>bains</Text>
+          <Box llx="476.57" lly="339.94" urx="525.43" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>,</Text>
+          <Box llx="524.99" lly="339.94" urx="531.12" ury="318.94"/>
+        </Word>
+        <Word>
+          <Text>faites</Text>
+          <Box llx="303.19" lly="364.93" urx="350.79" ury="343.93"/>
+        </Word>
+        <Word>
+          <Text>appel</Text>
+          <Box llx="356.04" lly="364.93" urx="406.56" ury="343.93"/>
+        </Word>
+        <Word>
+          <Text>à</Text>
+          <Box llx="411.81" lly="364.93" urx="423.25" ury="343.93"/>
+        </Word>
+        <Word>
+          <Text>un</Text>
+          <Box llx="428.50" lly="364.93" urx="451.74" ury="343.93"/>
+        </Word>
+        <Word>
+          <Text>professionnel</Text>
+          <Box llx="456.99" lly="364.93" urx="577.07" ury="343.93"/>
+        </Word>
+        <Word>
+          <Text>qui</Text>
+          <Box llx="303.19" lly="389.92" urx="330.88" ury="368.92"/>
+        </Word>
+        <Word>
+          <Text>vous</Text>
+          <Box llx="336.13" lly="389.92" urx="379.72" ury="368.92"/>
+        </Word>
+        <Word>
+          <Text>apportera</Text>
+          <Box llx="384.97" lly="389.92" urx="473.77" ury="368.92"/>
+        </Word>
+        <Word>
+          <Text>les</Text>
+          <Box llx="303.19" lly="414.91" urx="328.44" ury="393.91"/>
+        </Word>
+        <Word>
+          <Text>meilleurs</Text>
+          <Box llx="333.68" lly="414.91" urx="413.04" ury="393.91"/>
+        </Word>
+        <Word>
+          <Text>conseils</Text>
+          <Box llx="418.29" lly="414.91" urx="491.56" ury="393.91"/>
+        </Word>
+        <Word>
+          <Text>et</Text>
+          <Box llx="303.19" lly="439.90" urx="320.72" ury="418.90"/>
+        </Word>
+        <Word>
+          <Text>toute</Text>
+          <Box llx="325.97" lly="439.90" urx="372.80" ury="418.90"/>
+        </Word>
+        <Word>
+          <Text>son</Text>
+          <Box llx="378.05" lly="439.90" urx="411.87" ury="418.90"/>
+        </Word>
+        <Word>
+          <Text>expertise</Text>
+          <Box llx="417.12" lly="439.90" urx="499.35" ury="418.90"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="498.90" lly="439.90" urx="505.03" ury="418.90"/>
+        </Word>
+        <Word>
+          <Text>10</Text>
+          <Box llx="94.64" lly="100.27" urx="119.38" ury="80.89"/>
+        </Word>
+        <Word>
+          <Text>000</Text>
+          <Box llx="121.79" lly="100.27" urx="158.72" ury="80.89"/>
+        </Word>
+        <Word>
+          <Text>PROFESSIONNELS</Text>
+          <Box llx="164.25" lly="100.27" urx="339.04" ury="80.89"/>
+        </Word>
+        <Word>
+          <Text>FONT</Text>
+          <Box llx="167.05" lly="126.26" urx="219.56" ury="106.88"/>
+        </Word>
+        <Word>
+          <Text>CONFIANCE</Text>
+          <Box llx="225.09" lly="126.26" urx="339.04" ury="106.88"/>
+        </Word>
+        <Word>
+          <Text>AU</Text>
+          <Box llx="116.64" lly="152.26" urx="144.11" ury="132.87"/>
+        </Word>
+        <Word>
+          <Text>RÉSEAU</Text>
+          <Box llx="149.64" lly="152.26" urx="228.55" ury="132.87"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="234.07" lly="152.26" urx="261.56" ury="132.87"/>
+        </Word>
+        <Word>
+          <Text>POINTS</Text>
+          <Box llx="267.09" lly="152.26" urx="339.04" ury="132.87"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="103.40" lly="178.25" urx="130.89" ury="158.87"/>
+        </Word>
+        <Word>
+          <Text>VENTE</Text>
+          <Box llx="136.42" lly="178.25" urx="200.40" ury="158.87"/>
+        </Word>
+        <Word>
+          <Text>BLEU</Text>
+          <Box llx="205.93" lly="178.25" urx="258.08" ury="158.87"/>
+        </Word>
+        <Word>
+          <Text>ROUGE</Text>
+          <Box llx="263.61" lly="178.25" urx="333.14" ury="158.87"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="332.76" lly="178.25" urx="339.04" ury="158.87"/>
+        </Word>
+        <Word>
+          <Text>POURQUOI</Text>
+          <Box llx="115.44" lly="204.24" urx="221.46" ury="184.86"/>
+        </Word>
+        <Word>
+          <Text>PAS</Text>
+          <Box llx="225.93" lly="204.24" urx="263.86" ury="184.86"/>
+        </Word>
+        <Word>
+          <Text>VOUS</Text>
+          <Box llx="268.33" lly="204.24" urx="323.29" ury="184.86"/>
+        </Word>
+        <Word>
+          <Text>?</Text>
+          <Box llx="326.86" lly="204.24" urx="339.04" ury="184.86"/>
+        </Word>
+        <Word>
+          <Text>Et</Text>
+          <Box llx="306.26" lly="501.78" urx="320.18" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>bénéfi</Text>
+          <Box llx="324.63" lly="501.78" urx="366.12" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>ciez</Text>
+          <Box llx="366.11" lly="501.78" urx="392.50" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>d</Text>
+          <Box llx="396.95" lly="501.78" urx="406.13" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="406.13" lly="501.78" urx="410.58" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>une</Text>
+          <Box llx="410.58" lly="501.78" urx="436.07" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>TVA</Text>
+          <Box llx="440.51" lly="501.78" urx="468.39" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>à</Text>
+          <Box llx="472.83" lly="501.78" urx="481.14" ury="485.78"/>
+        </Word>
+        <Word>
+          <Text>taux</Text>
+          <Box llx="306.26" lly="520.32" urx="335.30" ury="504.32"/>
+        </Word>
+        <Word>
+          <Text>réduit</Text>
+          <Box llx="339.75" lly="520.32" urx="378.56" ury="504.32"/>
+        </Word>
+        <Word>
+          <Text>sur</Text>
+          <Box llx="383.01" lly="520.32" urx="404.34" ury="504.32"/>
+        </Word>
+        <Word>
+          <Text>le</Text>
+          <Box llx="408.79" lly="520.32" urx="420.05" ury="504.32"/>
+        </Word>
+        <Word>
+          <Text>montant</Text>
+          <Box llx="424.50" lly="520.32" urx="481.68" ury="504.32"/>
+        </Word>
+        <Word>
+          <Text>des</Text>
+          <Box llx="306.26" lly="538.87" urx="331.44" ury="522.87"/>
+        </Word>
+        <Word>
+          <Text>travaux</Text>
+          <Box llx="335.89" lly="538.87" urx="385.68" ury="522.87"/>
+        </Word>
+        <Word>
+          <Text>.</Text>
+          <Box llx="385.68" lly="538.87" urx="390.13" ury="522.87"/>
+        </Word>
+        <Word>
+          <Text>COUZEIX</Text>
+          <Box llx="144.18" lly="638.95" urx="153.78" ury="636.80"/>
+        </Word>
+        <Word>
+          <Text>OBERNAI</Text>
+          <Box llx="244.40" lly="580.18" urx="253.91" ury="578.03"/>
+        </Word>
+        <Word>
+          <Text>PHALSBOURG</Text>
+          <Box llx="244.14" lly="571.27" urx="258.44" ury="569.12"/>
+        </Word>
+        <Word>
+          <Text>SOUFFELWEYERSHEIM</Text>
+          <Box llx="264.64" lly="570.15" urx="287.41" ury="568.00"/>
+        </Word>
+        <Word>
+          <Text>HOUDEMONT</Text>
+          <Box llx="213.93" lly="575.43" urx="228.73" ury="573.28"/>
+        </Word>
+        <Word>
+          <Text>WOIPPY</Text>
+          <Box llx="227.66" lly="565.85" urx="235.80" ury="563.71"/>
+        </Word>
+        <Word>
+          <Text>MORLAIX</Text>
+          <Box llx="97.41" lly="566.15" urx="107.21" ury="564.00"/>
+        </Word>
+        <Word>
+          <Text>QUIMPER</Text>
+          <Box llx="93.22" lly="577.39" urx="103.18" ury="575.24"/>
+        </Word>
+        <Word>
+          <Text>SAINT-NAZAIRE</Text>
+          <Box llx="119.28" lly="594.17" urx="134.94" ury="592.03"/>
+        </Word>
+        <Word>
+          <Text>PONS</Text>
+          <Box llx="140.32" lly="635.41" urx="146.16" ury="633.26"/>
+        </Word>
+        <Word>
+          <Text>LONGUEAU</Text>
+          <Box llx="191.88" lly="541.64" urx="203.81" ury="539.49"/>
+        </Word>
+        <Word>
+          <Text>JAUX</Text>
+          <Box llx="197.08" lly="552.27" urx="202.10" ury="550.12"/>
+        </Word>
+        <Word>
+          <Text>MARMANDE</Text>
+          <Box llx="146.16" lly="665.43" urx="158.85" ury="663.28"/>
+        </Word>
+        <Word>
+          <Text>BERGERAC</Text>
+          <Box llx="155.75" lly="660.23" urx="166.72" ury="658.08"/>
+        </Word>
+        <Word>
+          <Text>LANGON</Text>
+          <Box llx="141.17" lly="669.56" urx="150.39" ury="667.41"/>
+        </Word>
+        <Word>
+          <Text>VILLENEUVE-BIAS</Text>
+          <Box llx="159.06" lly="672.16" urx="176.62" ury="670.01"/>
+        </Word>
+        <Word>
+          <Text>AGEN-BOE</Text>
+          <Box llx="158.22" lly="678.61" urx="169.16" ury="676.47"/>
+        </Word>
+        <Word>
+          <Text>LESPINASSE</Text>
+          <Box llx="149.32" lly="685.95" urx="161.28" ury="683.80"/>
+        </Word>
+        <Word>
+          <Text>EXINCOURT</Text>
+          <Box llx="251.37" lly="594.55" urx="263.91" ury="592.40"/>
+        </Word>
+        <Word>
+          <Text>THISE</Text>
+          <Box llx="233.93" lly="604.62" urx="239.99" ury="602.47"/>
+        </Word>
+        <Word>
+          <Text>DOLE</Text>
+          <Box llx="228.57" lly="608.72" urx="234.36" ury="606.57"/>
+        </Word>
+        <Word>
+          <Text>PONTARLIER</Text>
+          <Box llx="233.63" lly="615.16" urx="246.68" ury="613.01"/>
+        </Word>
+        <Word>
+          <Text>NOIDANS-LÈS-VESOUL</Text>
+          <Box llx="212.37" lly="591.95" urx="235.33" ury="589.80"/>
+        </Word>
+        <Word>
+          <Text>CHENOVE</Text>
+          <Box llx="213.38" lly="602.86" urx="223.63" ury="600.71"/>
+        </Word>
+        <Word>
+          <Text>MONTCEAU-</Text>
+          <Box llx="198.64" lly="615.40" urx="211.81" ury="613.25"/>
+        </Word>
+        <Word>
+          <Text>LES-MINES</Text>
+          <Box llx="200.83" lly="617.45" urx="211.81" ury="615.31"/>
+        </Word>
+        <Word>
+          <Text>LONS-</Text>
+          <Box llx="226.74" lly="620.78" urx="233.20" ury="618.63"/>
+        </Word>
+        <Word>
+          <Text>LE-SAUNIER</Text>
+          <Box llx="223.93" lly="622.84" urx="236.01" ury="620.69"/>
+        </Word>
+        <Word>
+          <Text>NARBONNE</Text>
+          <Box llx="171.48" lly="698.57" urx="183.70" ury="696.42"/>
+        </Word>
+        <Word>
+          <Text>LES</Text>
+          <Box llx="161.80" lly="706.03" urx="165.31" ury="703.88"/>
+        </Word>
+        <Word>
+          <Text>ANGLES</Text>
+          <Box llx="165.74" lly="706.03" urx="173.86" ury="703.88"/>
+        </Word>
+        <Word>
+          <Text>NÎMES</Text>
+          <Box llx="199.05" lly="679.74" urx="205.78" ury="677.59"/>
+        </Word>
+        <Word>
+          <Text>LE</Text>
+          <Box llx="212.65" lly="675.46" urx="214.44" ury="673.31"/>
+        </Word>
+        <Word>
+          <Text>THOR</Text>
+          <Box llx="210.26" lly="677.00" urx="214.88" ury="674.86"/>
+        </Word>
+        <Word>
+          <Text>PLAN</Text>
+          <Box llx="234.46" lly="692.67" urx="239.56" ury="690.52"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="240.12" lly="692.67" urx="242.82" ury="690.52"/>
+        </Word>
+        <Word>
+          <Text>CUQUES</Text>
+          <Box llx="234.46" lly="694.77" urx="242.78" ury="692.62"/>
+        </Word>
+        <Word>
+          <Text>AIX-</Text>
+          <Box llx="232.71" lly="686.51" urx="235.80" ury="684.54"/>
+        </Word>
+        <Word>
+          <Text>EN-</Text>
+          <Box llx="232.71" lly="688.05" urx="235.42" ury="686.09"/>
+        </Word>
+        <Word>
+          <Text>PROVENCE</Text>
+          <Box llx="232.71" lly="689.59" urx="240.95" ury="687.63"/>
+        </Word>
+        <Word>
+          <Text>FRÉJUS</Text>
+          <Box llx="253.47" lly="690.55" urx="260.36" ury="688.40"/>
+        </Word>
+        <Word>
+          <Text>MOUGINS</Text>
+          <Box llx="261.14" lly="686.60" urx="271.61" ury="684.45"/>
+        </Word>
+        <Word>
+          <Text>BAGNOLS</Text>
+          <Box llx="199.74" lly="666.62" urx="209.77" ury="664.47"/>
+        </Word>
+        <Word>
+          <Text>SUR</Text>
+          <Box llx="199.70" lly="668.72" urx="203.82" ury="666.57"/>
+        </Word>
+        <Word>
+          <Text>CÈZE</Text>
+          <Box llx="204.42" lly="668.72" urx="209.77" ury="666.57"/>
+        </Word>
+        <Word>
+          <Text>ALES</Text>
+          <Box llx="193.54" lly="672.43" urx="198.39" ury="670.28"/>
+        </Word>
+        <Word>
+          <Text>MENDE</Text>
+          <Box llx="185.81" lly="665.82" urx="193.64" ury="663.67"/>
+        </Word>
+        <Word>
+          <Text>LUNEL</Text>
+          <Box llx="211.61" lly="684.35" urx="217.67" ury="682.20"/>
+        </Word>
+        <Word>
+          <Text>ARLES</Text>
+          <Box llx="228.18" lly="683.82" ulx="226.03" uly="683.82" urx="226.03" ury="677.58" lrx="228.18" lry="677.58"/>
+        </Word>
+        <Word>
+          <Text>UZES</Text>
+          <Box llx="193.59" lly="675.19" urx="198.93" ury="673.04"/>
+        </Word>
+        <Word>
+          <Text>ORANGE</Text>
+          <Box llx="204.04" lly="672.35" urx="211.85" ury="670.20"/>
+        </Word>
+        <Word>
+          <Text>SAINT-ÉTIENNE</Text>
+          <Box llx="189.81" lly="647.29" urx="205.50" ury="645.14"/>
+        </Word>
+        <Word>
+          <Text>AUBENAS</Text>
+          <Box llx="196.00" lly="658.43" urx="205.66" ury="656.28"/>
+        </Word>
+        <Word>
+          <Text>ROANNE</Text>
+          <Box llx="207.86" lly="632.35" urx="216.92" ury="630.21"/>
+        </Word>
+        <Word>
+          <Text>VILLEURBANNE</Text>
+          <Box llx="207.13" lly="639.23" urx="222.88" ury="637.09"/>
+        </Word>
+        <Word>
+          <Text>NICE</Text>
+          <Box llx="265.99" lly="679.79" urx="271.05" ury="677.64"/>
+        </Word>
+        <Word>
+          <Text>CAGNES-SUR-MER</Text>
+          <Box llx="263.35" lly="684.10" urx="282.08" ury="681.95"/>
+        </Word>
+        <Word>
+          <Text>MÉRIGNAC</Text>
+          <Box llx="143.58" lly="653.73" urx="154.95" ury="651.58"/>
+        </Word>
+        <Word>
+          <Text>SAINT-RÉMY-DE-PROVENCE</Text>
+          <Box llx="233.55" lly="682.08" urx="251.27" ury="679.93"/>
+        </Word>
+        <Word>
+          <Text>CAVAILLON</Text>
+          <Box llx="240.90" lly="684.23" urx="250.81" ury="682.08"/>
+        </Word>
+        <Word>
+          <Text>PERTUIS</Text>
+          <Box llx="240.90" lly="686.64" urx="248.14" ury="684.49"/>
+        </Word>
+        <Word>
+          <Text>GOUESNOU</Text>
+          <Box llx="71.87" lly="563.89" urx="84.31" ury="561.74"/>
+        </Word>
+        <Word>
+          <Text>APT</Text>
+          <Box llx="238.61" lly="678.23" urx="242.54" ury="676.08"/>
+        </Word>
+        <Word>
+          <Text>MANOSQUE</Text>
+          <Box llx="247.06" lly="677.83" urx="259.66" ury="675.68"/>
+        </Word>
+        <Word>
+          <Text>ABBEVILLE</Text>
+          <Box llx="187.02" lly="536.91" urx="197.71" ury="534.76"/>
+        </Word>
+        <Word>
+          <Text>EYBENS</Text>
+          <Box llx="233.43" lly="654.14" urx="241.31" ury="651.99"/>
+        </Word>
+        <Word>
+          <Text>SALINS-LES-THERMES</Text>
+          <Box llx="240.03" lly="650.22" urx="262.15" ury="648.07"/>
+        </Word>
+        <Word>
+          <Text>MEAUX</Text>
+          <Box llx="95.61" lly="630.17" urx="103.22" ury="628.02"/>
+        </Word>
+        <Word>
+          <Text>L</Text>
+          <Box llx="79.78" lly="624.18" urx="80.92" ury="622.03"/>
+        </Word>
+        <Word>
+          <Text>'</Text>
+          <Box llx="80.92" lly="624.18" urx="81.44" ury="622.03"/>
+        </Word>
+        <Word>
+          <Text>ISLE</Text>
+          <Box llx="81.44" lly="624.18" urx="85.60" ury="622.03"/>
+        </Word>
+        <Word>
+          <Text>ADAM</Text>
+          <Box llx="86.03" lly="624.18" urx="92.36" ury="622.03"/>
+        </Word>
+        <Word>
+          <Text>HERBLAY</Text>
+          <Box llx="63.93" lly="617.45" urx="73.20" ury="615.31"/>
+        </Word>
+        <Word>
+          <Text>EVRY</Text>
+          <Box llx="82.94" lly="652.41" urx="87.86" ury="650.26"/>
+        </Word>
+        <Word>
+          <Text>TRAPPES</Text>
+          <Box llx="58.92" lly="628.29" urx="67.86" ury="626.14"/>
+        </Word>
+        <Word>
+          <Text>VERSAILLES</Text>
+          <Box llx="73.03" lly="634.16" urx="84.62" ury="632.01"/>
+        </Word>
+        <Word>
+          <Text>CHARMEIL</Text>
+          <Box llx="181.53" lly="632.55" urx="192.52" ury="630.40"/>
+        </Word>
+        <Word>
+          <Text>PARIS</Text>
+          <Box llx="181.20" lly="563.77" urx="186.89" ury="561.62"/>
+        </Word>
+        <Word>
+          <Text>SAINT-BRICE-COURCELLES</Text>
+          <Box llx="211.57" lly="556.56" urx="238.69" ury="554.42"/>
+        </Word>
+        <Word>
+          <Text>SARREGUEMINES</Text>
+          <Box llx="241.40" lly="565.26" urx="259.08" ury="563.11"/>
+        </Word>
+        <Word>
+          <Text>BOURG-St-MAURICE</Text>
+          <Box llx="249.99" lly="641.61" urx="270.79" ury="639.46"/>
+        </Word>
+        <Word>
+          <Text>LES</Text>
+          <Box llx="242.76" lly="688.59" urx="245.00" ury="686.44"/>
+        </Word>
+        <Word>
+          <Text>ARCS</Text>
+          <Box llx="245.27" lly="688.59" urx="248.67" ury="686.44"/>
+        </Word>
+        <Word>
+          <Text>CARPENTRAS</Text>
+          <Box llx="235.10" lly="670.62" urx="247.95" ury="668.47"/>
+        </Word>
+        <Word>
+          <Text>PERNES-LES-FONTAINES</Text>
+          <Box llx="235.10" lly="672.37" urx="258.34" ury="670.22"/>
+        </Word>
+        <Word>
+          <Text>SAULT</Text>
+          <Box llx="240.15" lly="667.36" urx="246.39" ury="665.22"/>
+        </Word>
+        <Word>
+          <Text>VAISON-LA-ROMAINE</Text>
+          <Box llx="232.90" lly="661.72" urx="254.65" ury="659.57"/>
+        </Word>
+        <Word>
+          <Text>SORGUES</Text>
+          <Box llx="224.98" lly="667.29" urx="233.92" ury="665.14"/>
+        </Word>
+        <Word>
+          <Text>BOLLENE</Text>
+          <Box llx="218.62" lly="664.64" urx="227.41" ury="662.68"/>
+        </Word>
+        <Word>
+          <Text>GARGENVILLE</Text>
+          <Box llx="58.36" lly="625.38" urx="72.57" ury="623.24"/>
+        </Word>
+        <Word>
+          <Text>VERTUS</Text>
+          <Box llx="210.63" lly="567.60" urx="218.43" ury="565.46"/>
+        </Word>
+        <Word>
+          <Text>ECUELLES</Text>
+          <Box llx="189.16" lly="582.76" urx="199.41" ury="580.61"/>
+        </Word>
+        <Word>
+          <Text>LE</Text>
+          <Box llx="144.57" lly="575.65" urx="146.97" ury="573.51"/>
+        </Word>
+        <Word>
+          <Text>MANS</Text>
+          <Box llx="147.56" lly="575.65" urx="153.74" ury="573.51"/>
+        </Word>
+        <Word>
+          <Text>SALON-</Text>
+          <Box llx="212.85" lly="686.22" urx="219.56" ury="684.07"/>
+        </Word>
+        <Word>
+          <Text>DE-PROVENCE</Text>
+          <Box llx="207.39" lly="688.32" urx="220.07" ury="686.18"/>
+        </Word>
+        <Word>
+          <Text>CHÂTEAUNEUF-</Text>
+          <Box llx="206.94" lly="696.54" urx="223.03" ury="694.39"/>
+        </Word>
+        <Word>
+          <Text>LES-MARTIGUES</Text>
+          <Box llx="206.54" lly="698.51" urx="223.03" ury="696.36"/>
+        </Word>
+        <Word>
+          <Text>SOTTEVILLE-</Text>
+          <Box llx="172.57" lly="551.16" urx="185.33" ury="549.01"/>
+        </Word>
+        <Word>
+          <Text>LES-ROUEN</Text>
+          <Box llx="172.57" lly="553.26" urx="184.50" ury="551.11"/>
+        </Word>
+        <Word>
+          <Text>LE</Text>
+          <Box llx="157.78" lly="548.08" urx="160.17" ury="545.94"/>
+        </Word>
+        <Word>
+          <Text>HAVRE</Text>
+          <Box llx="160.77" lly="548.08" urx="167.55" ury="545.94"/>
+        </Word>
+        <Word>
+          <Text>BRIVES</Text>
+          <Box llx="188.32" lly="652.70" urx="195.28" ury="650.55"/>
+        </Word>
+        <Word>
+          <Text>CHARENSAC</Text>
+          <Box llx="183.18" lly="654.66" urx="195.88" ury="652.52"/>
+        </Word>
+        <Word>
+          <Text>AJACCIO</Text>
+          <Box llx="263.12" lly="717.63" urx="271.82" ury="715.48"/>
+        </Word>
+        <Word>
+          <Text>TOULON</Text>
+          <Box llx="248.06" lly="696.53" urx="257.31" ury="694.38"/>
+        </Word>
+        <Word>
+          <Text>GRIMAUD</Text>
+          <Box llx="250.06" lly="692.84" urx="260.20" ury="690.70"/>
+        </Word>
+        <Word>
+          <Text>MONTPELLIER</Text>
+          <Box llx="195.63" lly="690.55" urx="210.54" ury="688.40"/>
+        </Word>
+        <Word>
+          <Text>CLERMONT</Text>
+          <Box llx="177.17" lly="686.65" urx="189.26" ury="684.50"/>
+        </Word>
+        <Word>
+          <Text>l</Text>
+          <Box llx="189.86" lly="686.65" urx="190.42" ury="684.50"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="190.42" lly="686.65" urx="190.98" ury="684.50"/>
+        </Word>
+        <Word>
+          <Text>HERAULT</Text>
+          <Box llx="190.98" lly="686.65" urx="200.44" ury="684.50"/>
+        </Word>
+        <Word>
+          <Text>BÉZIERS</Text>
+          <Box llx="181.93" lly="691.60" urx="190.32" ury="689.45"/>
+        </Word>
+        <Word>
+          <Text>AVIGNON</Text>
+          <Box llx="229.50" lly="676.60" ulx="227.35" uly="676.60" urx="227.35" ury="667.74" lrx="229.50" lry="667.74"/>
+        </Word>
+        <Word>
+          <Text>MONTFAVET</Text>
+          <Box llx="234.75" lly="674.31" urx="247.67" ury="672.16"/>
+        </Word>
+        <Word>
+          <Text>AVIGNON</Text>
+          <Box llx="248.09" lly="674.31" urx="257.92" ury="672.16"/>
+        </Word>
+        <Word>
+          <Text>COMPIÈGNE</Text>
+          <Box llx="198.20" lly="548.78" urx="211.17" ury="546.63"/>
+        </Word>
+        <Word>
+          <Text>TOULOUSE</Text>
+          <Box llx="167.43" lly="691.57" urx="178.99" ury="689.42"/>
+        </Word>
+        <Word>
+          <Text>LIMOGES</Text>
+          <Box llx="146.37" lly="643.26" urx="155.94" ury="641.12"/>
+        </Word>
+        <Word>
+          <Text>DIJON</Text>
+          <Box llx="210.10" lly="609.63" urx="216.48" ury="607.48"/>
+        </Word>
+        <Word>
+          <Text>FLEURVILLE</Text>
+          <Box llx="205.37" lly="622.46" urx="217.09" ury="620.31"/>
+        </Word>
+        <Word>
+          <Text>ARQUES</Text>
+          <Box llx="177.53" lly="526.09" urx="186.01" ury="523.94"/>
+        </Word>
+        <Word>
+          <Text>CHÂTEAUDUN</Text>
+          <Box llx="167.03" lly="572.06" urx="181.69" ury="569.91"/>
+        </Word>
+        <Word>
+          <Text>COUR</Text>
+          <Box llx="165.76" lly="585.55" urx="172.02" ury="583.40"/>
+        </Word>
+        <Word>
+          <Text>CHEVERGNY</Text>
+          <Box llx="165.76" lly="587.61" urx="178.49" ury="585.46"/>
+        </Word>
+        <Word>
+          <Text>VENDÔME</Text>
+          <Box llx="166.90" lly="576.76" urx="177.71" ury="574.61"/>
+        </Word>
+        <Word>
+          <Text>MONTOIRE</Text>
+          <Box llx="144.88" lly="582.22" urx="156.71" ury="580.07"/>
+        </Word>
+        <Word>
+          <Text>SAINT-PIERRE</Text>
+          <Box llx="146.99" lly="586.23" urx="160.77" ury="584.09"/>
+        </Word>
+        <Word>
+          <Text>DES-CORPS</Text>
+          <Box llx="149.02" lly="588.29" urx="160.77" ury="586.14"/>
+        </Word>
+        <Word>
+          <Text>VILLEBAROU</Text>
+          <Box llx="172.70" lly="582.48" urx="185.58" ury="580.34"/>
+        </Word>
+        <Word>
+          <Text>GENLIS</Text>
+          <Box llx="226.54" lly="612.06" urx="233.97" ury="609.92"/>
+        </Word>
+        <Word>
+          <Text>BOURG-EN-</Text>
+          <Box llx="223.13" lly="625.84" urx="235.28" ury="623.69"/>
+        </Word>
+        <Word>
+          <Text>BRESSE</Text>
+          <Box llx="223.13" lly="627.89" urx="230.63" ury="625.75"/>
+        </Word>
+        <Word>
+          <Text>PLAISANCE</Text>
+          <Box llx="147.82" lly="692.06" urx="157.50" ury="689.92"/>
+        </Word>
+        <Word>
+          <Text>DU</Text>
+          <Box llx="147.25" lly="694.17" urx="150.02" ury="692.02"/>
+        </Word>
+        <Word>
+          <Text>TOUCH</Text>
+          <Box llx="150.77" lly="694.17" urx="157.50" ury="692.02"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I0" x="497.37" y="855.50" width="95.28" height="129.60"/>
+    <PlacedImage image="I38" x="14.92" y="468.26" width="237.69" height="25.30"/>
+    <PlacedImage image="I1" x="497.37" y="842.06" width="95.28" height="35.76"/>
+    <PlacedImage image="I40" x="381.86" y="293.82" width="254.93" height="26.64"/>
+    <PlacedImage image="I49" x="103.72" y="620.50" width="14.88" height="10.56"/>
+    <PlacedImage image="I52" x="381.78" y="267.43" width="255.10" height="252.61"/>
+    <PlacedImage image="I51" x="47.56" y="734.02" width="242.40" height="222.00"/>
+    <PlacedImage image="I54" x="389.03" y="705.83" width="245.59" height="32.98"/>
+    <PlacedImage image="I55" x="389.08" y="655.71" width="12.07" height="147.04"/>
+    <PlacedImage image="I50" x="14.79" y="443.35" width="237.95" height="176.32"/>
+    <PlacedImage image="I53" x="389.03" y="672.96" width="210.54" height="131.48"/>
+    <PlacedImage image="I58" x="599.46" y="672.96" width="35.16" height="131.48"/>
+    <PlacedImage image="I57" x="494.24" y="541.60" width="140.38" height="32.98"/>
+    <PlacedImage image="I56" x="400.99" y="560.05" width="95.28" height="51.43"/>
+  </Content>
+</Page>

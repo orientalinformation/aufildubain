@@ -1,0 +1,105 @@
+<page uid="99">
+	<ref type="goto">
+		<id><![CDATA[0010.0000]]></id>
+		<url><![CDATA[8]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0001]]></id>
+		<url><![CDATA[16]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0002]]></id>
+		<url><![CDATA[18]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0003]]></id>
+		<url><![CDATA[20]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0004]]></id>
+		<url><![CDATA[22]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0005]]></id>
+		<url><![CDATA[34]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0006]]></id>
+		<url><![CDATA[38]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0007]]></id>
+		<url><![CDATA[40]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0008]]></id>
+		<url><![CDATA[46]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0009]]></id>
+		<url><![CDATA[50]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0010.0010]]></id>
+		<url><![CDATA[56]]></url>
+	</ref>
+	<zone id="47" rec="94|347|205|306">
+		<id><![CDATA[1489746794639_617_40]]></id>
+		<rec><![CDATA[94|347|205|306]]></rec>
+		<zone id="402" rec="119|390|61|24">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|390|61|24]]></rec>
+			<ref><![CDATA[0010.0000]]></ref>
+		</zone>
+		<zone id="403" rec="119|414|104|24">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|414|104|24]]></rec>
+			<ref><![CDATA[0010.0001]]></ref>
+		</zone>
+		<zone id="404" rec="119|438|95|23">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|438|95|23]]></rec>
+			<ref><![CDATA[0010.0002]]></ref>
+		</zone>
+		<zone id="405" rec="119|461|83|23">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|461|83|23]]></rec>
+			<ref><![CDATA[0010.0003]]></ref>
+		</zone>
+		<zone id="406" rec="119|483|88|25">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|483|88|25]]></rec>
+			<ref><![CDATA[0010.0004]]></ref>
+		</zone>
+		<zone id="407" rec="119|508|167|26">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|508|167|26]]></rec>
+			<ref><![CDATA[0010.0005]]></ref>
+		</zone>
+		<zone id="408" rec="119|531|53|23">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|531|53|23]]></rec>
+			<ref><![CDATA[0010.0006]]></ref>
+		</zone>
+		<zone id="409" rec="119|554|166|25">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|554|166|25]]></rec>
+			<ref><![CDATA[0010.0007]]></ref>
+		</zone>
+		<zone id="410" rec="119|579|82|25">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|579|82|25]]></rec>
+			<ref><![CDATA[0010.0008]]></ref>
+		</zone>
+		<zone id="411" rec="119|602|62|24">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[119|602|62|24]]></rec>
+			<ref><![CDATA[0010.0009]]></ref>
+		</zone>
+		<zone id="412" rec="116|626|177|25">
+			<id><![CDATA[1489758477956_8515_374]]></id>
+			<rec><![CDATA[116|626|177|25]]></rec>
+			<ref><![CDATA[0010.0010]]></ref>
+		</zone>
+	</zone>
+</page>

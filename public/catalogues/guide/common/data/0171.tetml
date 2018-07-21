@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I2" x="134.36" y="767.89" width="70.86" height="633.86" alpha="180" beta="180"/>
+    <PlacedImage image="I14" x="133.93" y="767.89" width="211.52" height="633.86"/>
+    <PlacedImage image="I8" x="345.45" y="838.25" width="281.96" height="70.78" alpha="180" beta="180"/>
+    <PlacedImage image="I13" x="306.71" y="886.38" width="8.64" height="29.28"/>
+    <PlacedImage image="I5" x="380.67" y="838.25" width="35.64" height="387.60" alpha="180" beta="180"/>
+    <PlacedImage image="I13" x="346.40" y="886.38" width="8.64" height="29.28"/>
+    <PlacedImage image="I15" x="380.25" y="838.25" width="211.52" height="387.60"/>
+    <PlacedImage image="I16" x="591.03" y="444.07" width="48.65" height="336.34"/>
+    <PlacedImage image="I9" x="334.64" y="443.95" width="304.91" height="336.11"/>
+    <Para>
+      <Box llx="117.11" lly="640.06" urx="492.82" ury="456.04">
+        <Word>
+          <Text>PORTES</Text>
+          <Box llx="117.11" lly="474.04" urx="185.65" ury="456.04"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="189.94" lly="474.04" urx="210.91" ury="456.04"/>
+        </Word>
+        <Word>
+          <Text>PAROIS</Text>
+          <Box llx="215.19" lly="474.04" urx="277.72" ury="456.04"/>
+        </Word>
+        <Word>
+          <Text>RECEVEURS</Text>
+          <Box llx="117.11" lly="501.71" urx="220.54" ury="483.71"/>
+        </Word>
+        <Word>
+          <Text>DOUCHES</Text>
+          <Box llx="117.11" lly="529.38" urx="202.95" ury="511.38"/>
+        </Word>
+        <Word>
+          <Text>À</Text>
+          <Box llx="207.23" lly="529.38" urx="218.90" ury="511.38"/>
+        </Word>
+        <Word>
+          <Text>L</Text>
+          <Box llx="223.18" lly="529.38" urx="233.19" ury="511.38"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="231.50" lly="529.38" urx="236.50" ury="511.38"/>
+        </Word>
+        <Word>
+          <Text>ITALIENNE</Text>
+          <Box llx="236.14" lly="529.38" urx="320.92" ury="511.38"/>
+        </Word>
+        <Word>
+          <Text>PANNEAUX</Text>
+          <Box llx="117.11" lly="557.05" urx="209.23" ury="539.05"/>
+        </Word>
+        <Word>
+          <Text>D</Text>
+          <Box llx="213.52" lly="557.05" urx="226.19" ury="539.05"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="225.83" lly="557.05" urx="230.83" ury="539.05"/>
+        </Word>
+        <Word>
+          <Text>HABILLAGE</Text>
+          <Box llx="230.47" lly="557.05" urx="325.58" ury="539.05"/>
+        </Word>
+        <Word>
+          <Text>CABINES</Text>
+          <Box llx="117.11" lly="584.72" urx="192.26" ury="566.72"/>
+        </Word>
+        <Word>
+          <Text>CABINES</Text>
+          <Box llx="117.11" lly="612.39" urx="192.26" ury="594.39"/>
+        </Word>
+        <Word>
+          <Text>EN</Text>
+          <Box llx="196.54" lly="612.39" urx="220.18" ury="594.39"/>
+        </Word>
+        <Word>
+          <Text>REMPLACEMENT</Text>
+          <Box llx="224.46" lly="612.39" urx="366.84" ury="594.39"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="371.12" lly="612.39" urx="394.43" ury="594.39"/>
+        </Word>
+        <Word>
+          <Text>BAIGNOIRE</Text>
+          <Box llx="398.72" lly="612.39" urx="492.82" ury="594.39"/>
+        </Word>
+        <Word>
+          <Text>CABINES</Text>
+          <Box llx="117.11" lly="640.06" urx="192.26" ury="622.06"/>
+        </Word>
+        <Word>
+          <Text>HAMMAM</Text>
+          <Box llx="196.54" lly="640.06" urx="278.10" ury="622.06"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="282.38" lly="640.06" urx="303.35" ury="622.06"/>
+        </Word>
+        <Word>
+          <Text>SAUNA</Text>
+          <Box llx="307.64" lly="640.06" urx="367.18" ury="622.06"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I12" x="226.68" y="278.59" width="140.87" height="93.49"/>
+    <Para>
+      <Box llx="218.69" lly="753.19" urx="545.90" ury="698.79">
+        <Word>
+          <Text>douche</Text>
+          <Box llx="218.69" lly="753.19" urx="545.90" ury="698.79"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I0" x="591.77" y="134.45" width="528.27" height="70.78" alpha="180" beta="180"/>
+  </Content>
+</Page>

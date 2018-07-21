@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I1" x="305.89" y="885.57" width="8.64" height="29.28"/>
+    <PlacedImage image="I1" x="345.57" y="885.57" width="8.64" height="29.28"/>
+    <PlacedImage image="I0" x="48.56" y="859.01" width="549.30" height="823.95" alpha="0.5"/>
+  </Content>
+</Page>

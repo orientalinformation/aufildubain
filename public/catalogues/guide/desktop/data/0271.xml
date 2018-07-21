@@ -1,0 +1,33 @@
+<page uid="19">
+	<ref type="goto">
+		<id><![CDATA[0270.0000]]></id>
+		<url><![CDATA[270]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0270.0001]]></id>
+		<url><![CDATA[291]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0270.0002]]></id>
+		<url><![CDATA[294]]></url>
+	</ref>
+	<zone rec="125|585|323|121" id="899">
+		<id><![CDATA[1489998167591_4173_396]]></id>
+		<rec><![CDATA[125|585|323|121]]></rec>
+		<zone rec="131|593|165|32" id="900">
+			<id><![CDATA[1489998182589_334_397]]></id>
+			<rec><![CDATA[131|593|165|32]]></rec>
+			<ref><![CDATA[0270.0000]]></ref>
+		</zone>
+		<zone rec="131|627|162|34" id="901">
+			<id><![CDATA[1489998182589_334_397]]></id>
+			<rec><![CDATA[131|627|162|34]]></rec>
+			<ref><![CDATA[0270.0001]]></ref>
+		</zone>
+		<zone rec="131|663|311|33" id="903">
+			<id><![CDATA[1489998182589_334_397]]></id>
+			<rec><![CDATA[131|663|311|33]]></rec>
+			<ref><![CDATA[0270.0002]]></ref>
+		</zone>
+	</zone>
+</page>

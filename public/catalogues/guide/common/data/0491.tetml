@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I9" x="15.31" y="886.52" width="69.36" height="404.15"/>
+    <PlacedImage image="I11" x="302.37" y="838.30" width="241.68" height="238.80" alpha="-90"/>
+    <PlacedImage image="I13" x="404.61" y="838.30" width="276.00" height="102.72" alpha="-90"/>
+    <PlacedImage image="I10" x="84.19" y="886.52" width="275.76" height="67.68"/>
+    <PlacedImage image="I0" x="275.25" y="486.46" width="282.00" height="211.68" alpha="-90"/>
+    <PlacedImage image="I12" x="302.37" y="597.10" width="138.24" height="238.80" alpha="-90"/>
+    <PlacedImage image="I20" x="306.66" y="886.28" width="8.64" height="29.28"/>
+    <PlacedImage image="I14" x="336.45" y="562.78" width="69.36" height="34.56" alpha="-90"/>
+    <PlacedImage image="I20" x="346.40" y="886.38" width="8.64" height="29.28"/>
+    <PlacedImage image="I16" x="334.60" y="430.92" width="304.90" height="323.28"/>
+    <PlacedImage image="I2" x="591.81" y="521.50" width="106.08" height="317.04" alpha="-90"/>
+    <PlacedImage image="I3" x="345.57" y="415.90" width="211.44" height="70.80" alpha="-90"/>
+    <PlacedImage image="I15" x="370.53" y="562.78" width="35.04" height="34.56" alpha="-90"/>
+    <PlacedImage image="I8" x="591.81" y="767.98" width="141.36" height="211.68" alpha="-90"/>
+    <PlacedImage image="I5" x="591.81" y="838.30" width="70.80" height="246.72" alpha="-90"/>
+    <PlacedImage image="I6" x="591.81" y="627.10" width="70.80" height="246.72" alpha="-90"/>
+    <PlacedImage image="I4" x="591.81" y="556.78" width="35.76" height="282.00" alpha="-90"/>
+    <PlacedImage image="I17" x="591.15" y="431.04" width="48.35" height="323.15"/>
+    <PlacedImage image="I18" x="251.52" y="298.86" width="115.79" height="173.68"/>
+    <Para>
+      <Box llx="124.64" lly="564.27" urx="405.20" ury="518.60">
+        <Word>
+          <Text>RADIATEURS</Text>
+          <Box llx="124.64" lly="536.60" urx="231.89" ury="518.60"/>
+        </Word>
+        <Word>
+          <Text>DÉCORATIFS</Text>
+          <Box llx="237.33" lly="536.60" urx="344.60" ury="518.60"/>
+        </Word>
+        <Word>
+          <Text>RADIATEURS</Text>
+          <Box llx="124.64" lly="564.27" urx="231.89" ury="546.27"/>
+        </Word>
+        <Word>
+          <Text>SÈCHE-SERVIETTES</Text>
+          <Box llx="237.33" lly="564.27" urx="405.20" ury="546.27"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I1" x="345.57" y="204.94" width="141.36" height="282.00" alpha="-90"/>
+    <Para>
+      <Box llx="119.71" lly="706.42" urx="557.24" ury="652.02">
+        <Word>
+          <Text>radiateurs</Text>
+          <Box llx="119.71" lly="706.42" urx="557.24" ury="652.02"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I7" x="591.81" y="134.38" width="70.80" height="246.72" alpha="-90"/>
+  </Content>
+</Page>

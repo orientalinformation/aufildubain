@@ -1,0 +1,69 @@
+<page uid="17">
+	<ref type="goto">
+		<id><![CDATA[0406.0000]]></id>
+		<url><![CDATA[406]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0001]]></id>
+		<url><![CDATA[430]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0002]]></id>
+		<url><![CDATA[437]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0003]]></id>
+		<url><![CDATA[446]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0004]]></id>
+		<url><![CDATA[450]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0005]]></id>
+		<url><![CDATA[451]]></url>
+	</ref>
+	<ref type="goto">
+		<id><![CDATA[0406.0006]]></id>
+		<url><![CDATA[460]]></url>
+	</ref>
+	<zone id="102" rec="82|506|412|226">
+		<id><![CDATA[1489747175768_2866_124]]></id>
+		<rec><![CDATA[82|506|412|226]]></rec>
+		<zone id="103" rec="99|517|65|28">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|517|65|28]]></rec>
+			<ref><![CDATA[0406.0000]]></ref>
+		</zone>
+		<zone id="104" rec="99|546|171|28">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|546|171|28]]></rec>
+			<ref><![CDATA[0406.0001]]></ref>
+		</zone>
+		<zone id="105" rec="99|575|165|28">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|575|165|28]]></rec>
+			<ref><![CDATA[0406.0002]]></ref>
+		</zone>
+		<zone id="106" rec="99|605|157|28">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|605|157|28]]></rec>
+			<ref><![CDATA[0406.0003]]></ref>
+		</zone>
+		<zone id="107" rec="99|633|251|27">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|633|251|27]]></rec>
+			<ref><![CDATA[0406.0004]]></ref>
+		</zone>
+		<zone id="108" rec="99|660|369|28">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|660|369|28]]></rec>
+			<ref><![CDATA[0406.0005]]></ref>
+		</zone>
+		<zone id="109" rec="99|689|152|31">
+			<id><![CDATA[1489747222855_7353_125]]></id>
+			<rec><![CDATA[99|689|152|31]]></rec>
+			<ref><![CDATA[0406.0006]]></ref>
+		</zone>
+	</zone>
+</page>

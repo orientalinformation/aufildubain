@@ -1,0 +1,84 @@
+<maps phone="true">
+	<zones color="#000" opacity="0" border="0px" borderColor="#000"  multizoom="1" hover="true" zoomIcons="multi|url|xurl|ldc|goto|gotoMap|diapo|video|embedVideo|facebook|google|pinterest|twitter|print|mail|htmlPanel" innerMapsVisibleNormal="true" showAssociatedZonesOnHover="true" displayMode="mapIcons" displayModeTablet="hs" displayModePhone="hs" placeOnTop="true" useShadow="true"/>
+	<hotspots>
+		<hotspot type="default" src="res/hotspot_default.svg" width="25" height="25" altId="defaultAlt" color="#FFFFFF" opacity="0.5" border="1px" borderColor="#000000"/>
+		<hotspot type="url"     src="res/hotspot_url.svg"   width="40" height="40" order="zoom"     zoomIcons="url" defaultAction="url" />
+		<hotspot type="xurl"    src="res/hotspot_url.svg"   width="40" height="40" order="zoom|xurl"    zoomIcons="xurl"/>
+		<hotspot type="xurl1"   src="res/hotspot_url.svg"   width="40" height="40" order="zoom|xurl1"   zoomIcons="xurl1"/>
+		<hotspot type="xurl2"   src="res/hotspot_url.svg"   width="40" height="40" order="zoom|xurl2"   zoomIcons="xurl2"/>
+		<hotspot type="yurl"    src="res/hotspot_url.svg"   width="40" height="40" order="zoom|yurl"    zoomIcons="yurl"/>
+		<hotspot type="yurl1"   src="res/hotspot_url.svg"   width="40" height="40" order="zoom|yurl1"   zoomIcons="yurl1"/>
+		<hotspot type="yurl2"   src="res/hotspot_url.svg"   width="40" height="40" order="zoom|yurl2"   zoomIcons="yurl2"/>
+		<hotspot type="ldc"     src="res/hotspot_ldc.svg"   width="40" height="40" order="zoom|ldc"     zoomIcons="ldc"/>
+		<hotspot type="mailto"  src="res/hotspot_ldc.svg"   width="40" height="40" order="zoom|mailto"  zoomIcons="mailto"/>
+		<hotspot type="pdf"     src="res/hotspot_goto.svg"  width="40" height="40" order="zoom|pdf"     zoomIcons="pdf"/>
+		<hotspot type="goto"    src="res/hotspot_goto.svg"  width="40" height="40" order="none"    zoomIcons="none" defaultAction="goto" />
+		<hotspot type="goto1"   src="res/hotspot_goto.svg"  width="40" height="40" order="zoom|goto1"   zoomIcons="goto1"/>
+		<hotspot type="audio"   src="res/hotspot_audio.svg" width="40" height="40" order="zoom|audio"   zoomIcons="audio"/>
+		<hotspot type="video"   src="res/hotspot_video.svg" width="40" height="40" order="zoom|video"   zoomIcons="video"/>
+		<hotspot type="videoYT" src="res/hotspot_video.svg" width="40" height="40" order="zoom|videoYT" zoomIcons="videoYT"/>
+		<hotspot type="embedVideo" src="res/hotspot_video.svg" width="40" height="40" order="zoom|embedVideo" zoomIcons="embedVideo"/>
+		<hotspot type="diapo"   src="res/hotspot_diapo.svg" width="40" height="40" order="zoom|diapo"   zoomIcons="diapo"/>
+		<hotspot type="multi"   src="res/hotspot_multi.svg" width="40" height="40" order="zoom|multi"   zoomIcons="multi"/>
+		<hotspot type="iframe"  src="res/hotspot_video.svg" width="40" height="40" order="zoom|iframe"  zoomIcons="iframe"/>
+		<hotspot type="containerPopup" src="res/picto_popup.svg" width="40" height="40" order="zoom|containerPopup" zoomIcons="containerPopup"/>
+		<hotspot type="htmlPanel" src="res/hotspot_ldc.png" width="40" height="40" order="zoom|htmlPanel" zoomIcons="htmlPanel"/>
+		
+		<hotspot type="zoom"    src="res/hotspot_zoom.png" width="40" height="40" order="false"/>
+		<hotspot type="disabled"                            width="26" height="26" disabled="true"/>
+		
+		<hotspot type="linkYouTube"  src="res/hotspot_youtube.svg" width="40" height="40"/>
+		
+		<hotspot type="facebook"    src="res/hotspot_facebook.svg"    width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="twitter"     src="res/hotspot_twitter.svg"     width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="pinterest"   src="res/hotspot_pinterest.svg"   width="40" height="40" baseUrl="common/facebook/" finUrl=".html" mediaBaseUrl="common/facebook_maps" mediaFinUrl=".jpg"/>
+		<hotspot type="google"      src="res/hotspot_google.svg"      width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="linkedin"    src="res/hotspot_linkedin.svg"    width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="stumbleupon" src="res/hotspot_stumbleupon.svg" width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="digg"        src="res/hotspot_digg.svg"        width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+		<hotspot type="delicious"   src="res/hotspot_delicious.svg"   width="40" height="40" baseUrl="common/facebook/" finUrl=".html"/>
+	</hotspots>
+
+	<mapIcons active="true" staticPositions="0" place="TR" orientation="vertical" order="multi|zoom|url|xurl|ldc|goto|gotoMap|diapo|video|embedVideo|facebook|google|pinterest|twitter|stumbleupon|mail|htmlPanel" _offsetX="0" _offsetY="0" spaceX="0" spaceY="0" groupMultiIcons="0" multiIcons="url|xurl|goto|diapo|video|embedVideo|multi|ldc|htmlPanel">
+		<details>
+			<templates>
+				<template id="mapIcon" size="28|26" skin="color=#000000">
+					<txt size="20|20" pos="4|6" textSize="14" color="#ffffff" font="v7-font-icon" class="#class" align="center"/>
+					<item size="100%|1" pos="0|25" skin="color=#ffffff"/>
+				</template>
+			</templates>
+		</details>
+		<zoom  templateId="mapIcon" templateParams="#class=zoom-in"/>
+		<url   templateId="mapIcon" templateParams="#class=link"/>
+		<xurl  templateId="mapIcon" templateParams="#class=link"/>
+		<xurl1 templateId="mapIcon" templateParams="#class=link"/>
+		<xurl2 templateId="mapIcon" templateParams="#class=link"/>
+		<yurl  templateId="mapIcon" templateParams="#class=link"/>
+		<yurl1 templateId="mapIcon" templateParams="#class=link"/>
+		<yurl2 templateId="mapIcon" templateParams="#class=link"/>
+		<ldc   templateId="mapIcon" templateParams="#class=info"/>
+		<goto  templateId="mapIcon" templateParams="#class=redo2"/>
+		<goto  templateId="mapIcon" templateParams="#class=redo2"/>
+		<goto  templateId="mapIcon" templateParams="#class=redo2"/>
+		<multi templateId="mapIcon" templateParams="#class=plus"/>
+		<htmlPanel templateId="mapIcon" templateParams="#class=plus"/>
+
+		<diapo templateId="mapIcon" templateParams="#class=icon-diaporama"/>
+		<video templateId="mapIcon" templateParams="#class=icon-film"/>
+		<embedVideo templateId="mapIcon" templateParams="#class=icon-film"/>
+		<audio templateId="mapIcon" templateParams="#class=icon-music"/>
+
+		<!-- default sharing icons -->
+		<facebook    templateId="mapIcon" templateParams="#class=icon-facebook"/>
+		<google      templateId="mapIcon" templateParams="#class=icon-gplus"/>
+		<pinterest   templateId="mapIcon" templateParams="#class=icon-pinterest"/>
+		<twitter     templateId="mapIcon" templateParams="#class=icon-twitter"/>
+		<linkedin    templateId="mapIcon" templateParams="#class=icon-linkedin"/>
+		<stumbleupon templateId="mapIcon" templateParams="#class=icon-stumbleupon"/>
+		<digg        templateId="mapIcon" templateParams="#class=icon-digg"/>
+		<delicious   templateId="mapIcon" templateParams="#class=icon-delicious"/>
+		<print       templateId="mapIcon" templateParams="#class=icon-print"/>
+		<mail        templateId="mapIcon" templateParams="#class=icon-email"/>
+
+	</mapIcons>
+</maps>

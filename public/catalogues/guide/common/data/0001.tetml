@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="637.28" height="883.89" label="19" topdown="true" trimbox="21.00|21.00|616.28|862.89" mediabox="0.00|0.00|637.28|883.89" cropbox="0.00|0.00|637.28|883.89" artbox="21.00|21.00|616.28|862.89">
+  <Options> granularity=word tetml={} topdown={output} includebox={{21.00 21.00 616.28 862.89}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I0" x="7.19" y="867.41" width="623.52" height="864.24"/>
+    <Para>
+      <Box llx="506.02" lly="706.30" urx="562.50" ury="656.30">
+        <Word>
+          <Text>2017</Text>
+          <Box llx="506.02" lly="682.30" urx="562.50" ury="656.30"/>
+        </Word>
+        <Word>
+          <Text>2018</Text>
+          <Box llx="506.02" lly="706.30" urx="562.50" ury="680.30"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="575.48" lly="838.46" ulx="575.48" uly="824.66" urx="562.50" ury="680.30" lrx="562.50" lry="706.30">
+        <Word>
+          <Text>9</Text>
+          <Box llx="575.48" lly="838.46" urx="582.66" ury="824.66"/>
+        </Word>
+        <Word>
+          <Text>€</Text>
+          <Box llx="582.77" lly="834.32" urx="587.79" ury="826.28"/>
+        </Word>
+      </Box>
+    </Para>
+  </Content>
+</Page>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I8" x="15.31" y="886.52" width="69.36" height="404.15"/>
+    <PlacedImage image="I23" x="63.55" y="838.26" width="238.80" height="379.19"/>
+    <PlacedImage image="I11" x="301.87" y="838.26" width="34.56" height="344.88"/>
+    <PlacedImage image="I9" x="84.19" y="886.52" width="275.76" height="67.68"/>
+    <PlacedImage image="I22" x="63.55" y="486.43" width="282.00" height="422.87"/>
+    <PlacedImage image="I21" x="306.66" y="886.28" width="8.64" height="29.28"/>
+    <PlacedImage image="I5" x="309.79" y="556.75" width="35.76" height="35.76"/>
+    <PlacedImage image="I4" x="274.75" y="521.47" width="70.80" height="35.52"/>
+    <PlacedImage image="I12" x="335.95" y="838.26" width="34.56" height="310.32"/>
+    <PlacedImage image="I21" x="346.40" y="886.38" width="8.64" height="29.28"/>
+    <PlacedImage image="I7" x="345.07" y="838.26" width="35.52" height="70.80"/>
+    <PlacedImage image="I13" x="370.03" y="838.26" width="34.56" height="276.00"/>
+    <PlacedImage image="I6" x="380.11" y="838.26" width="211.68" height="211.68"/>
+    <PlacedImage image="I3" x="345.07" y="627.07" width="246.72" height="211.68"/>
+    <PlacedImage image="I24" x="591.09" y="431.00" width="48.49" height="323.45"/>
+    <PlacedImage image="I15" x="334.67" y="430.92" width="304.84" height="323.28"/>
+    <Para>
+      <Box llx="143.06" lly="555.80" urx="361.11" ury="482.47">
+        <Word>
+          <Text>BAIGNOIRES</Text>
+          <Box llx="143.06" lly="500.47" urx="249.36" ury="482.47"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I19" x="168.28" y="288.40" width="185.52" height="123.65"/>
+    <Para>
+      <Word>
+        <Text>PARE-BAINS</Text>
+        <Box llx="143.06" lly="528.13" urx="246.50" ury="510.13"/>
+      </Word>
+      <Word>
+        <Text>BALNÉOTHÉRAPIE</Text>
+        <Box llx="143.06" lly="555.80" urx="296.96" ury="537.80"/>
+      </Word>
+      <Word>
+        <Text>ET</Text>
+        <Box llx="302.40" lly="555.80" urx="323.01" ury="537.80"/>
+      </Word>
+      <Word>
+        <Text>SPA</Text>
+        <Box llx="328.45" lly="555.80" urx="361.11" ury="537.80"/>
+      </Word>
+    </Para>
+    <Para>
+      <Box llx="243.73" lly="713.50" urx="499.20" ury="659.10">
+        <Word>
+          <Text>bains</Text>
+          <Box llx="243.73" lly="713.50" urx="499.20" ury="659.10"/>
+        </Word>
+      </Box>
+    </Para>
+    <PlacedImage image="I1" x="345.07" y="134.35" width="246.72" height="70.80"/>
+  </Content>
+</Page>

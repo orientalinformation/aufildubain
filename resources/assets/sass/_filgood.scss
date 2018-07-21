@@ -1,0 +1,100 @@
+/** xs **/
+body.filgood {
+    .page-header {
+        background-color: #fafafa;
+        background: url("../images/top-filgood-ws.jpg") top center no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+
+        .logo {
+            position: absolute;
+            right: 15px;
+            /*** md ***/
+            top: -140px;
+            max-width: 180px;
+            @include media-breakpoint-up(lg) {
+                top: -147px;
+                max-width: 220px;
+            }
+            @include media-breakpoint-up(xl) {
+                top: -167px;
+                max-width: 100%;
+            }
+        }
+        .container {
+            position: relative;
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
+        }
+    }
+    .page-content > .container > div {
+        border-bottom: 1px solid #f4f4f4;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        overflow: hidden;
+        .action-buttons {
+            margin-top: 50px;
+        }
+        .card {
+             border-radius: 10px;
+            img {
+                border-radius: 10px;
+            }
+            .card-top {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                &:after {
+                    content: '';
+                    z-index: 1111;
+                    position: absolute;
+                    box-sizing: border-box;
+                    bottom: -5px;
+                    width: 100%;
+                    left: 0; right: 0;
+                    top: 0;
+                    background-size: 100%;
+                    background-image: url(../images/slide-items/after-items-other.png);
+                    background-position: center bottom;
+                    background-repeat:  no-repeat;
+                }
+            }
+            h3 {
+                color: #ffffff;
+                text-transform: none;
+                font-size: 1.8rem;
+            }
+            color: #ffffff;
+            background-color: #00b4dd;
+        }
+    }
+    .h3-tag {
+        color: #00b4dd;
+        line-height: 100%;
+        font-weight: 900;
+        font-size: 1.6rem;
+        text-transform: none;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+
+}
+
+@include media-breakpoint-up(lg) {
+
+}
+
+@include media-breakpoint-up(xl) {
+
+}
+
+@include media-breakpoint-up(xxl) {
+
+}

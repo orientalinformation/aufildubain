@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+	<title>Page Selection</title>
+	
+	<meta name="title" content="Page Selection" /> 
+
+	<script>
+
+	(function (window, document, undefined) {
+
+
+		var multiSelect = {
+				
+				urlGET: function (param) {
+					
+					var params = document.URL.split('?');
+
+					if(params.length > 1) {
+						params = params[1].split('&');
+						
+						for (var  i = 0, len = params.length; i < len; i++) {
+							if (params[i].split('=')[0] === param) {
+								return params[i].split('=')[1];
+							}
+						}
+					}
+
+					return null;
+				},
+
+
+				init: function () {
+
+					var self = this;
+
+					var isHTTPS = (window.location.href.indexOf('https://') === 0);
+
+					window.onload = function () {
+
+						var interactifPdfUrl = decodeURIComponent(self.urlGET('url'));
+						var interactifPdfGetUrl = decodeURIComponent(self.urlGET('getUrl'));
+						var params = decodeURIComponent(self.urlGET('params'));
+						var action = self.urlGET('action');
+
+						var xhr = new XMLHttpRequest();	
+					    xhr.open('POST', interactifPdfUrl, true);
+						xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+					    xhr.onreadystatechange = function () {
+					        if (xhr.readyState == 4 && xhr.status == 200) {
+								var data = xhr.responseText;
+
+								var sendResultRe = /sendResult=([a-zA-Z]*)/i
+								var sendResult = data.match(sendResultRe);
+								if (sendResult && sendResult[1] === 'true') {
+
+									var filenameRe = /filename=(.*?)\.pdf/i
+									var filename = data.match(filenameRe);
+									var pdfPath = interactifPdfGetUrl + filename[1] + '.pdf';
+
+									var protocol = (isHTTPS) ? 'https://' : 'http://';
+									pdfPath = protocol + 'www.interactivpdf.com/OUTPUT/' + filename[1] + '.pdf';
+									
+									if (action === 'download') {
+										window.location = pdfPath;
+									} else if (action === 'print') {
+										window.location = protocol + 'www.interactivpdf.com/print.html?path=' + encodeURIComponent(pdfPath);
+									}
+
+								} else {
+									alert('There was an error, please try again later');
+								}
+					        }
+					    };
+
+					    xhr.send(params);
+					}
+				}
+			}
+
+			multiSelect.init();
+
+	})(window, document, undefined);
+	</script>
+
+</head>
+<body>
+
+	Loading...
+
+</body>
+</html>

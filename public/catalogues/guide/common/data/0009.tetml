@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page number="1" width="653.62" height="900.24" topdown="true" trimbox="29.17|29.17|624.45|871.06" mediabox="0.00|0.00|653.62|900.24" cropbox="0.00|0.00|653.62|900.24" artbox="29.17|29.17|624.45|871.06">
+  <Options> granularity=word tetml={} topdown={output} includebox={{29.17 29.17 624.45 871.06}}</Options>
+  <Content granularity="word" dehyphenation="false" dropcap="false" font="false" geometry="false" shadow="false" sub="false" sup="false">
+    <PlacedImage image="I0" x="305.89" y="885.57" width="8.64" height="29.28"/>
+    <PlacedImage image="I0" x="345.57" y="885.57" width="8.64" height="29.28"/>
+    <Para>
+      <Box llx="470.29" lly="131.75" urx="591.23" ury="112.20">
+        <Word>
+          <Text>COLLECTION</Text>
+          <Box llx="470.29" lly="131.75" urx="591.23" ury="112.20"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="375.52" lly="209.88" urx="590.38" ury="190.33">
+        <Word>
+          <Text>MOBILIER</Text>
+          <Box llx="375.52" lly="209.88" urx="466.45" ury="190.33"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="472.73" lly="209.88" urx="495.29" ury="190.33"/>
+        </Word>
+        <Word>
+          <Text>VASQUES</Text>
+          <Box llx="501.57" lly="209.88" urx="590.38" ury="190.33"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="508.83" lly="288.34" urx="590.38" ury="268.79">
+        <Word>
+          <Text>DOUCHE</Text>
+          <Box llx="508.83" lly="288.34" urx="590.38" ury="268.79"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="546.59" lly="366.58" urx="591.23" ury="347.03">
+        <Word>
+          <Text>BAIN</Text>
+          <Box llx="546.59" lly="366.58" urx="591.23" ury="347.03"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="356.09" lly="444.59" urx="590.38" ury="404.34">
+        <Word>
+          <Text>ROBINETTERIE</Text>
+          <Box llx="424.74" lly="423.89" urx="561.54" ury="404.34"/>
+        </Word>
+        <Word>
+          <Text>ET</Text>
+          <Box llx="567.82" lly="423.89" urx="590.38" ury="404.34"/>
+        </Word>
+        <Word>
+          <Text>ENSEMBLES</Text>
+          <Box llx="356.09" lly="444.59" urx="471.30" ury="425.04"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="477.58" lly="444.59" urx="502.56" ury="425.04"/>
+        </Word>
+        <Word>
+          <Text>DOUCHE</Text>
+          <Box llx="508.83" lly="444.59" urx="590.38" ury="425.04"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="410.06" lly="523.05" urx="590.38" ury="503.50">
+        <Word>
+          <Text>ESPACE</Text>
+          <Box llx="410.06" lly="523.05" urx="483.69" ury="503.50"/>
+        </Word>
+        <Word>
+          <Text>TOILETTES</Text>
+          <Box llx="489.96" lly="523.05" urx="590.38" ury="503.50"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="455.51" lly="601.24" urx="590.38" ury="581.69">
+        <Word>
+          <Text>ACCESSOIRES</Text>
+          <Box llx="455.51" lly="601.24" urx="590.38" ury="581.69"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="472.23" lly="679.31" urx="590.38" ury="659.76">
+        <Word>
+          <Text>RADIATEURS</Text>
+          <Box llx="472.23" lly="679.31" urx="590.38" ury="659.76"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="513.81" lly="757.41" urx="590.38" ury="737.86">
+        <Word>
+          <Text>CUISINE</Text>
+          <Box llx="513.81" lly="757.41" urx="590.38" ury="737.86"/>
+        </Word>
+      </Box>
+    </Para>
+    <Para>
+      <Box llx="381.56" lly="835.96" urx="591.07" ury="816.41">
+        <Word>
+          <Text>TRAITEMENT</Text>
+          <Box llx="381.56" lly="835.96" urx="500.40" ury="816.41"/>
+        </Word>
+        <Word>
+          <Text>DE</Text>
+          <Box llx="506.68" lly="835.96" urx="531.66" ury="816.41"/>
+        </Word>
+        <Word>
+          <Text>L</Text>
+          <Box llx="537.94" lly="835.96" urx="548.26" ury="816.41"/>
+        </Word>
+        <Word>
+          <Text>’</Text>
+          <Box llx="547.45" lly="835.96" urx="552.61" ury="816.41"/>
+        </Word>
+        <Word>
+          <Text>EAU</Text>
+          <Box llx="553.17" lly="835.96" urx="591.07" ury="816.41"/>
+        </Word>
+      </Box>
+    </Para>
+  </Content>
+</Page>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Print Page</title>
+	<meta name="title" content="Print" />
+	<style>
+
+		@page { 
+		    size: auto;
+		    /* this affects the margin in the printer settings */ 
+		    margin: 0;  
+		} 
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		#A4container {
+			display: block;
+			margin: 0 auto;
+			border: 1px solid #ccc;
+			position: relative;
+		}
+
+		canvas {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: block;
+		}
+
+		#notesContainer {
+			display: none;
+			padding: 1em;
+			font-size: 1em;
+			page-break-before: always;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="A4container">
+		<canvas id="printingCanvas"></canvas>
+	</div>
+
+	<div id="notesContainer">
+	</div>
+
+	<script>
+
+	(function (window, document, undefined) {
+
+		// constants
+		var A4_WIDTH  = 210,
+			A4_HEIGHT = 297;
+
+
+		// global references
+		var A4container    = document.getElementById('A4container'),
+			containerWidth, containerHeight,
+			printingCanvas = document.getElementById('printingCanvas'),
+			canvasWidth, canvasHeight,
+			context = printingCanvas.getContext('2d'),
+			notesContainer = document.getElementById('notesContainer');
+
+
+
+		// utilities
+		function urlGET (param) {
+					
+			var params = document.URL.split('?');
+
+			if (params.length > 1) {
+				params = params[1].split('&');				
+				for (var  i = 0, len = params.length; i < len; i++) {
+					if (params[i].split('=')[0] === param) {
+						return params[i].split('=')[1];
+					}
+				}
+			}
+
+			return null;
+		};
+
+		function preload (files, callback) {
+
+			var images = [];
+
+			var onComplete = function (image) {
+				
+				images.push(image);
+
+				totalFilesLoaded++;
+				if (totalFilesLoaded === totalFilesToLoad) {
+					callback(images);
+				}
+			};
+
+			var firstImage = new Image();
+			firstImage.onload = function () {
+
+				onComplete(this);
+
+				if (isDoublePage) {
+
+					var secondImage = new Image();
+					secondImage.onload = function () {
+						onComplete(this);
+					};
+					secondImage.src = files[1];
+				}
+			};
+			firstImage.src = files[0];
+		}
+
+
+		function setContainerSize (layout) {
+
+			// setting the container size
+			if (layout === 'portrait') {
+				var pageWidth  = A4_WIDTH,
+					pageHeight = A4_HEIGHT;
+			} else {
+				var pageWidth  = A4_HEIGHT,
+					pageHeight = A4_WIDTH;
+			}
+			
+			A4container.style.width  = pageWidth + 'mm';
+			A4container.style.height = pageHeight + 'mm';
+
+			containerWidth  = A4container.clientWidth;
+			containerHeight = A4container.clientHeight;
+		}
+
+
+		function setCanvasSize (imageWidth, imageHeight) {
+
+			var pageWidth  = (isDoublePage) ? imageWidth * 2 : imageWidth,
+				pageHeight = imageHeight,
+				pageRatio  = pageWidth / pageHeight,
+				containerRatio = containerWidth / containerHeight;
+
+			if (pageRatio > containerRatio) {
+
+				canvasWidth  = containerWidth,
+				canvasHeight = canvasWidth / pageRatio; 
+
+				printingCanvas.style.width = '100%';
+			} else {
+				canvasHeight = containerHeight,
+				canvasWidth  = canvasHeight * pageRatio; 
+			}
+
+			printingCanvas.style.width  = canvasWidth + 'px';
+			printingCanvas.style.height = canvasHeight + 'px';
+
+			printingCanvas.width  = canvasWidth;
+			printingCanvas.height = canvasHeight;
+		}
+
+
+		function printNotes(page) {
+
+			if (window.opener) {
+				if (typeof window.opener.MainFrame !== 'undefined') {
+					var mainframe = window.opener.MainFrame;
+					if (mainframe) {
+						var notes = mainframe.Manager.Notes.list,
+							title = mainframe.Manager.Text.getById('printAnnotationsTitle') || '';
+					}
+				} else if (typeof window.opener.G !== 'undefined') {
+					var mainframe = window.opener.G;
+					if (mainframe) {
+						var notes = mainframe.Mg.Notes.list,
+							title = mainframe.Mg.Text.gBI('printAnnotationsTitle') || '';
+					}
+				}
+
+				var notesHtml = notesContainer.innerHTML;
+				
+				if (notes) {
+
+					var hasNotes = false;
+					for (var noteId in notes) {
+						
+						var note = notes[noteId];
+						if (note.page == page) {
+							
+							var noteTitle = title.replace('##page', page),
+								noteText  = note.text.replace('\n', '<br/>');
+
+							notesHtml += '<p style="font-weight: bold;">' + noteTitle + '</p>';
+							notesHtml += '<p>' + noteText + '</p>';
+							notesHtml += '<br/>';
+
+							hasNotes = true;
+						}
+					}
+
+					if (hasNotes) {
+						notesContainer.innerHTML = notesHtml;
+						notesContainer.style.display = 'block';
+					}
+				}
+			}
+		}
+
+
+		function getPagesFromFiles() {
+
+			var filesString = urlGET('files'),
+				fileNames = filesString.split(','),
+				pages = fileNames.map(function (file) {
+					var fileParts = file.split('/'),
+						fileName = fileParts.pop(),
+						pageIndex = fileName.substr(0, 4);
+
+					return parseInt(pageIndex, 10);
+				});
+
+			return pages;
+		}
+
+
+		// extracting the pdf files
+		var path = decodeURIComponent(urlGET('path')) || 'common/data/',
+			filesString = urlGET('files'),
+			fileNames = filesString.split(','),
+			files = fileNames.map(function (file) {return path + file});
+		
+		var isSinglePage = (files.length === 1),
+			isDoublePage = (files.length === 2);
+
+		// we preload all the necessary images
+		var totalFilesToLoad = files.length,
+			totalFilesLoaded = 0;
+		preload(files, function (images) {
+
+
+			// determine the size / layout / ratio of the printed page
+			var firstImage  = images[0],
+				imageWidth  = firstImage.width,
+				imageHeight = firstImage.height
+
+			if (isSinglePage) {
+				var pageWidth  = imageWidth,
+					pageHeight = imageHeight;
+			} else {
+				var pageWidth  = imageWidth * 2,
+					pageHeight = imageHeight;
+			}
+
+			if (pageWidth > pageHeight) {
+				var layout = 'landscape';
+			} else {
+				var layout = 'portrait';
+			}
+
+
+			setContainerSize(layout);
+			setCanvasSize(imageWidth, imageHeight);
+
+			if (isSinglePage) {
+
+				drawPage(images[0], 'single');
+			} else if (isDoublePage) {
+
+				drawPage(images[0], 'left');
+				drawPage(images[1], 'right');
+			} else {
+				// not supported
+			}
+
+			var shouldPrintNotes = (urlGET('annotations') === 'true');
+			if (shouldPrintNotes) {
+				var annotationsPages = getPagesFromFiles();
+				annotationsPages.forEach(function (page) {
+					printNotes(page);
+				});
+			}
+
+			window.print();
+			console.log('printing');
+		});
+
+		
+		
+
+
+		function drawPage (image, type) {
+
+			var imageWidth  = image.width,
+				imageHeight = image.height;
+
+			var sourceX = 0,
+				sourceY = 0,
+				sourceWidth  = imageWidth,
+				sourceHeight = imageHeight,
+				destinationX = 0,
+				destinationY = 0,
+				destionationWidth  = canvasWidth,
+				destionationHeight = canvasHeight;
+
+			if (type === 'left') {
+				destionationWidth  = canvasWidth / 2;
+			} else if (type === 'right') {
+				destinationX = canvasWidth / 2,
+				destionationWidth  = canvasWidth / 2;
+			}
+
+			context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, destinationX, destinationY, destionationWidth, destionationHeight);
+		}
+
+	})(window, document, undefined);
+	</script>
+</body>
+</html>

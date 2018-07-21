@@ -1,0 +1,93 @@
+/** xs **/
+html {
+    font-size: 10px;
+    @include media-breakpoint-up(md) {
+        font-size: 12px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 16px;
+    }
+    h1, h2, h3 {
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #4a4c4a;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.88rem;
+        margin-bottom: 10px;
+        
+    }
+
+    h3 {
+        font-size: 1.05rem;
+        margin-bottom: 5px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: none;
+        @include media-breakpoint-up(md) {
+            font-size: 1.1rem;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 1rem;
+        }
+    }
+}
+// ================== HEADINGS ==================
+
+.title {
+    position: relative;
+    display: block;
+
+    .filigrane {
+        position: absolute;
+        text-transform: uppercase;
+        color: rgba(191, 189, 189, 0.11);
+        white-space: nowrap;
+        font-weight: 900;
+        width: 100%;
+        -webkit-touch-callout: none;
+        user-select: none;
+    }
+    &.page:before {
+        right: 0;
+        margin: 0 auto;
+    }
+    &:before {
+        content: '';
+        background: #00b4dd;
+        width: 120px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &.h1 {
+        padding-top: 30px;
+        .filigrane {
+            top: -30px;
+            left: -10px;
+            font-size: 2.9em;
+        }
+    }
+    &.h2 {
+        padding-top: 20px;
+        .filigrane {
+            top: -20px;
+            left: -10px;
+            font-size: 3.1em;
+        }
+    }
+}

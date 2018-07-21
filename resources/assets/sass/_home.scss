@@ -1,0 +1,280 @@
+body.home {
+    .slick-arrow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        margin: auto;
+        cursor: pointer;
+    }
+    header {
+        @include media-breakpoint-up(md) {
+            margin-bottom: -100px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -190px;
+        }
+        .slider {
+            max-height: 715px;
+            position: relative;
+            overflow: hidden;
+            .slidesjs-pagination {
+                position: absolute;
+                bottom: 20%;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                padding: 0;
+                z-index: 101;
+                text-align: center;
+                @include media-breakpoint-up(md) {
+                    bottom: 35%;
+                }
+                @include media-breakpoint-up(lg) {
+                    bottom: 45%;
+                }
+                @include media-breakpoint-up(xl) {
+                    bottom: 32%;
+                }
+                li {
+                    display: inline-block;
+                    margin: 0 7px;
+                    a {
+                        color: transparent;
+                        background: #ADD5E5;
+                        -webkit-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        border-radius: 50%;
+                        width: 12px;
+                        height: 12px;
+                        line-height: 100%;
+                        display: block;
+                        &.active {
+                            background-color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .intro-home {
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+        @include media-breakpoint-up(md) {
+            margin-top: 0;
+        }
+        .container {
+            .card {
+                .card-top {
+                    img.card-img-top {
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                }
+            }
+            max-width: 100%;
+            @include media-breakpoint-up(xl) {
+                max-width: 1140px;
+            }
+            @include media-breakpoint-up(xxl) {
+                max-width: 1300px;
+            }
+        }
+        
+        
+    }
+    .section-img-left {
+        padding-top: 70px;
+        position: relative;
+        z-index: 0;
+        border-bottom: 1px solid #e8e8e8e8;
+        .container {
+            overflow: hidden;
+            div {
+                z-index: 12;
+            }
+        }
+        @include media-breakpoint-up(sm) {
+            margin-top: -180px;
+            padding-top: 220px;
+            background: transparent url('../images/img-mama.jpg') no-repeat;
+            background-position: -90% 20%;
+            background-size: contain;
+            min-height: 650px;
+            
+        }
+        @include media-breakpoint-up(md) {
+            background-position: -50% 20%;
+        }
+        @include media-breakpoint-up(lg) {
+            background-position: -10% 20%;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-top: -200px;
+            background-size: 40%;
+            background-position: left 20%;
+            
+        }
+
+        &:after {
+            content: '';
+            background: transparent url('../images/before-img-left.png') no-repeat;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 11;
+            background-size: contain;
+            height: 100%;
+            background-position: top left;
+        }
+    }
+    .section-conseils {
+        border-bottom: 1px solid #e8e8e8;
+        .container {
+            overflow: hidden;
+        }
+        .card {
+            .card-img-top {
+                -webkit-clip-path: ellipse(63% 70% at 48% 29%);
+                clip-path: ellipse(63% 70% at 48% 29%);
+            }
+        }
+        padding-top: 50px;
+        padding-bottom: 65px;
+        border-bottom: 1px solid #e8e8e8;
+        @include media-breakpoint-up(md) {
+            padding-top: 80px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: 167px;
+        }
+        .conseils.slider {
+            .slick-arrow {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 11;
+                margin: auto;
+                cursor: pointer;
+            }
+            .slick-slide {
+                padding: 5px;
+                .card {
+                    border-radius: 10px;
+                    padding-bottom: 30px;
+                    .card-top {
+                        img.card-img-top {
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                    }
+                    @include media-breakpoint-up(xs) {
+                        max-width: 250px;
+                    }
+                    @include media-breakpoint-up(sm) {
+                        max-width: 300px;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        max-width: unset;
+                    }
+                    .btn-arrow {
+                        position: absolute;
+                        opacity: 0;
+                        bottom: 25px;
+                        left: 25px;
+                        -webkit-transition: ease-in-out 0.4s;
+                        -ms-transition: ease-in-out 0.4s;
+                        -moz-transition: ease-in-out 0.4s;
+                        transition: ease-in-out 0.4s;
+                    }
+                    &:hover .btn-arrow {
+                        opacity: 1;
+                        -webkit-animation: movearrow 3s infinite;
+                        -ms-animation: movearrow 3s infinite;
+                        -moz-animation: movearrow 3s infinite;
+                        animation: movearrow 3s infinite;
+                    }
+                }
+            }
+            
+        }
+    }
+    .section-localiser {
+        padding: 110px 0 180px;
+        background: url(/images/bg-map.png) center bottom no-repeat;
+        background-size: cover;
+        border-bottom: 1px solid #e8e8e8;
+        .container {
+            overflow: hidden;
+            font-size: 10px;
+        }
+
+        .title {
+            font-family: "Uni Neue",sans-serif;
+            text-transform: uppercase;
+            color: #4a4c4a;
+            position: relative;
+            padding-top: 20px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+
+        .input-group {
+            margin: auto;
+            -webkit-border-radius: 35px;
+            -ms-border-radius: 35px;
+            -moz-border-radius: 35px;
+            border-radius: 35px;
+            overflow: hidden;
+            border: 1px solid #e3e3e3;
+            margin-top: 40px;
+            
+            input {
+                height: 62px;
+                -webkit-border-radius: 35px 0 0 35px;
+                -ms-border-radius: 35px 0 0 35px;
+                -moz-border-radius: 35px 0 0 35px;
+                border-radius: 35px 0 0 35px;
+                font-family: "Uni Neue",sans-serif;
+                padding: 15px 20px;
+                font-style: italic;
+                font-size: 1.36em;
+                font-weight: 400;
+                color: #4a4c4a;                
+            }
+
+            span {
+                background: #00b4dd;
+                color: #fff;
+                font-family: "Uni Neue",sans-serif;
+                border: none;
+                padding: 15px 20px;
+                font-style: italic;
+                font-size: 1.36em;
+                font-weight: 400;
+                border-radius: 0 35px 35px 0;
+                -webkit-border-radius: 0 35px 35px 0;
+                -ms-border-radius: 0 35px 35px 0;
+                -moz-border-radius: 0 35px 35px 0;
+            }
+        }
+
+        p {
+            font-family: "Uni Neue",sans-serif;
+            margin-bottom: 0;
+            padding: 0 45px;
+            font-size: 1.2em;
+            line-height: 21px;
+        } 
+    }
+}
+
+.top-padding {
+    height: 75px;
+}
+

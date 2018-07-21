@@ -1,0 +1,137 @@
+
+/*!
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "~bootstrap/scss/functions";
+@import "variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/jumbotron";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+// @import "~bootstrap/scss/print";
+
+
+@import "layout";
+@import "errors";
+@import "header";
+@import "decoration";
+@import "typography";
+@import "components";
+
+@import "~line-awesome/dist/css/line-awesome.css";
+@import "~magnific-popup/dist/magnific-popup";
+@import "ie10-viewport-bug-workaround";
+@import "~slick-carousel/slick/slick";
+@import "~wowjs/css/libs/animate";
+@import "legacy/animate";
+@import "~select2/dist/css/select2";
+
+@import "extensions";
+@import "projects";
+@import "tendances";
+@import "stores";
+@import "home";
+@import "filgood";
+@import "products";
+@import "brands";
+@import "maps";
+@import "contactus";
+@import "footer";
+
+.slider-wrapper {
+    a {
+        bottom: 0;
+        img{
+            &.slide {
+                // position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+.container-brand {
+    a:hover {
+        .brand {
+            border: 1px solid #889fe0;
+        }
+    }
+}
+
+.dt-brand {
+    a:hover {
+        img {
+            border: 1px solid #889fe0;
+        }
+    }
+}
+
+.main-page {
+    .slick-slide {
+        padding: 5px;
+    }
+}
+
+.pgrid-item {
+    float: left;
+    
+}
+
+.top-category a {
+    color: #333333;
+    font-size: 1.2em;
+}
+
+.top-category .sub-menu a {
+    font-size: 1.1em;
+}
+
+.top-category a.active { 
+    font-weight: bold;
+    color:#05829e; 
+}
+
+.top-category a:hover {
+    color: #00b4dd;
+}
+
+
